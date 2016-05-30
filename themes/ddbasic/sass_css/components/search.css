@@ -1,0 +1,37 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.pane-search-per-page {
+  float: left;
+  display: block;
+  margin-right: 3.78378%;
+  width: 48.10811%; }
+  .pane-search-per-page:last-child {
+    margin-right: 0; }
+
+.pane-ting-search-sort-form {
+  float: left;
+  display: block;
+  margin-right: 3.78378%;
+  width: 48.10811%;
+  margin-right: 0; }
+  .pane-ting-search-sort-form:last-child {
+    margin-right: 0; }
+
+.pane-search-result {
+  float: left; }
+
+.ting_search-results {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  .ting_search-results .search-result {
+    float: left;
+    width: 100%;
+    margin-bottom: 10px; }
+    .ting_search-results .search-result .search-snippet-info > p {
+      margin: 0; }
+
+/*# sourceMappingURL=search.css.map */

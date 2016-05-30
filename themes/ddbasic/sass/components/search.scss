@@ -1,0 +1,44 @@
+@import 'base';
+
+// ==========================================================================
+// Search options
+// ==========================================================================
+
+.pane-search-per-page {
+  @include span-columns(4 of 8);
+}
+
+.pane-ting-search-sort-form {
+  @include span-columns(4 of 8);
+  @include omega();
+}
+
+.pane-search-result {
+  float: left;
+}
+
+
+
+// ==========================================================================
+// Search results
+// ==========================================================================
+
+.ting_search-results {
+  margin: 0;
+  padding: 0;
+  
+  list-style: none;
+  
+  .search-result {
+    float: left;
+    width: 100%;
+    
+    margin-bottom: 10px;
+    
+    .search-snippet-info {
+      > p {
+        margin: 0;
+      }      
+    }
+  }
+}

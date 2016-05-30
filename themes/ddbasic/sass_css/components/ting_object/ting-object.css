@@ -1,0 +1,109 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.ting-object.view-mode-full .ting-object-left {
+  float: left;
+  display: block;
+  margin-right: 2.4911%;
+  width: 23.13167%; }
+  .ting-object.view-mode-full .ting-object-left:last-child {
+    margin-right: 0; }
+.ting-object.view-mode-full .ting-object-right {
+  float: left;
+  display: block;
+  margin-right: 2.4911%;
+  width: 74.37722%;
+  margin-right: 0; }
+  .ting-object.view-mode-full .ting-object-right:last-child {
+    margin-right: 0; }
+  .ting-object.view-mode-full .ting-object-right .ting-object-right-content {
+    float: left;
+    display: block;
+    margin-right: 3.34928%;
+    width: 54.06699%; }
+    .ting-object.view-mode-full .ting-object-right .ting-object-right-content:last-child {
+      margin-right: 0; }
+  .ting-object.view-mode-full .ting-object-right .ting-object-right-actions {
+    float: left;
+    display: block;
+    margin-right: 3.34928%;
+    width: 31.10048%;
+    margin-right: 0;
+    float: right; }
+    .ting-object.view-mode-full .ting-object-right .ting-object-right-actions:last-child {
+      margin-right: 0; }
+.ting-object.view-mode-full .field-name-ting-series {
+  margin-top: 30px; }
+.ting-object.view-mode-full .field-name-ting-abstract,
+.ting-object.view-mode-full .field-name-ting-subjects {
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(38, 38, 38, 0.2); }
+.ting-object.view-mode-full .action-button {
+  display: block;
+  margin-bottom: 15px; }
+.ting-object.view-mode-full .field-name-ting-type ul {
+  margin: 0;
+  list-style: none; }
+  .ting-object.view-mode-full .field-name-ting-type ul li {
+    margin: 0;
+    color: #000; }
+.ting-object.view-mode-full .field-name-ting-title h2 {
+  font-family: "FaktPro-SemiBold", sans-serif;
+  font-size: 30px;
+  line-height: 34px;
+  margin-bottom: 5px; }
+.ting-object.view-mode-full .field-name-ting-abstract {
+  margin: 30px 0; }
+.ting-object.view-mode-full .group-material-details {
+  clear: both; }
+
+.ting-object.view-mode-collection-list,
+.ting-object.view-mode-search-result {
+  padding: 15px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  background-color: #e5e5e5; }
+  .ting-object.view-mode-collection-list:last-of-type,
+  .ting-object.view-mode-search-result:last-of-type {
+    margin-bottom: 0; }
+  .ting-object.view-mode-collection-list .ting-object-left,
+  .ting-object.view-mode-search-result .ting-object-left {
+    float: left;
+    display: block;
+    margin-right: 3.78378%;
+    width: 22.16216%;
+    min-height: 1px; }
+    .ting-object.view-mode-collection-list .ting-object-left:last-child,
+    .ting-object.view-mode-search-result .ting-object-left:last-child {
+      margin-right: 0; }
+  .ting-object.view-mode-collection-list .ting-object-right,
+  .ting-object.view-mode-search-result .ting-object-right {
+    float: left;
+    display: block;
+    margin-right: 3.78378%;
+    width: 61.08108%;
+    margin-right: 0;
+    padding-bottom: 20px; }
+    .ting-object.view-mode-collection-list .ting-object-right:last-child,
+    .ting-object.view-mode-search-result .ting-object-right:last-child {
+      margin-right: 0; }
+  .ting-object.view-mode-collection-list h2,
+  .ting-object.view-mode-search-result h2 {
+    font-family: "FaktPro-SemiBold", sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 0; }
+  .ting-object.view-mode-collection-list .field-name-ting-abstract,
+  .ting-object.view-mode-search-result .field-name-ting-abstract {
+    margin: 20px 0; }
+  .ting-object.view-mode-collection-list .field-name-ting-type ul,
+  .ting-object.view-mode-search-result .field-name-ting-type ul {
+    list-style: none;
+    margin: 0; }
+    .ting-object.view-mode-collection-list .field-name-ting-type ul li,
+    .ting-object.view-mode-search-result .field-name-ting-type ul li {
+      margin: 0; }
+
+/*# sourceMappingURL=ting-object.css.map */

@@ -6,31 +6,42 @@
 
 
 ;----------// Stylesheets
-  stylesheets[all][] = css/ddbasic.styles.css
+  stylesheets[all][] = sass_css/base/addfont.css
+  stylesheets[all][] = sass_css/base/form.css
+  stylesheets[all][] = sass_css/base/icomoon.css
+  stylesheets[all][] = sass_css/base/standard.css
+  
+  stylesheets[all][] = sass_css/components/class.css
+  stylesheets[all][] = sass_css/components/field.css
+  stylesheets[all][] = sass_css/components/footer.css
+  stylesheets[all][] = sass_css/components/header.css
+  stylesheets[all][] = sass_css/components/menu.css
+  stylesheets[all][] = sass_css/components/search.css 
+  
+  stylesheets[all][] = sass_css/components/form/form-user-login.css
+  
+  stylesheets[all][] = sass_css/components/node/event.css
+  stylesheets[all][] = sass_css/components/node/news.css
+  
+  stylesheets[all][] = sass_css/components/panel/panel-user-login.css
+  stylesheets[all][] = sass_css/components/panel/opening-hours.css
+  
+  stylesheets[all][] = sass_css/components/ting_object/ting-object.css
+  stylesheets[all][] = sass_css/components/ting_object/ting-collection.css
+  
+  stylesheets[all][] = sass_css/components/view/view.css
 
-  ; Override stylesheets
-  stylesheets[all][] = css/system.menus.css
-  stylesheets[all][] = css/system.messages.css
-  stylesheets[all][] = css/addressfield.css
-  stylesheets[all][] = css/date.css
-  stylesheets[all][] = css/jquery.ui.theme.css
-  stylesheets[all][] = css/jquery.ui.theme.min.css
-  stylesheets[all][] = css/jquery.ui.dialog.css
-  stylesheets[all][] = css/jquery.ui.dialog.min.css
-
+  
+  stylesheets[all][] = sass_css/layout/panel.css
+  
 
 ;----------// JavaScripts
   scripts[] = scripts/jquery.cookie.js
-  scripts[] = scripts/respond.min.js
-  scripts[] = scripts/jquery.scrollto.js
-  scripts[] = scripts/html5shiv.js
-  scripts[] = scripts/equalize.min.js
-  scripts[] = scripts/scalefix.js
-  scripts[] = scripts/selectivizr-min.js
-  scripts[] = scripts/ddbasic.topbar.menu.min.js
-  scripts[] = scripts/ddbasic.common.min.js
-  scripts[] = scripts/ddbasic.facet.min.js
-  scripts[] = scripts/ddbasic.search.min.js
+  
+  scripts[] = scripts/topbar.js
+  
+  scripts[] = scripts/node/event.js
+  scripts[] = scripts/node/news.js
 
 
 ;----------// Regions

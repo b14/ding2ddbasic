@@ -1,0 +1,21 @@
+@import 'base';
+
+.opening-hours-week {
+  padding: 0;
+  .days {
+    padding: 0;
+    .day {
+      min-height: 80px;
+      padding: 15px;
+      box-sizing: border-box;
+      
+      &.even {
+        background-color: $grey;
+      }
+      
+      .times {
+        text-align: left;
+      }    
+    }
+  }
+}

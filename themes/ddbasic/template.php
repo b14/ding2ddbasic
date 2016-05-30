@@ -1,11 +1,16 @@
 <?php
+require_once __DIR__ . '/template.form.php';  
+require_once __DIR__ . '/template.node.php';
+require_once __DIR__ . '/template.field.php';
+
 /**
  * @file
  * Preprocess and Process Functions.
  */
-
+ 
 // Includes frequently used theme functions that gets theme info, css files etc.
 include_once drupal_get_path('theme', 'ddbasic') . '/inc/functions.inc';
+
 
 /**
  * Implements hook_preprocess_html().
@@ -98,42 +103,6 @@ function ddbasic_process_html(&$vars) {
   }
 }
 
-/**
- * Implements hook_form_alter().
- */
-function ddbasic_form_alter(&$form, &$form_state, $form_id) {
-  switch ($form_id) {
-    case 'search_block_form':
-      $form['search_block_form']['#attributes']['placeholder'] = t('Search the library');
-      $form['search_block_form']['#field_prefix'] = '<i class="icon-search"></i>';
-      $form['search_block_form']['#title'] = t('Search the library database and the website');
-
-      // Remove element-invisible
-      unset($form['search_block_form']['#title_display']);
-      break;
-
-    case 'user_login_block':
-      $form['name']['#title'] = t('Loan or social security number');
-      $form['name']['#field_prefix'] = '<i class="icon-user"></i>';
-      $form['name']['#attributes']['placeholder'] = t('The number is 10 digits');
-      $form['name']['#type'] = 'password';
-
-      $form['pass']['#title'] = t('Pincode');
-      $form['pass']['#field_prefix'] = '<i class="icon-lock"></i>';
-      $form['pass']['#attributes']['placeholder'] = t('Pincode is 4 digits');
-
-      // Add JavaScript that will place focus in the login box, when the Login
-      // is clicked.
-      drupal_add_js(drupal_get_path('theme', 'ddbasic') . '/scripts/ddbasic.login.js', 'file');
-
-      unset($form['links']);
-
-      // Temporary hack to get rid of open id links.
-      unset($form['openid_links']);
-      unset($form['#attached']['js']);
-      break;
-  }
-}
 
 
 /**
@@ -176,6 +145,19 @@ function ddbasic_preprocess_panels_pane(&$vars) {
 }
 
 /**
+ * Render callback.
+ *
+ * Remove panels div separator.
+ */
+function ddbasic_panels_default_style_render_region($vars) {
+  $output = '';
+  $output .= implode('', $vars['panes']);
+
+  return $output;
+}
+
+/**
+ * @TODO Remove this
  * Implements theme_menu_tree().
  */
 function ddbasic_menu_tree__menu_block__1($vars) {
@@ -210,6 +192,7 @@ function ddbasic_menu_tree__user_menu($vars) {
   return '<ul class="system-user-menu">' . $vars['tree'] . '</ul>';
 }
 
+
 /**
  * Implements hook_preprocess_views_view_unformatted().
  *
@@ -237,6 +220,7 @@ function ddbasic_preprocess_views_view_unformatted(&$vars) {
     $count++;
 
     $vars['classes'][$id][] = $count % 2 ? 'odd' : 'even';
+    $vars['classes'][$id][] = 'views-row';
 
     if ($count == 1) {
       $vars['classes'][$id][] = $row_first;
@@ -275,263 +259,6 @@ function ddbasic_preprocess_user_picture(&$variables) {
   $variables['user_picture'] = str_replace('<img ', '<img class="pull-left" ', $variables['user_picture']);
 }
 
-/**
- * Implements hook_preprocess_node().
- *
- * Override or insert variables into the node templates.
- */
-function ddbasic_preprocess_node(&$variables, $hook) {
-  // Opening hours on library list. but not on the search page.
-  $path = drupal_get_path_alias();
-  if (!(strpos($path, 'search', 0) === 0)) {
-    $hooks = theme_get_registry(FALSE);
-    if (isset($hooks['opening_hours_week']) && $variables['type'] == 'ding_library') {
-      $variables['opening_hours'] = theme('opening_hours_week', array('node' => $variables['node']));
-    }
-  }
-
-  // Add ddbasic_byline to variables.
-  $variables['ddbasic_byline'] = t('By: ');
-
-  // Add event node specific ddbasic variables.
-  if (isset($variables['content']['#bundle']) && $variables['content']['#bundle'] == 'ding_event') {
-
-    // Add event location variables.
-    if (!empty($variables['content']['field_ding_event_location'][0]['#address']['name_line'])) {
-      $variables['ddbasic_event_location'] = $variables['content']['field_ding_event_location'][0]['#address']['name_line'] . '<br/>' . $variables['content']['field_ding_event_location'][0]['#address']['thoroughfare'] . ', ' . $variables['content']['field_ding_event_location'][0]['#address']['locality'];
-    }
-    else {
-      // User OG group ref to link back to library.
-      if (isset($variables['content']['og_group_ref'])) {
-        $variables['ddbasic_event_location'] = $variables['content']['og_group_ref'];
-      }
-    }
-
-    // Add event date to variables. A render array is created based on the date
-    // format "date_only".
-    $event_date_ra = field_view_field('node', $variables['node'], 'field_ding_event_date', array(
-      'label' => 'hidden',
-      'type' => 'date_default',
-      'settings' => array(
-        'format_type' => 'ding_date_only',
-        'fromto' => 'both',
-      ),
-    ));
-    $variables['ddbasic_event_date'] = $event_date_ra[0]['#markup'];
-
-    // Add event time to variables. A render array is created based on the date
-    // format "time_only".
-    $event_time_ra = field_view_field('node', $variables['node'], 'field_ding_event_date', array(
-      'label' => 'hidden',
-      'type' => 'date_default',
-      'settings' => array(
-        'format_type' => 'ding_time_only',
-        'fromto' => 'both',
-      ),
-    ));
-    $variables['ddbasic_event_time'] = $event_time_ra[0]['#markup'];
-  }
-
-  // Add tpl suggestions for node view modes.
-  if (isset($variables['view_mode'])) {
-    $variables['theme_hook_suggestions'][] = 'node__view_mode__' . $variables['view_mode'];
-  }
-
-  // Add "read more" links to event, news and e-resource in search result view
-  // mode.
-  if ($variables['view_mode'] == 'search_result') {
-    switch ($variables['node']->type) {
-      case 'ding_event':
-        $more_link = array(
-          '#theme' => 'link',
-          '#text' => '<i class="icon-chevron-right"></i>',
-          '#path' => 'node/' . $variables['nid'],
-          '#options' => array(
-            'attributes' => array(
-              'title' => $variables['title'],
-            ),
-            'html' => TRUE,
-          ),
-          '#prefix' => '<div class="event-arrow-link">',
-          '#surfix' => '</div>',
-          '#weight' => 6,
-        );
-
-        $variables['content']['group_right_col_search']['more_link'] = $more_link;
-        break;
-
-      case 'ding_news':
-        $more_link = array(
-          '#theme' => 'link',
-          '#text' => t('Read more'),
-          '#path' => 'node/' . $variables['nid'],
-          '#options' => array(
-            'attributes' => array(
-              'title' => $variables['title'],
-            ),
-            'html' => FALSE,
-          ),
-          '#prefix' => '<span class="news-link">',
-          '#surfix' => '</span>',
-          '#weight' => 6,
-        );
-
-        $variables['content']['group_right_col_search']['more_link'] = $more_link;
-        break;
-
-      case 'ding_eresource':
-        $more_link = array(
-          '#theme' => 'link',
-          '#text' => t('Read more'),
-          '#path' => 'node/' . $variables['nid'],
-          '#options' => array(
-            'attributes' => array(
-              'title' => $variables['title'],
-            ),
-            'html' => FALSE,
-          ),
-          '#prefix' => '<span class="eresource-link">',
-          '#surfix' => '</span>',
-          '#weight' => 6,
-        );
-
-        $variables['content']['group_right_col_search']['more_link'] = $more_link;
-        break;
-    }
-  }
-
-  // For search result view mode move title into left col. group.
-  if (isset($variables['content']['group_right_col_search'])) {
-    $variables['content']['group_right_col_search']['title'] = array(
-      '#theme' => 'link',
-      '#text' => decode_entities($variables['title']),
-      '#path' => 'node/' . $variables['nid'],
-      '#options' => array(
-        'attributes' => array(
-          'title' => $variables['title'],
-        ),
-        'html' => FALSE,
-      ),
-      '#prefix' => '<h2>',
-      '#suffix' => '</h2>',
-    );
-  }
-
-  // Add updated to variables.
-  $variables['ddbasic_updated'] = t('!datetime', array(
-    '!datetime' => format_date(
-      $variables['node']->changed,
-      $type = 'long',
-      $format = '',
-      $timezone = NULL,
-      $langcode = NULL
-    ))
-  );
-
-  // Modified submitted variable.
-  if ($variables['display_submitted']) {
-    $variables['submitted'] = t('!datetime', array(
-      '!datetime' => format_date(
-        $variables['created'],
-        $type = 'long',
-        $format = '',
-        $timezone = NULL,
-        $langcode = NULL
-      ))
-    );
-  }
-}
-
-/**
- * Implements template_preprocess_field().
- */
-function ddbasic_preprocess_field(&$vars, $hook) {
-  // Get current view mode (teaser).
-  $view_mode = $vars['element']['#view_mode'];
-  $field_name = $vars['element']['#field_name'];
-
-  // Add suggestion for ddbasic specific field.
-  $vars['theme_hook_suggestions'][] = 'field__ddbasic';
-
-  // Add suggestion for ddbasic field with specific name.
-  $vars['theme_hook_suggestions'][] = 'field__ddbasic_' . $field_name;
-
-  // Add suggestion for ddbasic field in specific view mode.
-  $vars['theme_hook_suggestions'][] = 'field__ddbasic_' . $view_mode;
-
-  // Stream line tags in view modes using the same tpl.
-  if ($vars['element']['#field_type'] == 'taxonomy_term_reference') {
-    $vars['theme_hook_suggestions'][] = 'field__ddbasic_tags__' . $view_mode;
-  }
-
-  // Ensure that all OG group ref field are the same.
-  if ($field_name == 'ding_event_groups_ref' || $field_name == 'ding_news_groups_ref' || $field_name == 'og_group_ref') {
-    $vars['theme_hook_suggestions'][] = 'field__og_group_ref';
-
-    // Add classes to get label correctly formatted.
-    foreach ($vars['items'] as $id => $item) {
-      $vars['items'][$id]['#options'] = array(
-        'attributes' => array(
-          'class' => array(
-            'label',
-            'label_info',
-          ),
-        ),
-      );
-    }
-  }
-
-  // Clean up fields in search result view mode aka. search result page.
-  if ($view_mode == 'search_result') {
-    // Add suggestion that only hits the search result page.
-    $vars['theme_hook_suggestions'][] = 'field__' . $vars['element']['#field_type'] . '__' . $view_mode;
-
-    switch ($vars['element']['#field_name']) {
-      case 'ting_author':
-      case 'ting_abstract':
-      case 'ting_subjects':
-        $vars['classes_array'] = array('content');
-        break;
-
-      case 'ting_title':
-        $vars['classes_array'] = array('heading');
-        break;
-    }
-  }
-
-  // Make suggestion for the availability on the search result page.
-  if ($vars['element']['#field_type'] == 'ting_collection_types' &&
-      $vars['element']['#formatter'] == 'ding_availability_with_labels') {
-    $vars['theme_hook_suggestions'][] = 'field__' . $vars['element']['#field_type'] . '__' . 'search_result';
-  }
-
-  // Add class to library OG ref on staff profiles only.
-  if ($vars['element']['#bundle'] == 'ding_staff_profile') {
-    $staff_fields = array(
-      'og_group_ref',
-      'field_ding_staff_department',
-      'field_ding_staff_email',
-      'field_ding_staff_phone',
-      'field_ding_staff_work_areas',
-    );
-
-    if (in_array($field_name, $staff_fields)) {
-      $vars['theme_hook_suggestions'][] = 'field__ding_staff__content_field';
-
-      // Ensure that department is not add label info.
-      if ($field_name == 'field_ding_staff_department' || $field_name == 'og_group_ref') {
-        foreach ($vars['items'] as $id => $item) {
-          // This as little hack to make the user interface look better.
-          $vars['items'][$id]['#options']['no_label'] = TRUE;
-        }
-      }
-    }
-
-    if ($field_name == 'og_group_ref') {
-      $vars['classes_array'][] = 'field-name-ding-library-name';
-    }
-  }
-}
 
 /**
  * Implements theme_link().
@@ -553,18 +280,6 @@ function ddbasic_link($variables) {
   }
 
   return '<a href="' . check_plain(url($variables['path'], $variables['options'])) . '"' . drupal_attributes($variables['options']['attributes']) . '>' . ($variables['options']['html'] ? $variables['text'] : check_plain($variables['text'])) . '</a>';
-}
-
-/**
- * Render callback.
- *
- * Remove panels div separator.
- */
-function ddbasic_panels_default_style_render_region($vars) {
-  $output = '';
-  $output .= implode('', $vars['panes']);
-
-  return $output;
 }
 
 
@@ -606,7 +321,6 @@ function ddbasic_preprocess_entity_profile2(&$variables) {
   }
 }
 
-
 /**
  * Implements theme_menu_link().
  */
@@ -634,6 +348,7 @@ function ddbasic_menu_link($vars) {
 
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $link . $sub_menu . "</li>\n";
 }
+
 
 /**
  * Implements theme_menu_link().
@@ -910,6 +625,15 @@ function ddbasic_process_page(&$vars) {
  * Adds wrapper classes to the different groups on the ting object.
  */
 function ddbasic_preprocess_ting_object(&$vars) {
+  
+  //
+  // Add tpl suggestions for node view modes.
+  if (isset($variables['elements']['#view_mode'])) {
+    $variables['theme_hook_suggestions'][] = $variables['elements']['#bundle'] . '__view_mode__' . $variables['elements']['#view_mode'];
+  }
+  
+  $variables['classes_array'][0] = str_replace('_', '-', $variables['elements']['#bundle']);
+  
   if (isset($vars['elements']['#view_mode']) && $vars['elements']['#view_mode'] == 'full') {
     switch ($vars['elements']['#entity_type']) {
       case 'ting_object':
@@ -1009,3 +733,5 @@ function ddbasic_preprocess_ting_object(&$vars) {
     }
   }
 }
+
+

@@ -1,0 +1,61 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.view .view-content .views-row {
+  margin-bottom: 30px; }
+  .grid-small .view .view-content .views-row {
+    float: left;
+    display: block;
+    margin-right: 2.4911%;
+    width: 23.13167%; }
+    .grid-small .view .view-content .views-row:last-child {
+      margin-right: 0; }
+    .grid-small .view .view-content .views-row:nth-child(4n) {
+      margin-right: 0; }
+    .grid-small .view .view-content .views-row:nth-child(4n+1) {
+      clear: left; }
+  .grid-medium .view .view-content .views-row {
+    float: left;
+    display: block;
+    margin-right: 2.4911%;
+    width: 31.6726%; }
+    .grid-medium .view .view-content .views-row:last-child {
+      margin-right: 0; }
+    .grid-medium .view .view-content .views-row:nth-child(3n) {
+      margin-right: 0; }
+    .grid-medium .view .view-content .views-row:nth-child(3n+1) {
+      clear: left; }
+  .grid-large .view .view-content .views-row {
+    float: left;
+    display: block;
+    margin-right: 2.4911%;
+    width: 48.75445%; }
+    .grid-large .view .view-content .views-row:last-child {
+      margin-right: 0; }
+    .grid-large .view .view-content .views-row:nth-child(2n) {
+      margin-right: 0; }
+    .grid-large .view .view-content .views-row:nth-child(2n+1) {
+      clear: left; }
+.view .view-content > ul {
+  padding: 0;
+  list-style: none; }
+
+.grid-medium .view-ding-news.first-child-large .view-content .views-row:first-child {
+  float: left;
+  display: block;
+  margin-right: 2.4911%;
+  width: 65.8363%; }
+  .grid-medium .view-ding-news.first-child-large .view-content .views-row:first-child:last-child {
+    margin-right: 0; }
+.grid-medium .view-ding-news.first-child-large .view-content .views-row:nth-child(3n) {
+  margin-right: 2.4911%; }
+.grid-medium .view-ding-news.first-child-large .view-content .views-row:nth-child(3n+1) {
+  clear: none; }
+.grid-medium .view-ding-news.first-child-large .view-content .views-row:nth-child(5n + 2) {
+  margin-right: 0; }
+.grid-medium .view-ding-news.first-child-large .view-content .views-row:nth-child(5n + 3) {
+  clear: left; }
+
+/*# sourceMappingURL=view.css.map */

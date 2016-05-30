@@ -1,0 +1,12 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.pane-user-login {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 65px 0 5px; }
+
+/*# sourceMappingURL=panel-user-login.css.map */

@@ -1,0 +1,85 @@
+@import 'base';
+
+// ==========================================================================
+// Teaser
+// ==========================================================================
+.node-ding-event.node-teaser {
+  position: relative;
+  float: left;
+  width: 100%;
+  .inner {
+    @include transition(
+      width $speed $ease, 
+      background-color $speed $ease, 
+      box-shadow $speed $ease
+    );
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: $box-padding;
+    background-color: $grey;
+    .info-top {
+      color: $charcoal-opacity-dark;
+      > div {
+        float: left;
+      }
+    }
+    .date {
+      @include font('header-small');
+      clear: left;
+      color: $color-primary;
+    }
+    .field-name-field-ding-event-lead {
+      @include transition(
+        height $speed $ease, 
+        opacity $speed $ease
+      );
+      height: 0;
+      opacity: 0;
+    }
+    .event-bottom {
+      margin-top: 50px;
+      .info-bottom {
+        float: left;
+        .library {
+          color: $color-primary;
+        }
+      }
+      .button {
+        @include transition(opacity $speed $ease);
+        float: right;
+        opacity: 0;
+      }
+    }
+    // Hover
+    &:hover {
+      @include transition(
+        width $speed $hover-delay $ease, 
+        background-color $speed $hover-delay $ease, 
+        box-shadow $speed $hover-delay $ease
+      );
+      width: 120%;
+      background-color: $white;
+      box-shadow: $box-shadow;
+      .field-name-field-ding-event-lead {
+        @include transition(
+          height $speed $hover-delay $ease, 
+          opacity $speed $hover-delay $ease
+        );
+        opacity: 1;
+        height: 50px;
+      }
+      .event-bottom {
+        .button {
+          @include transition(
+            opacity $speed $hover-delay $ease,
+            background-color $speed $ease,
+            color $speed $ease
+          );
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

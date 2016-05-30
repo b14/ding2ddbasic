@@ -1,0 +1,93 @@
+@import 'base';
+
+
+// Base
+//
+// Styleguide 1.
+
+// Standard elements
+//
+// Styleguide 1.1
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  @include font('base');
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $charcoal;
+}
+body {
+  padding-top: $header-height; // Compensate for fixed header
+  background-color: $white;
+  @include transition(background-color $speed $ease);
+  // Toolbar
+  &.toolbar {
+    padding-top: $header-height + 65px !important;
+  }
+  // When topbar is open
+  &.topbar-is-open {
+    background-color: $charcoal;
+    overflow: hidden;
+  }
+}
+
+// Headers
+//
+// Markup:
+// <h1>Header h1</h1>
+// <h2>Header h2</h2>
+// <h3>Header h3</h3>
+//
+// Styleguide 1.1.1
+
+h1,h2,h3 {
+  margin-top: 0;
+  font-weight: $weight-normal;
+}
+h1 {
+  @include font('header-large');
+  color: $color-primary;
+  margin-bottom: 30px;
+}
+h2 {
+  @include font('header');
+  margin-bottom: 30px;
+}
+h3 {
+  @include font('header-small');
+  margin-bottom: 20px;
+}
+
+// Paragraph
+p {
+  margin-bottom: $distance-paragraph;
+}
+
+// Images
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+// Links
+//
+// Markup:
+// <a>Link</a>
+//
+// Styleguide 1.1.2
+
+a {
+  text-decoration: none;
+  color: $color-text;
+  &:hover {
+    color: $charcoal;
+  }
+}
+
+// Lists
+ul {
+  margin: 0 0 $distance-paragraph;
+}

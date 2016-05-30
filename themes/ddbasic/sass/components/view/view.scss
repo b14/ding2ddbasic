@@ -1,0 +1,63 @@
+@import 'base';
+
+// ==========================================================================
+// All views
+// ==========================================================================
+.view {
+  .view-content {
+    .views-row {
+      margin-bottom: 30px;
+      // Small grid
+      .grid-small & {
+        @include span-columns(3);
+        @include omega(4n);
+      }
+      // Medium grid
+      .grid-medium & {
+        @include span-columns(4);
+        @include omega(3n);
+      }
+      // Large grid
+      .grid-large & {
+        @include span-columns(6);
+        @include omega(2n);
+      }
+    }
+    // List
+    > ul {
+      padding: 0;
+      list-style: none;
+    }
+  }
+}
+
+
+// ==========================================================================
+// View din news
+// ==========================================================================
+.view-ding-news {
+  // First child large
+  &.first-child-large {
+    .view-content {
+      .views-row {
+        // First child
+        &:first-child {
+          // Medium grid
+          .grid-medium & {
+            @include span-columns(8);
+          }
+        }
+        // Medium grid
+        .grid-medium & {
+          @include omega-reset(3n, 12);
+          &:nth-child(5n + 2) {
+            margin-right: 0;
+          }
+          &:nth-child(5n + 3) {
+            clear: left;
+          }
+        }
+      }
+    }
+  }
+}

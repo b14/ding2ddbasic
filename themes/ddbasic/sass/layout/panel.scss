@@ -1,0 +1,69 @@
+@import 'base';
+
+//
+// Extra facetbrowsers
+// @TODO should these be removed from the panel?
+.primary-content .pane-ding-facetbrowser, 
+.primary-content .pane-search-backends {
+  display: none;
+}
+
+// ==========================================================================
+// Panel Layouts
+// ==========================================================================
+
+.panel-pane {
+  .pane-content {
+    // Frontpage layout
+    .frontpage-layout {
+      .panel-pane {
+        @include background-image(linear-gradient($grey-light 0, $white 100%));
+        padding: 40px 0 30px;
+        .pane-title,
+        .pane-content {
+          @include outer-container;
+        }
+        .pane-title {
+          @include font('header-large');
+          color: $color-text;
+        }
+      }
+    }
+    // Ding2 site template
+    .ding2-site-template {
+      .panel-pane {
+        @include background-image(linear-gradient($grey-light 0, $white 100%));
+        padding: 40px 0 30px;
+        .pane-title,
+        .pane-content {
+          @include outer-container;
+        }
+        .pane-title {
+          @include font('header-large');
+          color: $color-text;
+        }
+      }
+    }
+    
+    // Default layout
+    .default-layout {
+      @include background-image(linear-gradient($grey-light 0, $white 100%));
+      padding: 40px 0 30px;
+      .layout-wrapper {
+        @include outer-container;
+        .primary-content {
+          @include span-columns(8);
+          @include omega;
+          float: right;
+        }
+        .secondary-content {
+          @include span-columns(4);
+        }
+      }
+    }
+    // More link
+    .more-link {
+      @include span-columns(3);
+    }
+  }
+}

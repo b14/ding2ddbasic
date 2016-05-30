@@ -1,0 +1,44 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.footer {
+  background-color: #262626;
+  color: #fff; }
+  .footer a {
+    -webkit-transition: color 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    -moz-transition: color 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: color 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    color: #fff; }
+    .footer a:hover {
+      color: rgba(255, 255, 255, 0.54); }
+  .footer .footer-inner {
+    max-width: 1124px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px 0 100px; }
+    .footer .footer-inner:after {
+      content: "";
+      display: table;
+      clear: both; }
+    .footer .footer-inner > .panel-pane {
+      float: left;
+      display: block;
+      margin-right: 2.4911%;
+      width: 23.13167%; }
+      .footer .footer-inner > .panel-pane:last-child {
+        margin-right: 0; }
+      .footer .footer-inner > .panel-pane:nth-child(4n) {
+        margin-right: 0; }
+      .footer .footer-inner > .panel-pane:nth-child(4n+1) {
+        clear: left; }
+      .footer .footer-inner > .panel-pane .pane-title {
+        font-family: "FaktPro-SemiBold", sans-serif;
+        font-size: 18px;
+        line-height: 24px; }
+  .topbar-is-open .footer {
+    opacity: 0.5;
+    pointer-events: none; }
+
+/*# sourceMappingURL=footer.css.map */

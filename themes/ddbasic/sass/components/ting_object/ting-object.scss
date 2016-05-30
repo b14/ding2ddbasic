@@ -1,0 +1,120 @@
+@import 'base';
+
+// ==========================================================================
+// Full
+// ==========================================================================
+
+.ting-object.view-mode-full {  
+  
+  .ting-object-left {
+    @include span-columns(3 of 12);
+  }
+  
+  .ting-object-right {
+    @include span-columns(9 of 12);
+    @include omega();
+    
+    .ting-object-right-content {
+      @include span-columns(5 of 9);
+    }
+    
+    .ting-object-right-actions {
+      @include span-columns(3 of 9);
+      @include omega();
+      float: right;
+    }
+  } 
+    
+  .field-name-ting-series {
+    margin-top: 30px;
+  }
+  
+  .field-name-ting-abstract,
+  .field-name-ting-subjects {
+    padding-bottom: 30px;
+    border-bottom: 1px solid $charcoal-opacity-light;
+  }
+  
+  .action-button {
+    display: block;
+    margin-bottom: 15px;
+  } 
+  
+  .field-name-ting-type {
+    ul {      
+      margin: 0;
+      
+      list-style: none;
+      
+      li {
+        margin: 0;
+        
+        color: $black;   
+      }
+    }
+  }
+  
+  .field-name-ting-title h2 {
+    @include font('header');
+    
+    margin-bottom: 5px;
+  }
+  
+  .field-name-ting-abstract {
+    margin: 30px 0;
+  }
+  
+  .group-material-details {
+    clear: both;
+  }
+}
+
+// ==========================================================================
+// Search result
+// ==========================================================================
+
+.ting-object.view-mode-collection-list,
+.ting-object.view-mode-search-result {  
+  padding: 15px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  
+  background-color: $grey;
+  
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .ting-object-left {
+    @include span-columns(2 of 8);
+    
+    min-height: 1px;
+  }
+  
+  .ting-object-right {
+    @include span-columns(5 of 8);
+    @include omega();
+    
+    padding-bottom: 20px;
+    //border-bottom: 1px solid $grey-dark;
+  }
+  
+  h2 {
+    @include font('header-small');
+    margin-bottom: 0;
+  }
+  
+  .field-name-ting-abstract {
+    margin: 20px 0;
+  }
+  
+  .field-name-ting-type {
+    ul {
+      list-style: none;
+      margin: 0;
+      li {
+        margin: 0;
+      }
+    }
+  }
+}

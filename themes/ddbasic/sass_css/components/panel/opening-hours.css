@@ -1,0 +1,19 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.opening-hours-week {
+  padding: 0; }
+  .opening-hours-week .days {
+    padding: 0; }
+    .opening-hours-week .days .day {
+      min-height: 80px;
+      padding: 15px;
+      box-sizing: border-box; }
+      .opening-hours-week .days .day.even {
+        background-color: #e5e5e5; }
+      .opening-hours-week .days .day .times {
+        text-align: left; }
+
+/*# sourceMappingURL=opening-hours.css.map */

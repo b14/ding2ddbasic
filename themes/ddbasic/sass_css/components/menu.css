@@ -1,0 +1,106 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+ul.topbar-menu li.topbar-link-user a:after {
+  content: "\e90b"; }
+
+ul.menu, ul.main-menu, ul.secondary-menu, ul.topbar-menu {
+  padding: 0;
+  margin-bottom: 0; }
+  ul.menu li,
+  ul.menu li.leaf, ul.main-menu li,
+  ul.main-menu li.leaf, ul.secondary-menu li,
+  ul.secondary-menu li.leaf, ul.topbar-menu li,
+  ul.topbar-menu li.leaf {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+
+ul.main-menu {
+  font-family: "FaktPro-SemiBold", sans-serif;
+  font-size: 18px;
+  line-height: 24px; }
+  ul.main-menu li.leaf {
+    position: relative;
+    float: left;
+    padding: 30px 0;
+    margin-right: 40px;
+    border-bottom: 0 solid #fff; }
+    ul.main-menu li.leaf:last-child {
+      margin-right: 0; }
+    ul.main-menu li.leaf a {
+      color: #fff; }
+      ul.main-menu li.leaf a:after {
+        -webkit-transition: height 150ms cubic-bezier(0.165, 0.84, 0.44, 1);
+        -moz-transition: height 150ms cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition: height 150ms cubic-bezier(0.165, 0.84, 0.44, 1);
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background-color: #fff; }
+      ul.main-menu li.leaf a:hover:after {
+        height: 5px; }
+    ul.main-menu li.leaf.active-trail a:after {
+      height: 5px; }
+    ul.main-menu li.leaf.has-children ul {
+      display: none; }
+
+ul.secondary-menu li.leaf a {
+  color: #fff; }
+
+ul.topbar-menu {
+  float: left;
+  display: block;
+  margin-right: 2.4911%;
+  width: 14.59075%;
+  margin-right: 0;
+  float: right; }
+  ul.topbar-menu:last-child {
+    margin-right: 0; }
+  ul.topbar-menu li.topbar-link-search, ul.topbar-menu li.topbar-link-menu, ul.topbar-menu li.topbar-link-user:last-child {
+    display: none; }
+  ul.topbar-menu li.topbar-link-user {
+    width: 100%;
+    float: left;
+    margin: 5px 0; }
+    ul.topbar-menu li.topbar-link-user a {
+      position: relative;
+      -webkit-transition: background-color 300ms cubic-bezier(0.165, 0.84, 0.44, 1), color 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      -moz-transition: background-color 300ms cubic-bezier(0.165, 0.84, 0.44, 1), color 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      transition: background-color 300ms cubic-bezier(0.165, 0.84, 0.44, 1), color 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      width: 100%;
+      float: left;
+      border-radius: 5px;
+      padding: 20px 80px 14px 15px;
+      background-color: #f66d70;
+      color: #fff; }
+      ul.topbar-menu li.topbar-link-user a:after {
+        font-family: 'icomoon';
+        font-size: 54px;
+        color: #fff;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        display: block;
+        position: absolute;
+        top: 0; }
+      ul.topbar-menu li.topbar-link-user a:after {
+        -webkit-transition: color 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+        -moz-transition: color 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition: color 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+        right: 7px; }
+      ul.topbar-menu li.topbar-link-user a:hover {
+        background-color: #808285;
+        color: #fff; }
+        ul.topbar-menu li.topbar-link-user a:hover:after {
+          color: #fff; }
+
+/*# sourceMappingURL=menu.css.map */

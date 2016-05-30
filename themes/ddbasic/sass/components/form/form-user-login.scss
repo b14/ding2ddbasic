@@ -1,0 +1,81 @@
+@import 'base';
+
+// ==========================================================================
+// User login form
+// ==========================================================================
+
+.user-login-form {
+  @include transition(margin-bottom $speed $ease);
+  width: 100%;
+  float: left;
+  // When topbar is open
+  .topbar-is-open & {
+    margin-bottom: 45px;
+  }
+  .close-user-login {
+    @include place-icon(close);
+    width: 24px;
+    height: 24px;
+    float: right;
+    margin-bottom: 30px;
+    cursor: pointer;
+    &:after {
+      @include transform(translate(-50%, -50%));
+      @include transition(color $speed $ease);
+      top: 50%;
+      left: 50%;
+      
+    }
+    &:hover {
+      &:after {
+        color: $color-text;
+      }
+    }
+  }
+  .form-item {
+    width: 100%;
+    float: left;
+    margin: 0 0 15px;
+    > label {
+      display: none;
+    }
+  }
+  .submit-button-with-icon {
+    .color-and-icon {
+      @include button(profile, $white);
+      position: absolute;
+      background-color: $color-secondary;
+    }
+    &:hover {
+      .color-and-icon {
+        background-color: $grey-dark;
+      }
+    }
+  }
+  .form-links {
+    @include transition(opacity $speed $ease);
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    opacity: 0;
+    // When topbar is open
+    .topbar-is-open & {
+      @include transition(opacity $speed $speed $ease);
+      opacity: 1;
+    }
+    ul {
+      margin: 0;
+      list-style: none;
+      li {
+        float: right;
+        margin: 0;
+        a {
+          color: $charcoal-opacity-dark;
+          &:hover {
+            color: $color-text;
+          }
+        }
+      }
+    }
+  }
+}

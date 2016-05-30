@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACE,CAAE;ECQI,kBAAoB,EDPJ,UAAU;ECY1B,eAAiB,EDZD,UAAU;EC2B1B,UAAY,ED3BI,UAAU;;AEAlC,mBAAoB;EAClB,OAAO,EAAE,CAAC;EACV,yBAAM;IACJ,OAAO,EAAE,CAAC;IACV,8BAAK;MACH,UAAU,EAAE,IAAI;MAChB,OAAO,EAAE,IAAI;MACb,UAAU,EAAE,UAAU;MAEtB,mCAAO;QACL,gBAAgB,ECIjB,OAAO;MDDR,qCAAO;QACL,UAAU,EAAE,IAAI",
+"sources": ["../../../sass/contrib/neat/grid/_grid.scss","../../../sass/contrib/bourbon/addons/_prefixer.scss","../../../sass/components/panel/opening-hours.scss","../../../sass/configuration/_variables.scss"],
+"names": [],
+"file": "opening-hours.css"
+}

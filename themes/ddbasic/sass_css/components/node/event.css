@@ -1,0 +1,67 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.node-ding-event.node-teaser {
+  position: relative;
+  float: left;
+  width: 100%; }
+  .node-ding-event.node-teaser .inner {
+    -webkit-transition: width 300ms cubic-bezier(0.165, 0.84, 0.44, 1), background-color 300ms cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    -moz-transition: width 300ms cubic-bezier(0.165, 0.84, 0.44, 1), background-color 300ms cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: width 300ms cubic-bezier(0.165, 0.84, 0.44, 1), background-color 300ms cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 15px;
+    background-color: #e5e5e5; }
+    .node-ding-event.node-teaser .inner .info-top {
+      color: rgba(38, 38, 38, 0.54); }
+      .node-ding-event.node-teaser .inner .info-top > div {
+        float: left; }
+    .node-ding-event.node-teaser .inner .date {
+      font-family: "FaktPro-SemiBold", sans-serif;
+      font-size: 18px;
+      line-height: 24px;
+      clear: left;
+      color: #4d898e; }
+    .node-ding-event.node-teaser .inner .field-name-field-ding-event-lead {
+      -webkit-transition: height 300ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      -moz-transition: height 300ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      transition: height 300ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      height: 0;
+      opacity: 0; }
+    .node-ding-event.node-teaser .inner .event-bottom {
+      margin-top: 50px; }
+      .node-ding-event.node-teaser .inner .event-bottom .info-bottom {
+        float: left; }
+        .node-ding-event.node-teaser .inner .event-bottom .info-bottom .library {
+          color: #4d898e; }
+      .node-ding-event.node-teaser .inner .event-bottom .button {
+        -webkit-transition: opacity 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+        -moz-transition: opacity 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition: opacity 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+        float: right;
+        opacity: 0; }
+    .node-ding-event.node-teaser .inner:hover {
+      -webkit-transition: width 300ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1), background-color 300ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 300ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      -moz-transition: width 300ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1), background-color 300ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 300ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      transition: width 300ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1), background-color 300ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 300ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      width: 120%;
+      background-color: #fff;
+      box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.3); }
+      .node-ding-event.node-teaser .inner:hover .field-name-field-ding-event-lead {
+        -webkit-transition: height 300ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 300ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+        -moz-transition: height 300ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 300ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition: height 300ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 300ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+        opacity: 1;
+        height: 50px; }
+      .node-ding-event.node-teaser .inner:hover .event-bottom .button {
+        -webkit-transition: opacity 300ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1), background-color 300ms cubic-bezier(0.165, 0.84, 0.44, 1), color 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+        -moz-transition: opacity 300ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1), background-color 300ms cubic-bezier(0.165, 0.84, 0.44, 1), color 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition: opacity 300ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1), background-color 300ms cubic-bezier(0.165, 0.84, 0.44, 1), color 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+        opacity: 1; }
+
+/*# sourceMappingURL=event.css.map */

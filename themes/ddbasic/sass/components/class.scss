@@ -1,0 +1,202 @@
+@import 'base';
+
+
+// Components
+//
+//Styleguide 2.
+
+// Class
+//
+// Elements difened by a class that are formattet the same way, 
+// no matter what context they appear in.
+//
+// Styleguide 2.1
+
+
+.content-wrapper {
+  @include transition(opacity $speed $ease);
+  // When topbar is open
+  .topbar-is-open & {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+
+// More link button
+//
+// A link button used to link to more content of same type as in the context of the link button
+//
+// .more-link a:hover  - hover
+//
+// Markup:
+// <div class="more-link">
+//  <a class="{$modifiers}">More link</a>
+// </div>
+//
+//Styleguide 2.1.1
+
+.more-link {
+  clear: left;
+  text-align: left;
+  a {
+    @include button(arrow-right, $white);
+    &:after {
+      color: $charcoal-opacity-dark;
+    }
+  }
+}
+
+
+// Button
+//
+// @TODO - Description
+//
+// .button:hover  - hover
+//
+// Markup:
+// <div class="button" class="{$modifiers}">Button</div>
+// 
+// Styleguide 2.1.2
+
+.button {
+  @include transition(
+    background-color $speed $ease,
+    color $speed $ease
+  );
+  display: block;
+  border-radius: $round-corner;
+  padding: 20px 80px 14px 15px;
+  background-color: $grey;
+  color: $charcoal;
+  &:hover {
+    background-color: $color-secondary;
+    color: $color-text-on-secondary;
+  }
+}
+
+// Action Button
+//
+// @TODO - Description
+//
+// .action-button:hover   - hover
+// &.reserve-button       - button for reserving material
+//
+// Markup:
+// <div class="action-button" class="{$modifiers}">Button</div>
+// 
+// Styleguide 2.1.3
+
+.action-button {
+  color: $charcoal-opacity-dark;
+  background-color: $grey;
+  padding: 20px 80px 14px 15px;
+  border-radius: $round-corner;
+  &.reserve-button {
+    color: $white;
+    background-color: $grey-dark;
+  }
+  &:hover {
+    background-color: $color-secondary;
+    color: $color-text-on-secondary;
+  }
+}
+
+
+// Submit-button with icon
+//
+// In order to place icon on submit-button we wrap it in a div with the class "submit-button-with-icon" 
+// and place an empty div before it with the class "color-and-icon"
+//
+// Markup:
+// <div class="submit-button-with-icon">
+// <div class="color-and-icon"></div>
+// <input type="submit" value="Submit button with icon">
+// </div>
+// 
+// Styleguide 2.1.4
+
+.submit-button-with-icon {
+  position: relative;
+  .color-and-icon {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: $round-corner;
+    background-color: $charcoal;
+  }
+  input[type="submit"] {
+    position: relative;
+    z-index: 2;
+    background-color: transparent;
+  }
+}
+
+// Pager
+//
+// Markup:
+// <ul class="pager">
+// <li class="pager-previous"><a>previous</a></li>
+// <li class="pager-item"><a>1</a></li>
+// <li class="pager-current"><a>2</a></li>
+// <li class="pager-item"><a>3</a></li>
+// <li class="pager-next"><a>next</a></li>
+// </ul>
+//
+// Styleguide 2.1.5
+
+ul.pager {
+  li {
+    display: inline-block;
+    padding: 0;
+    margin: 17px 5px;
+    a {
+      color: $charcoal;
+    }
+    &.pager-current {
+      color: $color-text;
+      font-weight: $weight-normal;
+    }
+    &.pager-previous,
+    &.pager-next {
+      margin: 0;
+      text-indent: -9999px;
+      a {
+        display: block;
+      }
+    }
+    &.pager-previous {
+      float: left;
+      a {
+        @include arrow-button(arrow-left);
+        &:after {
+          text-indent: 0;
+        }
+      }
+    }
+    &.pager-next {
+      float: right;
+      a {
+        @include arrow-button(arrow-right);
+        &:after {
+          text-indent: 0;
+        }
+      }
+    }
+  }
+}
+
+
+
+// Info dash is used between information elements on fx. news and events
+.info-dash {
+  margin: 0 5px;
+}
+
+// Hide ajax progress throbber
+.ajax-progress-throbber {
+  //display: none;
+}
