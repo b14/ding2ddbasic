@@ -8,6 +8,10 @@ var jshint = require('gulp-jshint');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var sass = require('gulp-sass');
+var cleanCSS = require('gulp-clean-css');
+var concatCss = require('gulp-concat-css');
+var gulpStylelint = require('gulp-stylelint');
+
 
 // We only want to process our own non-processed JavaScript files.
 var jsPath = './scripts/ddbasic.!(*.min).js';
@@ -40,15 +44,18 @@ gulp.task('uglify', 'Minify JavaScript using Uglify',
 gulp.task('sass', 'Process SCSS using libsass',
   function () {
     gulp.src(sassPath)
-      .pipe(sass({
-        outputStyle: 'compressed',
-        includePaths: [
-          'node_modules/compass-mixins/lib',
-          // Zen grids is downloaded as a library using drush make.
-          '../../libraries/zen-grids/stylesheets'
+      .pipe(gulpStylelint({
+        syntax: 'scss',
+        failAfterError: false,
+        reporters: [
+          {formatter: 'string', console: true, save: 'stylelint'},
         ]
-      }).on('error', sass.logError))
-      .pipe(gulp.dest('./css'));
+      }))
+      .pipe(sass({outputStyle: 'compressed'})
+        .on('error', sass.logError))
+      .pipe(concatCss("bundle.css"))
+      .pipe(cleanCSS())
+      .pipe(gulp.dest('./gulp_css'));
   }
 );
 

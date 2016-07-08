@@ -1,0 +1,172 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(-360deg); } }
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg); }
+  to {
+    -moz-transform: rotate(-360deg); } }
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(-360deg);
+    -moz-transform: rotate(-360deg);
+    -ms-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    transform: rotate(-360deg); } }
+.node-ding-library.node-teaser {
+  position: relative; }
+  .node-ding-library.node-teaser .libraries {
+    float: left;
+    width: 100%; }
+    .node-ding-library.node-teaser .libraries .group-ding-library-left-column {
+      float: left;
+      display: block;
+      margin-right: 2.4911%;
+      width: 23.13167%; }
+      .node-ding-library.node-teaser .libraries .group-ding-library-left-column:last-child {
+        margin-right: 0; }
+      @media screen and (max-width: 950px) {
+        .node-ding-library.node-teaser .libraries .group-ding-library-left-column {
+          display: none; } }
+    .node-ding-library.node-teaser .libraries .group-ding-library-right-column {
+      float: left;
+      display: block;
+      margin-right: 2.4911%;
+      width: 74.37722%;
+      margin-right: 0;
+      margin-bottom: 40px; }
+      .node-ding-library.node-teaser .libraries .group-ding-library-right-column:last-child {
+        margin-right: 0; }
+      @media screen and (max-width: 950px) {
+        .node-ding-library.node-teaser .libraries .group-ding-library-right-column {
+          float: left;
+          display: block;
+          margin-right: 2.4911%;
+          width: 82.91815%; }
+          .node-ding-library.node-teaser .libraries .group-ding-library-right-column:last-child {
+            margin-right: 0; } }
+  .node-ding-library.node-teaser a.opening-hours-toggle {
+    position: static;
+    margin-top: -20px;
+    margin-left: 25.62278%; }
+    @media screen and (max-width: 950px) {
+      .node-ding-library.node-teaser a.opening-hours-toggle {
+        margin-top: -20px;
+        margin-left: 0px; } }
+  .node-ding-library.node-teaser .libraries-opening-hours {
+    float: left;
+    display: block;
+    margin-right: 2.4911%;
+    width: 74.37722%;
+    margin-right: 0;
+    margin: 20px 0 30px 25.62278%;
+    display: none; }
+    .node-ding-library.node-teaser .libraries-opening-hours:last-child {
+      margin-right: 0; }
+    .node-ding-library.node-teaser .libraries-opening-hours .day .name {
+      float: left;
+      display: block;
+      margin-right: 3.34928%;
+      width: 19.61722%; }
+      .node-ding-library.node-teaser .libraries-opening-hours .day .name:last-child {
+        margin-right: 0; }
+    .node-ding-library.node-teaser .libraries-opening-hours .day .times {
+      float: left;
+      display: block;
+      margin-right: 3.34928%;
+      width: 65.55024%;
+      margin-right: 0; }
+      .node-ding-library.node-teaser .libraries-opening-hours .day .times:last-child {
+        margin-right: 0; }
+      .node-ding-library.node-teaser .libraries-opening-hours .day .times .instance {
+        float: left;
+        display: block;
+        margin-right: 5.10949%;
+        width: 29.92701%; }
+        .node-ding-library.node-teaser .libraries-opening-hours .day .times .instance:last-child {
+          margin-right: 0; }
+        .node-ding-library.node-teaser .libraries-opening-hours .day .times .instance:nth-child(3n) {
+          margin-right: 0; }
+        .node-ding-library.node-teaser .libraries-opening-hours .day .times .instance:nth-child(3n+1) {
+          clear: left; }
+    @media screen and (max-width: 950px) {
+      .node-ding-library.node-teaser .libraries-opening-hours {
+        float: left;
+        display: block;
+        margin-right: 3.00429%;
+        width: 100%;
+        display: none;
+        margin: 0px; }
+        .node-ding-library.node-teaser .libraries-opening-hours:last-child {
+          margin-right: 0; } }
+  .node-ding-library.node-teaser .page-title {
+    font-family: "FaktPro-SemiBold", sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 5px 0 15px; }
+    .node-ding-library.node-teaser .page-title a {
+      color: #262626; }
+  .node-ding-library.node-teaser .field-name-field-ding-library-addresse {
+    float: left;
+    display: block;
+    margin-right: 3.34928%;
+    width: 31.10048%; }
+    .node-ding-library.node-teaser .field-name-field-ding-library-addresse:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 600px) {
+      .node-ding-library.node-teaser .field-name-field-ding-library-addresse {
+        float: left;
+        display: block;
+        margin-right: 3.00429%;
+        width: 100%;
+        margin-bottom: 20px; }
+        .node-ding-library.node-teaser .field-name-field-ding-library-addresse:last-child {
+          margin-right: 0; } }
+  .node-ding-library.node-teaser .field-name-field-ding-library-phone-number,
+  .node-ding-library.node-teaser .field-name-field-ding-library-fax-number,
+  .node-ding-library.node-teaser .field-name-field-ding-library-mail {
+    float: left;
+    display: block;
+    margin-right: 3.34928%;
+    width: 42.58373%;
+    float: right;
+    margin-right: 19.61722%; }
+    .node-ding-library.node-teaser .field-name-field-ding-library-phone-number:last-child,
+    .node-ding-library.node-teaser .field-name-field-ding-library-fax-number:last-child,
+    .node-ding-library.node-teaser .field-name-field-ding-library-mail:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 600px) {
+      .node-ding-library.node-teaser .field-name-field-ding-library-phone-number,
+      .node-ding-library.node-teaser .field-name-field-ding-library-fax-number,
+      .node-ding-library.node-teaser .field-name-field-ding-library-mail {
+        float: left;
+        display: block;
+        margin-right: 3.34928%;
+        width: 100%;
+        margin-right: 0px; }
+        .node-ding-library.node-teaser .field-name-field-ding-library-phone-number:last-child,
+        .node-ding-library.node-teaser .field-name-field-ding-library-fax-number:last-child,
+        .node-ding-library.node-teaser .field-name-field-ding-library-mail:last-child {
+          margin-right: 0; } }
+    .node-ding-library.node-teaser .field-name-field-ding-library-phone-number .field-label,
+    .node-ding-library.node-teaser .field-name-field-ding-library-fax-number .field-label,
+    .node-ding-library.node-teaser .field-name-field-ding-library-mail .field-label {
+      width: 100px;
+      float: left; }
+  .node-ding-library.node-teaser .field-name-field-ding-library-mail:last-child {
+    margin-right: 19.61722%; }
+
+/*# sourceMappingURL=library.css.map */

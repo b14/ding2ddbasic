@@ -5,17 +5,27 @@
 $black: #000;
 $black-overlay: rgba(0, 0, 0, 0.8);
 
+$color-standard-text: #474747;
+
 $charcoal: #262626;
+$charcoal-opacity-extra-dark: rgba(38, 38, 38, 0.8);
 $charcoal-opacity-dark: rgba(38, 38, 38, 0.54);
 $charcoal-opacity-light: rgba(38, 38, 38, 0.2); 
 $white: #fff;
 $white-opacity-dark: rgba(255, 255, 255, 0.54);
 $white-opacity-light: rgba(255, 255, 255, 0.2);
 
-
 $grey-light: #f1f2f2;
 $grey: #e5e5e5;
+$grey-medium: #cccccc;
 $grey-dark: #808285;
+
+$green: #24D273;
+$green-text: darken($green, 10);
+$red: #E22045;
+$red-text: $red;
+$yellow: #FFCA5F;
+$yellow-text: darken($yellow, 15);
 
 $color-primary: #4d898e; // @TODO selected by user
 $color-secondary: #f66d70; // @TODO selected by user
@@ -38,8 +48,10 @@ $color-text-on-secondary: $white; // @TODO selected by user
 // Distance
 // ==========================================================================
 $header-height: 148px;
+$header-height-second-level-menu: 209px;
 $distance-paragraph: 30px;
 $element-height: 54px;
+$wrapper-width: 90%;
 
 
 // ==========================================================================
@@ -65,4 +77,5 @@ $z-below: 50;
 $z-content: 100;
 $z-above: 150;
 $z-header: 300;
+$z-overlay: 900;
 $z-debug: 999;

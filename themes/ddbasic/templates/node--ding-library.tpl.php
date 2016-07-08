@@ -90,7 +90,7 @@ if ($view_mode == 'teaser') {
   $content['group_ding_library_right_column']['title']['#weight'] = '0';
 }
 ?>
-<div class="<?php print $classes; ?>">
+<div class="<?php print $classes; ?> clearfix">
   <?php if ($view_mode != 'teaser'): ?>
     <h2 class="page-title"><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
   <?php endif ?>

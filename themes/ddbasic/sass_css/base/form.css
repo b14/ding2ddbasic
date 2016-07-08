@@ -3,21 +3,42 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-.form-type-select:after {
+.form-type-select .select-wrapper:after {
   content: "\e900"; }
 
 input[type="checkbox"]:checked + label:after {
   content: "\e906"; }
 
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(-360deg); } }
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg); }
+  to {
+    -moz-transform: rotate(-360deg); } }
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(-360deg);
+    -moz-transform: rotate(-360deg);
+    -ms-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    transform: rotate(-360deg); } }
 fieldset {
   border: none;
   margin: 0;
-  padding: 25px 0;
-  border-top: 1px solid rgba(38, 38, 38, 0.2); }
-  fieldset:last-of-type {
-    border-bottom: 1px solid rgba(38, 38, 38, 0.2); }
+  padding: 25px 0; }
   fieldset.collapsible {
-    overflow: hidden; }
+    overflow: hidden;
+    padding: 28px 0 26px; }
     fieldset.collapsible.collapsed {
       height: 75px !important; }
     fieldset.collapsible .fieldset-legend {
@@ -143,7 +164,7 @@ input[type="radio"] + label:after {
 input[type="radio"]:checked + label:after {
   background-color: #4d898e; }
 
-.form-type-select {
+.form-type-select .select-wrapper {
   position: relative;
   overflow: hidden;
   height: 54px;
@@ -151,7 +172,7 @@ input[type="radio"]:checked + label:after {
   border: 1px solid #e5e5e5;
   border-radius: 5px;
   position: relative; }
-  .form-type-select:after {
+  .form-type-select .select-wrapper:after {
     font-family: 'icomoon';
     font-size: 54px;
     color: rgba(38, 38, 38, 0.54);
@@ -164,9 +185,9 @@ input[type="radio"]:checked + label:after {
     display: block;
     position: absolute;
     top: 0; }
-  .form-type-select:after {
+  .form-type-select .select-wrapper:after {
     right: 0; }
-  .form-type-select:before {
+  .form-type-select .select-wrapper:before {
     content: '';
     display: block;
     background-color: #e5e5e5;
@@ -184,7 +205,7 @@ select {
   line-height: 20px;
   font-weight: 400;
   position: absolute;
-  z-index: 500;
+  z-index: 50;
   width: 110%;
   height: 52px;
   -webkit-appearance: none;
@@ -226,12 +247,5 @@ input[type="submit"] {
   cursor: pointer; }
   input[type="submit"]:hover {
     background-color: #808285; }
-
-.form-item-search-block-form {
-  margin: 0; }
-  .form-item-search-block-form > label {
-    display: none; }
-  .form-item-search-block-form input[type="text"].form-autocomplete {
-    background-image: none; }
 
 /*# sourceMappingURL=form.css.map */

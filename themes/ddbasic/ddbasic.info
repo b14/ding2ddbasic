@@ -10,39 +10,89 @@
   stylesheets[all][] = sass_css/base/form.css
   stylesheets[all][] = sass_css/base/icomoon.css
   stylesheets[all][] = sass_css/base/standard.css
+  stylesheets[all][] = sass_css/base/table.css
   
   stylesheets[all][] = sass_css/components/class.css
   stylesheets[all][] = sass_css/components/field.css
   stylesheets[all][] = sass_css/components/footer.css
   stylesheets[all][] = sass_css/components/header.css
   stylesheets[all][] = sass_css/components/menu.css
+  stylesheets[all][] = sass_css/components/opening-hours.css
   stylesheets[all][] = sass_css/components/search.css 
+  stylesheets[all][] = sass_css/components/select-list.css 
+  stylesheets[all][] = sass_css/components/popupbar.css 
+  stylesheets[all][] = sass_css/components/cookie.css
+  stylesheets[all][] = sass_css/components/ui-datepicker.css
+  stylesheets[all][] = sass_css/components/entity-profile2.css 
   
+  stylesheets[all][] = sass_css/components/form/form-components.css
   stylesheets[all][] = sass_css/components/form/form-user-login.css
+  stylesheets[all][] = sass_css/components/form/form-user-profile.css
+  stylesheets[all][] = sass_css/components/form/form-loans.css
+  stylesheets[all][] = sass_css/components/form/form-class.css
   
   stylesheets[all][] = sass_css/components/node/event.css
+  stylesheets[all][] = sass_css/components/node/group.css
+  stylesheets[all][] = sass_css/components/node/library.css
   stylesheets[all][] = sass_css/components/node/news.css
   
-  stylesheets[all][] = sass_css/components/panel/panel-user-login.css
-  stylesheets[all][] = sass_css/components/panel/opening-hours.css
+  stylesheets[all][] = sass_css/components/panel/class-panel.css
+  stylesheets[all][] = sass_css/components/panel/pane-ding-facetbrowser.css
+  stylesheets[all][] = sass_css/components/panel/pane-search-result-count.css
+  stylesheets[all][] = sass_css/components/panel/pane-taxonomy-menu.css
+  stylesheets[all][] = sass_css/components/panel/pane-user-login.css
+  stylesheets[all][] = sass_css/components/panel/pane-ding-user-frontend-ding-user-loan-number.css
+  stylesheets[all][] = sass_css/components/panel/pane-reservations.css
+  stylesheets[all][] = sass_css/components/panel/pane-profile2.css
+  stylesheets[all][] = sass_css/components/panel/pane-menu.css
   
-  stylesheets[all][] = sass_css/components/ting_object/ting-object.css
-  stylesheets[all][] = sass_css/components/ting_object/ting-collection.css
-  
+  stylesheets[all][] = sass_css/components/ting-object/ting-object.css
+  stylesheets[all][] = sass_css/components/ting-object/ting-collection.css
+  stylesheets[all][] = sass_css/components/ting-object/material-item.css
+    
   stylesheets[all][] = sass_css/components/view/view.css
 
   
   stylesheets[all][] = sass_css/layout/panel.css
+  stylesheets[all][] = scripts/contrib/slick.css
   
 
 ;----------// JavaScripts
+  scripts[] = scripts/contrib/imagesloaded.pkgd.min.js
+  scripts[] = scripts/contrib/masonry.pkgd.min.js
+  scripts[] = scripts/contrib/slick.js
+
   scripts[] = scripts/jquery.cookie.js
+  scripts[] = scripts/respond.min.js
+  scripts[] = scripts/jquery.scrollto.js
+  scripts[] = scripts/html5shiv.js
+  scripts[] = scripts/equalize.min.js
+  scripts[] = scripts/scalefix.js
+  scripts[] = scripts/selectivizr-min.js
+  scripts[] = scripts/site.js
+  _scripts[] = scripts/ddbasic.topbar.menu.min.js
+  _scripts[] = scripts/ddbasic.common.min.js
+  scripts[] = scripts/ddbasic.common.js
+  _scripts[] = scripts/ddbasic.facet.min.js
+  _scripts[] = scripts/ddbasic.search.min.js
   
-  scripts[] = scripts/topbar.js
+  scripts[] = scripts/popupbar.js
+  scripts[] = scripts/socialshare.js
+  scripts[] = scripts/utils.js
+  scripts[] = scripts/menu.js
+  scripts[] = scripts/profile-dropdown.js
+  scripts[] = scripts/cookies.js
+  scripts[] = scripts/footer.js
+  scripts[] = scripts/misc.js
+  
   
   scripts[] = scripts/node/event.js
   scripts[] = scripts/node/news.js
-
+  
+  scripts[] = scripts/ting-object/ting-object.js
+  
+  scripts[] = scripts/view.js
+  
 
 ;----------// Regions
   regions[header]            = Header

@@ -1,4 +1,4 @@
-@import 'base';
+@import '../base.scss';
 
 //
 // Extra facetbrowsers
@@ -14,56 +14,67 @@
 
 .panel-pane {
   .pane-content {
-    // Frontpage layout
+    
+    
+    // Ding frontpage layout
     .frontpage-layout {
       .panel-pane {
-        @include background-image(linear-gradient($grey-light 0, $white 100%));
-        padding: 40px 0 30px;
-        .pane-title,
-        .pane-content {
-          @include outer-container;
-        }
-        .pane-title {
-          @include font('header-large');
-          color: $color-text;
+        @include linear-gradient(to top, $white 30px, $grey-light 100%);
+        .panel-pane-inner {
+          @include wrapper;
+          position: relative; // Is set to relative to position absolute elements inside panels correct
+          padding: 40px 0 30px;
         }
       }
     }
-    // Ding2 site template
+    // Ding2 Site template
     .ding2-site-template {
       .panel-pane {
-        @include background-image(linear-gradient($grey-light 0, $white 100%));
-        padding: 40px 0 30px;
-        .pane-title,
-        .pane-content {
-          @include outer-container;
-        }
-        .pane-title {
-          @include font('header-large');
-          color: $color-text;
+        @include linear-gradient(to top, $white 30px, $grey-light 100%);
+        .panel-pane-inner {
+          @include wrapper;
+          position: relative; // Is set to relative to position absolute elements inside panels correct
+          padding: 40px 0 30px;
         }
       }
     }
     
-    // Default layout
-    .default-layout {
-      @include background-image(linear-gradient($grey-light 0, $white 100%));
-      padding: 40px 0 30px;
-      .layout-wrapper {
-        @include outer-container;
-        .primary-content {
-          @include span-columns(8);
-          @include omega;
-          float: right;
-        }
-        .secondary-content {
-          @include span-columns(4);
+    // Default panel layout (Two sidebars, content in middle)
+    .default-panel-layout {
+      .left-and-main-content {
+        @include linear-gradient(to top, $white 30px, $grey-light 100%);
+        padding: 40px 0 30px;
+        .layout-wrapper {
+          @include wrapper;
+          .secondary-content {
+            @include span-columns(4);
+            
+            @include media($tablet) {
+             @include span-columns(12); 
+             padding-bottom: 15px;
+            }
+          }
+          .primary-content {
+            @include span-columns(8);
+            float: right;
+            @include omega;
+            
+            @include media($tablet) {
+             @include span-columns(12); 
+            }
+          }
         }
       }
-    }
-    // More link
-    .more-link {
-      @include span-columns(3);
+      .attachments-wrapper {
+        .panel-pane {
+          @include linear-gradient(to top, $white 30px, $grey-light 100%);
+          .panel-pane-inner {
+            @include wrapper;
+            position: relative; // Is set to relative to position absolute elements inside panels correct
+            padding: 40px 0 30px;
+          }
+        }
+      }
     }
   }
 }

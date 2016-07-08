@@ -1,0 +1,22 @@
+@import '../../base.scss';
+
+// ==========================================================================
+// User profile
+// ==========================================================================
+
+.panel-pane.pane-profile2 {
+  h2 {
+    @include font('header-large');
+    color: $color-text;
+  }
+  .content {
+    > .field {
+      @include span-columns(6);
+      @include omega(2n);
+      margin-bottom: 10px;
+      .field-label {
+        color: $color-text;
+      }
+    }
+  }
+}

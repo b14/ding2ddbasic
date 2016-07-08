@@ -1,0 +1,181 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+#user-profile-form .pane-content > div #edit-profile-provider-alma-field-alma-reservation-pause .fieldset-wrapper .date-no-float .form-type-date-popup .date-padding .form-item:after {
+  content: "\e900"; }
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(-360deg); } }
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg); }
+  to {
+    -moz-transform: rotate(-360deg); } }
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(-360deg);
+    -moz-transform: rotate(-360deg);
+    -ms-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    transform: rotate(-360deg); } }
+#user-profile-form input[type=text]:not(.date-clear),
+#user-profile-form input[type=password] {
+  border-radius: 0;
+  background-color: #cccccc;
+  color: #262626; }
+#user-profile-form label {
+  color: #4d898e; }
+#user-profile-form .form-wrapper {
+  padding: 0; }
+#user-profile-form .pane-content > div > .form-wrapper:not(#edit-pass--2):not(#edit-profile-provider-alma-field-alma-reservation-pause):not(#edit-profile-provider-alma-field-alma-mail) {
+  float: left;
+  display: block;
+  margin-right: 2.4911%;
+  width: 48.75445%; }
+  #user-profile-form .pane-content > div > .form-wrapper:not(#edit-pass--2):not(#edit-profile-provider-alma-field-alma-reservation-pause):not(#edit-profile-provider-alma-field-alma-mail):last-child {
+    margin-right: 0; }
+  #user-profile-form .pane-content > div > .form-wrapper:not(#edit-pass--2):not(#edit-profile-provider-alma-field-alma-reservation-pause):not(#edit-profile-provider-alma-field-alma-mail):nth-child(2n) {
+    margin-right: 0; }
+  #user-profile-form .pane-content > div > .form-wrapper:not(#edit-pass--2):not(#edit-profile-provider-alma-field-alma-reservation-pause):not(#edit-profile-provider-alma-field-alma-mail):nth-child(2n+1) {
+    clear: left; }
+  @media screen and (max-width: 600px) {
+    #user-profile-form .pane-content > div > .form-wrapper:not(#edit-pass--2):not(#edit-profile-provider-alma-field-alma-reservation-pause):not(#edit-profile-provider-alma-field-alma-mail) {
+      width: 100%; } }
+#user-profile-form .pane-content > div #edit-pass--2 {
+  width: 100%;
+  float: left;
+  padding: 20px 0;
+  margin: 20px 0;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5; }
+  #user-profile-form .pane-content > div #edit-pass--2 .fieldset-wrapper {
+    width: 100%;
+    float: left; }
+  #user-profile-form .pane-content > div #edit-pass--2 .form-type-password {
+    float: left;
+    display: block;
+    margin-right: 2.4911%;
+    width: 48.75445%; }
+    #user-profile-form .pane-content > div #edit-pass--2 .form-type-password:last-child {
+      margin-right: 0; }
+    #user-profile-form .pane-content > div #edit-pass--2 .form-type-password:nth-child(2n) {
+      margin-right: 0; }
+    #user-profile-form .pane-content > div #edit-pass--2 .form-type-password:nth-child(2n+1) {
+      clear: left; }
+    @media screen and (max-width: 600px) {
+      #user-profile-form .pane-content > div #edit-pass--2 .form-type-password {
+        width: 100%; } }
+#user-profile-form .pane-content > div #edit-profile-provider-alma-field-alma-reservation-pause {
+  width: 100%;
+  float: left;
+  padding: 20px 0;
+  margin: 20px 0;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5; }
+  #user-profile-form .pane-content > div #edit-profile-provider-alma-field-alma-reservation-pause .fieldset-wrapper {
+    width: 100%; }
+    #user-profile-form .pane-content > div #edit-profile-provider-alma-field-alma-reservation-pause .fieldset-wrapper .fieldset-description {
+      margin-bottom: 10px; }
+    #user-profile-form .pane-content > div #edit-profile-provider-alma-field-alma-reservation-pause .fieldset-wrapper .date-no-float {
+      float: left;
+      display: block;
+      margin-right: 2.4911%;
+      width: 48.75445%;
+      clear: none; }
+      #user-profile-form .pane-content > div #edit-profile-provider-alma-field-alma-reservation-pause .fieldset-wrapper .date-no-float:last-child {
+        margin-right: 0; }
+      @media screen and (max-width: 600px) {
+        #user-profile-form .pane-content > div #edit-profile-provider-alma-field-alma-reservation-pause .fieldset-wrapper .date-no-float {
+          width: 100%; } }
+      #user-profile-form .pane-content > div #edit-profile-provider-alma-field-alma-reservation-pause .fieldset-wrapper .date-no-float .form-type-date-popup {
+        width: 100%;
+        margin: 0; }
+        #user-profile-form .pane-content > div #edit-profile-provider-alma-field-alma-reservation-pause .fieldset-wrapper .date-no-float .form-type-date-popup .date-padding {
+          width: 100%;
+          padding: 0; }
+          #user-profile-form .pane-content > div #edit-profile-provider-alma-field-alma-reservation-pause .fieldset-wrapper .date-no-float .form-type-date-popup .date-padding .form-item {
+            width: 100%;
+            position: relative;
+            height: 54px;
+            margin: 20px 0;
+            background-color: #fff;
+            border: 1px solid #e5e5e5;
+            border-radius: 5px;
+            position: relative; }
+            #user-profile-form .pane-content > div #edit-profile-provider-alma-field-alma-reservation-pause .fieldset-wrapper .date-no-float .form-type-date-popup .date-padding .form-item:after {
+              font-family: 'icomoon';
+              font-size: 54px;
+              color: rgba(38, 38, 38, 0.54);
+              speak: none;
+              font-style: normal;
+              font-weight: normal;
+              font-variant: normal;
+              text-transform: none;
+              line-height: 1;
+              display: block;
+              position: absolute;
+              top: 0; }
+            #user-profile-form .pane-content > div #edit-profile-provider-alma-field-alma-reservation-pause .fieldset-wrapper .date-no-float .form-type-date-popup .date-padding .form-item:after {
+              right: 0;
+              pointer-events: none; }
+            #user-profile-form .pane-content > div #edit-profile-provider-alma-field-alma-reservation-pause .fieldset-wrapper .date-no-float .form-type-date-popup .date-padding .form-item:before {
+              content: '';
+              display: block;
+              background-color: #e5e5e5;
+              background-repeat: no-repeat;
+              background-position: right 4px center;
+              width: 54px;
+              height: 52px;
+              position: absolute;
+              right: 0;
+              top: 0;
+              pointer-events: none; }
+            #user-profile-form .pane-content > div #edit-profile-provider-alma-field-alma-reservation-pause .fieldset-wrapper .date-no-float .form-type-date-popup .date-padding .form-item input {
+              width: 100%;
+              background-color: transparent;
+              cursor: pointer; }
+            #user-profile-form .pane-content > div #edit-profile-provider-alma-field-alma-reservation-pause .fieldset-wrapper .date-no-float .form-type-date-popup .date-padding .form-item > label {
+              position: absolute;
+              top: -20px; }
+#user-profile-form .pane-content > div #edit-ding-user-fee-sms {
+  width: 100%;
+  float: left; }
+#user-profile-form .pane-content > div #edit-profile-provider-alma-field-alma-mail {
+  width: 100%;
+  float: left;
+  margin-bottom: 20px; }
+  #user-profile-form .pane-content > div #edit-profile-provider-alma-field-alma-mail input {
+    float: left;
+    display: block;
+    margin-right: 2.4911%;
+    width: 48.75445%; }
+    #user-profile-form .pane-content > div #edit-profile-provider-alma-field-alma-mail input:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 600px) {
+      #user-profile-form .pane-content > div #edit-profile-provider-alma-field-alma-mail input {
+        width: 100%;
+        margin-bottom: 10px; } }
+  #user-profile-form .pane-content > div #edit-profile-provider-alma-field-alma-mail .description {
+    float: left;
+    display: block;
+    margin-right: 2.4911%;
+    width: 48.75445%;
+    margin-right: 0; }
+    #user-profile-form .pane-content > div #edit-profile-provider-alma-field-alma-mail .description:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 600px) {
+      #user-profile-form .pane-content > div #edit-profile-provider-alma-field-alma-mail .description {
+        width: 100%; } }
+
+/*# sourceMappingURL=form-user-profile.css.map */

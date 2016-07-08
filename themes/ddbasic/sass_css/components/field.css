@@ -3,4 +3,79 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(-360deg); } }
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg); }
+  to {
+    -moz-transform: rotate(-360deg); } }
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(-360deg);
+    -moz-transform: rotate(-360deg);
+    -ms-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    transform: rotate(-360deg); } }
+.field-name-ting-author {
+  color: rgba(38, 38, 38, 0.54); }
+
+.field-name-ting-details-genre .ting-material-detail {
+  display: block; }
+  .field-name-ting-details-genre .ting-material-detail::first-letter {
+    text-transform: uppercase; }
+
+.field-name-ting-subjects strong {
+  display: block; }
+.field-name-ting-subjects a {
+  margin-right: 15px; }
+
+.field-name-ting-series .field-label {
+  font-family: "FaktPro-SemiBold", sans-serif; }
+
+.field-name-ding-availability-holdings p {
+  margin-bottom: 0; }
+
+.field-name-ting-type ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  .field-name-ting-type ul li {
+    color: rgba(38, 38, 38, 0.54); }
+
+.field-name-field-ding-library-title-image {
+  margin-bottom: 20px; }
+
+.ting-carousel-field {
+  margin-left: -2.5%; }
+  .ting-carousel-field > .field-items .slick-track > .field-item .ting-object {
+    padding-left: 10%;
+    padding-left: 10.76923%; }
+  @media screen and (max-width: 1100px) {
+    .ting-carousel-field > .field-items .slick-track > .field-item .ting-object {
+      padding-left: 7.5%; } }
+  @media screen and (max-width: 600px) {
+    .ting-carousel-field {
+      margin-left: 0; }
+      .ting-carousel-field > .field-items .slick-track > .field-item .ting-object {
+        padding-left: 0; } }
+
+div.search-field-in-content--message {
+  width: 100%;
+  float: left;
+  border: none;
+  padding: 20px 15px;
+  margin-bottom: 30px;
+  background-color: #4d898e;
+  color: #fff; }
+
 /*# sourceMappingURL=field.css.map */

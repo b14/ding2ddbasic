@@ -1,15 +1,21 @@
 <?php
-require_once __DIR__ . '/template.form.php';  
+require_once __DIR__ . '/utils.inc';
+
+require_once __DIR__ . '/template.block.php';
+require_once __DIR__ . '/template.form.php';
 require_once __DIR__ . '/template.node.php';
 require_once __DIR__ . '/template.field.php';
+require_once __DIR__ . '/template.opening_hours.php';
+require_once __DIR__ . '/template.ctools_plugin.php';
 
 /**
  * @file
  * Preprocess and Process Functions.
  */
- 
+
 // Includes frequently used theme functions that gets theme info, css files etc.
-include_once drupal_get_path('theme', 'ddbasic') . '/inc/functions.inc';
+// @B14 outcommentet
+//include_once drupal_get_path('theme', 'ddbasic') . '/inc/functions.inc';
 
 
 /**
@@ -51,6 +57,10 @@ function ddbasic_preprocess_html(&$vars) {
     'weight' => 999,
     'preprocess' => FALSE,
   ));
+
+  // Add additional body classes
+  $vars['classes_array'] = array_merge($vars['classes_array'], ddbasic_body_class());
+
 }
 
 /**
@@ -98,17 +108,19 @@ function ddbasic_process_html(&$vars) {
 
   // Color module.
   // Hook into color.module.
-  if (module_exists('color')) {
-    _color_html_alter($vars);
-  }
+  // @B14 outcommentet
+  //if (module_exists('color')) {
+  //  _color_html_alter($vars);
+  //}
+  
 }
-
 
 
 /**
  * Implements hook_preprocess_panels_pane().
  */
 function ddbasic_preprocess_panels_pane(&$vars) {
+  //dpm($vars);
   // Suggestions base on sub-type.
   $vars['theme_hook_suggestions'][] = 'panels_pane__' . str_replace('-', '__', $vars['pane']->subtype);
   $vars['theme_hook_suggestions'][] = 'panels_pane__'  . $vars['pane']->panel . '__' . str_replace('-', '__', $vars['pane']->subtype);
@@ -142,6 +154,12 @@ function ddbasic_preprocess_panels_pane(&$vars) {
       $vars['content']['#theme_wrappers'] = array('menu_tree__sub_menu');
     }
   }
+
+
+  if($vars['pane']->subtype == 'menu_block-main_menu_second_level') {
+    ddbasic_body_class('has-second-level-menu');
+  }
+
 }
 
 /**
@@ -157,11 +175,22 @@ function ddbasic_panels_default_style_render_region($vars) {
 }
 
 /**
- * @TODO Remove this
  * Implements theme_menu_tree().
  */
 function ddbasic_menu_tree__menu_block__1($vars) {
   return '<ul class="main-menu">' . $vars['tree'] . '</ul>';
+}
+/**
+ * Implements theme_menu_tree().
+ */
+function ddbasic_menu_tree__menu_block__main_menu_second_level($vars) {
+  return '<ul class="main-menu-second-level">' . $vars['tree'] . '</ul>';
+}
+/**
+ * Implements theme_menu_tree().
+ */
+function ddbasic_menu_tree__sub_menu($vars) {
+  return '<ul class="main-menu-third-level">' . $vars['tree'] . '</ul>';
 }
 
 /**
@@ -169,13 +198,6 @@ function ddbasic_menu_tree__menu_block__1($vars) {
  */
 function ddbasic_menu_tree__menu_block__2($vars) {
   return '<ul class="secondary-menu">' . $vars['tree'] . '</ul>';
-}
-
-/**
- * Implements theme_menu_tree().
- */
-function ddbasic_menu_tree__sub_menu($vars) {
-  return '<ul class="sub-menu">' . $vars['tree'] . '</ul>';
 }
 
 /**
@@ -192,7 +214,57 @@ function ddbasic_menu_tree__user_menu($vars) {
   return '<ul class="system-user-menu">' . $vars['tree'] . '</ul>';
 }
 
+/**
+ * Implements hook_preprocess_views_view_unformatted().
+ *
+ * Overwrite views row classes
+ */
+function ddbasic_preprocess_views_view(&$vars) {
+  switch ($vars['name']) {
+    case 'ding_event':
+      switch ($vars['view']->current_display) {
+        case 'ding_event_list_frontpage':
+        case 'ding_event_library_list':
+        case 'ding_event_groups_list':
+        case 'ding_event_list_same_tag':
+          // Add max-two-rows class
+          $vars['classes_array'][] = 'max-two-rows';
+        break;
+      }
+    break;
+    case 'ding_news':
+       switch ($vars['view']->current_display) {
+        case 'ding_news_groups_list':
+        case 'ding_news_list_same_tag':
+          // Add slide-on-mobile class
+          $vars['classes_array'][] = 'slide-on-mobile';
+        break;
+        case 'ding_news_list':
+          // Add first-child-large class
+          //$vars['classes_array'][] = 'first-child-large';
+        break;
+        case 'ding_news_frontpage_list':
+          // Add slide-on-mobile class
+          $vars['classes_array'][] = 'slide-on-mobile';
+          // Add first-child-large class
+          $vars['classes_array'][] = 'first-child-large';
+        break;
+      }
+    break;
+    case 'ding_groups':
+       switch ($vars['view']->current_display) {
+        case 'panel_pane_1':
+          // Add slide-on-mobile class
+          $vars['classes_array'][] = 'slide-on-mobile';
+        break;
+        
+       
+      }
+    break;
+    
+  }
 
+}
 /**
  * Implements hook_preprocess_views_view_unformatted().
  *
@@ -414,7 +486,13 @@ function ddbasic_menu_link__menu_tabs_menu($vars) {
       $element['#attributes']['class'][] = 'topbar-link-signout';
 
       break;
-
+    
+    case 'libraries':
+      $title_prefix = '<i class="icon-clock"></i>';
+      $element['#localized_options']['attributes']['class'][] = 'topbar-link-opening-hours';
+      $element['#attributes']['class'][] = 'topbar-link-opening-hours';
+      break;
+      
     default:
       $title_prefix = '<i class="icon-align-justify"></i>';
       $element['#localized_options']['attributes']['class'][] = 'topbar-link-menu';
@@ -499,6 +577,17 @@ function ddbasic_load_plugins() {
 
     // Add variable to js so we can check if it is set.
     drupal_add_js(array('ddbasic' => array('load_equalize' => theme_get_setting('load_equalize'))), 'setting');
+  }
+}
+
+/**
+ * Implements hook_js_alter().
+ */
+function ddbasic_js_alter(&$javascript) {
+  // Set the ding_popup.js to the popup-hijack.js instead.
+  $ding_popup = drupal_get_path('module', 'ding_popup') . '/ding_popup.js';
+  if (isset($javascript[$ding_popup])) {
+    $javascript[$ding_popup]['data'] = drupal_get_path('theme', 'ddbasic') . '/scripts/popup-hijack.js';
   }
 }
 
@@ -625,15 +714,50 @@ function ddbasic_process_page(&$vars) {
  * Adds wrapper classes to the different groups on the ting object.
  */
 function ddbasic_preprocess_ting_object(&$vars) {
-  
   //
   // Add tpl suggestions for node view modes.
-  if (isset($variables['elements']['#view_mode'])) {
-    $variables['theme_hook_suggestions'][] = $variables['elements']['#bundle'] . '__view_mode__' . $variables['elements']['#view_mode'];
+  if (isset($vars['elements']['#view_mode'])) {
+    $vars['theme_hook_suggestions'][] = $vars['elements']['#bundle'] . '__view_mode__' . $vars['elements']['#view_mode'];
   }
-  
-  $variables['classes_array'][0] = str_replace('_', '-', $variables['elements']['#bundle']);
-  
+  switch ($vars['elements']['#entity_type']) {
+    case 'ting_collection':
+      // Add a reference to the ting_object if it's included in a
+      // ting_collection.
+      foreach ($vars['object']->entities as &$ting_entity) {
+        $ting_entity->in_collection = $vars['object'];
+      }
+      break;
+      
+    case 'ting_object':
+      $uri = entity_uri('ting_object', $vars['object']);
+      $vars['ting_object_url'] = url($uri['path']);
+      break;
+  }
+
+  // Inject the availability from the collection into the actual ting object.
+  // Notice it's only done on the "search_result" view mode.
+  if ($vars['elements']['#entity_type'] == 'ting_object' && isset($vars['object']->in_collection)
+      && isset($vars['elements']['#view_mode'])
+      && in_array($vars['elements']['#view_mode'], array('search_result', 'collection_list'))) {
+    if (isset($vars['content']['group_ting_right_col_search'])) {
+      $right_col = 'group_ting_right_col_search';
+    } else {
+      $right_col = 'group_ting_right_col_collection';
+    }
+    $vars['content'][$right_col]['availability'] = field_view_field(
+      'ting_collection',
+      $vars['object']->in_collection,
+      'ting_collection_types',
+      array(
+        'type' => 'ding_availability_with_labels',
+        'label' => 'hidden',
+        'weight' => 9999,
+      )
+    );
+  }
+
+
+
   if (isset($vars['elements']['#view_mode']) && $vars['elements']['#view_mode'] == 'full') {
     switch ($vars['elements']['#entity_type']) {
       case 'ting_object':
@@ -669,7 +793,8 @@ function ddbasic_preprocess_ting_object(&$vars) {
           unset($content['group_material_details']);
         }
 
-        if (isset($content['group_holdings_available']) && $content['group_holdings_available']) {
+        if (isset($content['content']['ding_availability_holdings'])) {
+
           $vars['content']['holdings-available'] = array(
             '#prefix' => '<div class="ting-object-wrapper">',
             '#suffix' => '</div>',
@@ -679,7 +804,7 @@ function ddbasic_preprocess_ting_object(&$vars) {
               'details' => $content['group_holdings_available'],
             ),
           );
-          unset($content['group_holdings_available']);
+          unset($content['content']['ding_availability_holdings']);
         }
 
         if (isset($content['group_periodical_issues']) && $content['group_periodical_issues']) {
@@ -721,17 +846,58 @@ function ddbasic_preprocess_ting_object(&$vars) {
         if (!empty($content)) {
           $vars['content'] += $content;
         }
+
         break;
 
-      case 'ting_collection':
-        // Assumes that field only has one value.
-        foreach ($vars['content']['ting_entities'][0] as &$type) {
-          $type['#prefix'] = '<div class="ting-collection-wrapper"><div class="ting-collection-inner-wrapper">' . $type['#prefix'];
-          $type['#suffix'] = '</div></div>';
-        }
-        break;
+      //case 'ting_collection':
+      //  // Assumes that field only has one value.
+      //  foreach ($vars['content']['ting_entities'][0] as &$type) {
+      //    $type['#prefix'] = '<div class="ting-collection-wrapper"><div class="ting-collection-inner-wrapper">' . $type['#prefix'];
+      //    $type['#suffix'] = '</div></div>';
+      //  }
+      //  break;
     }
   }
 }
 
+/**
+ * Preprocess function for material_item theme function. 
+ */
+function ddbasic_preprocess_material_item(&$variables) {
+  //Add label for styling to checkbox
+  $element = $variables['element'];
 
+  $element[$element['#id']]['#title'] = ".";
+
+  // Render the checkbox.
+  $variables['checkbox'] = drupal_render($element[$element['#id']]);
+  
+}
+
+/**
+ * Preprocess function form element
+ */
+
+function ddbasic_preprocess_form_element(&$variables) {
+  //remove label to profile date field
+  if($variables['element']['#id'] == 'edit-profile-provider-alma-field-alma-reservation-pause-und-0-value2') {
+    $variables['element']['#title'] = '';
+  }
+  //Change label for date picker
+  if($variables['element']['#id'] == 'edit-profile-provider-alma-field-alma-reservation-pause-und-0-value2-datepicker-popup-0') {
+    $variables['element']['#title'] = 'Til dato:';
+  }
+  //Change label for date picker
+  if($variables['element']['#id'] == 'edit-profile-provider-alma-field-alma-reservation-pause-und-0-value-datepicker-popup-0') {
+    $variables['element']['#title'] = 'Fra dato:';
+  }
+  
+}
+
+/**
+ * Implements hook_preprocess_ting_search_carousel_collection().
+ */
+function ddbasic_preprocess_ting_search_carousel_collection(&$variables) {
+  $object = ding_entity_load($variables['collection']->id, 'ting_object');
+  $variables['content'] = ting_object_view($object, 'teaser');
+}

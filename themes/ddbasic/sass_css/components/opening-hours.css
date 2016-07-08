@@ -1,0 +1,118 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(-360deg); } }
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg); }
+  to {
+    -moz-transform: rotate(-360deg); } }
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(-360deg);
+    -moz-transform: rotate(-360deg);
+    -ms-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    transform: rotate(-360deg); } }
+.js-opening-hours-toggle-element {
+  display: none; }
+
+.opening-hours-week {
+  padding: 0; }
+
+.opening-hours-table table, .opening-hours-table thead, .opening-hours-table tbody, .opening-hours-table th, .opening-hours-table td, .opening-hours-table tr {
+  display: block; }
+.opening-hours-table thead {
+  width: 100%;
+  float: left;
+  display: none; }
+  .front .opening-hours-table thead {
+    display: block; }
+.opening-hours-table th {
+  float: left;
+  display: block;
+  margin-right: 2.4911%;
+  width: 23.13167%; }
+  .opening-hours-table th:last-child {
+    margin-right: 0; }
+  .node-ding-library.node-teaser .opening-hours-table th, .left-and-main-content .primary-content .opening-hours-table th {
+    float: left;
+    display: block;
+    margin-right: 3.78378%;
+    width: 22.16216%; }
+    .node-ding-library.node-teaser .opening-hours-table th:last-child, .left-and-main-content .primary-content .opening-hours-table th:last-child {
+      margin-right: 0; }
+  @media screen and (max-width: 950px) {
+    .opening-hours-table th {
+      display: none; }
+      .front .opening-hours-table th:first-child {
+        display: block;
+        width: 100%;
+        font-family: "FaktPro-SemiBold", sans-serif; } }
+.opening-hours-table tr {
+  width: 100%;
+  float: left; }
+  @media screen and (max-width: 950px) {
+    .opening-hours-table tr.even {
+      background: #e5e5e5;
+      padding: 20px; }
+    .opening-hours-table tr.odd {
+      background: #fff;
+      padding: 20px; } }
+.opening-hours-table td {
+  float: left;
+  display: block;
+  margin-right: 2.4911%;
+  width: 23.13167%; }
+  .opening-hours-table td:last-child {
+    margin-right: 0; }
+  .node-ding-library.node-teaser .opening-hours-table td, .left-and-main-content .primary-content .opening-hours-table td {
+    float: left;
+    display: block;
+    margin-right: 3.78378%;
+    width: 22.16216%; }
+    .node-ding-library.node-teaser .opening-hours-table td:last-child, .left-and-main-content .primary-content .opening-hours-table td:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 950px) {
+      .node-ding-library.node-teaser .opening-hours-table td, .left-and-main-content .primary-content .opening-hours-table td {
+        float: left;
+        display: block;
+        margin-right: 3.78378%;
+        width: 100%; }
+        .node-ding-library.node-teaser .opening-hours-table td:last-child, .left-and-main-content .primary-content .opening-hours-table td:last-child {
+          margin-right: 0; } }
+  @media screen and (max-width: 950px) {
+    .opening-hours-table td {
+      display: block;
+      width: 100%;
+      padding: 0; }
+      .opening-hours-table td:first-child {
+        color: #4d898e;
+        margin-bottom: 0;
+        padding: 0; }
+      .opening-hours-table td:last-child {
+        margin-top: 10px;
+        margin-bottom: 0; }
+      .opening-hours-table td.empty {
+        display: none !important; }
+      .opening-hours-table td:before {
+        display: block;
+        content: attr(data-label) " ";
+        font-family: "FaktPro-SemiBold", sans-serif; } }
+@media screen and (max-width: 950px) {
+  .opening-hours-table {
+    margin-top: 20px; } }
+
+/*# sourceMappingURL=opening-hours.css.map */

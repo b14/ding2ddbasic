@@ -1,4 +1,4 @@
-@import 'base';
+@import '../../base.scss';
 
 // ==========================================================================
 // User login form
@@ -24,12 +24,14 @@
       @include transition(color $speed $ease);
       top: 50%;
       left: 50%;
-      
     }
     &:hover {
       &:after {
         color: $color-text;
       }
+    }
+    @include media($mobile) {
+      display: none;
     }
   }
   .form-item {
@@ -39,6 +41,12 @@
     > label {
       display: none;
     }
+    .description {
+      display: none;
+    }
+  }
+  .form-actions {
+    margin-bottom: 20px;
   }
   .submit-button-with-icon {
     .color-and-icon {
@@ -53,16 +61,7 @@
     }
   }
   .form-links {
-    @include transition(opacity $speed $ease);
-    position: absolute;
-    bottom: 10px;
-    right: 0;
-    opacity: 0;
-    // When topbar is open
-    .topbar-is-open & {
-      @include transition(opacity $speed $speed $ease);
-      opacity: 1;
-    }
+    clear: both;
     ul {
       margin: 0;
       list-style: none;

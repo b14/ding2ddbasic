@@ -1,0 +1,97 @@
+@import '../../base.scss';
+
+// ==========================================================================
+// User material item
+// ==========================================================================
+
+//@TODO create common class for .pane-reservations and .pane-bookmarks
+.pane-reservations, .pane-bookmarks, .pane-loans {
+  width: 100%;
+  float: left;
+  margin-bottom: 30px;
+  .actions-container {
+    position: relative;
+    float: left;
+    
+    width: 100%;
+    float: left;
+    padding: 10px;
+    margin-bottom: 30px;
+    
+    background-color: $grey-dark;
+    
+    .select-all {
+      @include media($mobile){
+        width: 100%;
+        float: left;
+      }
+      .form-item {
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        @include transform(translateY(-50%));
+        
+        @include media($mobile){
+          position: static;
+          @include transform(translateY(0%));
+        }
+        
+        label {
+          color: $white;
+        }
+      }
+    }
+    
+    .action-buttons {
+      width: calc(100% - 180px);
+      float: right;
+      
+      @include media($tablet){
+        width: calc(100% - 130px);
+      }
+      
+      @include media($mobile){
+        width: 100%;
+        float: left; 
+      }
+      > div {
+        @include span-columns(6);
+        
+        @include media($mobile){
+          width: 100%;
+          margin-bottom: 10px;
+        }  
+      }
+    }
+  }
+  .action-buttons {
+    float: left;
+    > div {
+      background: none;
+      &.delete-reservations,
+      &.delete-bookmarks {
+        input {
+          background-color: $red;
+          color: $white;
+          &:disabled {
+            background-color: lighten($grey-dark, 5%);
+            color: $charcoal-opacity-dark;
+          }
+        }
+      }
+      
+      &.update-reservations,
+      &.renew-loan-button {
+        padding: 0;
+        input {
+          background-color: $green;
+          color: $white;
+          &:disabled {
+            background-color: lighten($grey-dark, 5%);
+            color: $charcoal-opacity-dark;
+          }
+        }
+      }
+    }
+  }
+}

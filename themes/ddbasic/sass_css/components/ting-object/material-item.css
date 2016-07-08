@@ -1,0 +1,171 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(-360deg); } }
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg); }
+  to {
+    -moz-transform: rotate(-360deg); } }
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(-360deg);
+    -moz-transform: rotate(-360deg);
+    -ms-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    transform: rotate(-360deg); } }
+.material-item {
+  position: relative;
+  float: left;
+  min-height: 136px;
+  width: 100%;
+  padding: 10px 20px; }
+  .material-item:after {
+    content: "";
+    display: table;
+    clear: both; }
+  @media screen and (max-width: 600px) {
+    .material-item {
+      padding: 10px; } }
+  .material-item .left-column {
+    float: left;
+    min-width: 130px;
+    min-height: 28px; }
+    @media screen and (max-width: 600px) {
+      .material-item .left-column {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        min-width: 60px;
+        min-height: 60px; } }
+    .material-item .left-column .item-checkbox {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      transform: translateY(-50%); }
+      @media screen and (max-width: 600px) {
+        .material-item .left-column .item-checkbox {
+          left: 10px;
+          top: 10px;
+          -webkit-transform: translateY(0%);
+          -moz-transform: translateY(0%);
+          -ms-transform: translateY(0%);
+          -o-transform: translateY(0%);
+          transform: translateY(0%); } }
+      .material-item .left-column .item-checkbox .form-type-checkbox {
+        position: relative;
+        width: 28px;
+        height: 28px; }
+        .material-item .left-column .item-checkbox .form-type-checkbox.form-disabled {
+          visibility: hidden; }
+        .material-item .left-column .item-checkbox .form-type-checkbox label {
+          text-indent: -9999px; }
+          .material-item .left-column .item-checkbox .form-type-checkbox label:after {
+            text-indent: 0; }
+    .material-item .left-column .ting-cover {
+      float: left;
+      width: 70px;
+      margin-left: 60px; }
+      @media screen and (max-width: 600px) {
+        .material-item .left-column .ting-cover {
+          display: none; } }
+  .material-item .right-column {
+    float: left;
+    width: calc(100% - 130px);
+    padding-left: 30px; }
+    @media screen and (max-width: 600px) {
+      .material-item .right-column {
+        width: 100%;
+        padding: 0; } }
+    .material-item .right-column .item-title {
+      width: calc(100% - 190px);
+      float: left;
+      margin: 10px 0 10px 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: #4d898e; }
+      @media screen and (max-width: 600px) {
+        .material-item .right-column .item-title {
+          width: 100%;
+          min-height: 50px;
+          margin-top: 0;
+          padding: 0 10px 0 60px;
+          white-space: normal; } }
+    .material-item .right-column .messages.warning {
+      position: absolute;
+      top: 16px;
+      right: 0;
+      width: 190px;
+      height: 28px;
+      padding: 5px 10px 0 0;
+      margin: 0;
+      background-color: #E22045;
+      background-image: none;
+      color: #fff;
+      border: 0;
+      text-align: right; }
+      @media screen and (max-width: 600px) {
+        .material-item .right-column .messages.warning {
+          position: static;
+          float: right;
+          margin-right: -10px; } }
+    .material-item .right-column .item-information-list {
+      width: 100%;
+      float: left;
+      margin: 0;
+      padding: 0;
+      /*
+            li.reserve {
+              list-style: none;
+              display: block;
+              clear: both;
+              float: right;
+            }
+      */ }
+      .material-item .right-column .item-information-list li {
+        float: left;
+        margin-right: 30px;
+        list-style: none; }
+        #ding-loan-loans-form .material-item .right-column .item-information-list li {
+          margin-right: 100px; }
+        @media screen and (max-width: 600px) {
+          .material-item .right-column .item-information-list li {
+            width: 50%;
+            box-sizing: border-box;
+            padding-right: 10px;
+            margin: 0 0 20px 0; } }
+        .material-item .right-column .item-information-list li .item-information-label {
+          font-family: "FaktPro-SemiBold", sans-serif;
+          color: #808285; }
+        .material-item .right-column .item-information-list li.created-date {
+          display: none; }
+        .material-item .right-column .item-information-list li.material-number {
+          display: none; }
+  .material-item.odd {
+    background-color: #cccccc; }
+    @media screen and (max-width: 600px) {
+      .material-item.odd {
+        padding-top: 20px; } }
+    .material-item.odd .left-column {
+      top: 10px; }
+      .material-item.odd .left-column .item-checkbox .form-type-checkbox:before {
+        background-color: #f1f2f2; }
+
+/*# sourceMappingURL=material-item.css.map */

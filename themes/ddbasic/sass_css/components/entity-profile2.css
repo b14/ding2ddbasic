@@ -1,0 +1,66 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(-360deg); } }
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg); }
+  to {
+    -moz-transform: rotate(-360deg); } }
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(-360deg);
+    -moz-transform: rotate(-360deg);
+    -ms-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    transform: rotate(-360deg); } }
+.entity-profile2 .field-name-field-ding-staff-position {
+  float: left;
+  display: block;
+  margin-right: 7.86517%;
+  width: 100%;
+  float: none;
+  padding-bottom: 20px;
+  margin: 20px 0px 30px 0px;
+  border-bottom: 1px solid #cccccc;
+  font-family: "FaktPro-SemiBold", sans-serif;
+  font-size: 18px;
+  line-height: 24px; }
+  .entity-profile2 .field-name-field-ding-staff-position:last-child {
+    margin-right: 0; }
+.entity-profile2 .field-name-og-group-ref .field-label,
+.entity-profile2 .field-name-field-ding-staff-department .field-label,
+.entity-profile2 .field-name-field-ding-staff-email .field-label,
+.entity-profile2 .field-name-field-ding-staff-phone .field-label,
+.entity-profile2 .field-name-field-ding-staff-work-areas .field-label {
+  font-family: "FaktPro-SemiBold", sans-serif;
+  float: left;
+  width: 120px; }
+.entity-profile2 .field-name-og-group-ref .field-items,
+.entity-profile2 .field-name-field-ding-staff-department .field-items,
+.entity-profile2 .field-name-field-ding-staff-email .field-items,
+.entity-profile2 .field-name-field-ding-staff-phone .field-items,
+.entity-profile2 .field-name-field-ding-staff-work-areas .field-items {
+  float: left;
+  width: calc(100% - 120px);
+  word-break: break-all; }
+.entity-profile2 .field-name-field-ding-staff-description {
+  float: left;
+  width: 100%;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #cccccc; }
+
+/*# sourceMappingURL=entity-profile2.css.map */

@@ -1,4 +1,4 @@
-@import 'base';
+@import '../base.scss';
 
 
 // Form
@@ -15,14 +15,10 @@ fieldset {
   border: none;
   margin: 0;
   padding: 25px 0;
-  border-top: 1px solid $charcoal-opacity-light;
-  &:last-of-type {
-    border-bottom: 1px solid $charcoal-opacity-light;
-  }
   
   &.collapsible {
     overflow: hidden;
-    
+    padding: 28px 0 26px;
     &.collapsed {
       height: 75px !important;
     }
@@ -188,43 +184,47 @@ input[type="radio"]  {
 //
 // Markup:
 // <div class="form-type-select">
+// <div class="select-wrapper">
 // <select>
 // <option>Option</option>
 // <option>Option</option>
 // </select>
 // </div>
+// </div>
 //
 // Styleguide 1.2.4
  
 .form-type-select {
-  position: relative;
-  overflow: hidden;
-  height: $element-height;
-  background-color: $white;
-  border: 1px solid $grey;
-  border-radius: $round-corner;
-  @include place-icon(arrow-down-small, $charcoal-opacity-dark);
-  &:after {
-    right: 0;
-  }
-  &:before {
-    content: '';
-    display: block;
-    background-color: $grey;
-    background-repeat: no-repeat;
-    background-position: right 4px center;
-    width: $element-height;
+  .select-wrapper {
+    position: relative;
+    overflow: hidden;
     height: $element-height;
-    position: absolute;
-    right: 0;
-    top: 0;
+    background-color: $white;
+    border: 1px solid $grey;
+    border-radius: $round-corner;
+    @include place-icon(arrow-down-small, $charcoal-opacity-dark);
+    &:after {
+      right: 0;
+    }
+    &:before {
+      content: '';
+      display: block;
+      background-color: $grey;
+      background-repeat: no-repeat;
+      background-position: right 4px center;
+      width: $element-height;
+      height: $element-height;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
   }
 }
 
 select {
   @include font('base');
   position: absolute;
-  z-index: 500;
+  z-index: $z-below;
   width: 110%;
   height: 52px;
   -webkit-appearance: none;
@@ -275,19 +275,5 @@ input[type="submit"]  {
   cursor: pointer;
   &:hover {
     background-color: $grey-dark;
-  }
-}
-
-// ==========================================================================
-// Search form
-// ==========================================================================
-
-.form-item-search-block-form {
-  margin: 0;
-  > label {
-    display: none;
-  }
-  input[type="text"].form-autocomplete {
-    background-image: none;
   }
 }

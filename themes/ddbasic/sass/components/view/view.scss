@@ -1,12 +1,17 @@
-@import 'base';
+@import '../../base.scss';
 
 // ==========================================================================
 // All views
 // ==========================================================================
+
 .view {
   .view-content {
     .views-row {
-      margin-bottom: 30px;
+      margin-bottom: getGutter();
+      // Tablet
+      @include media($tablet) {
+        margin-bottom: 30px;
+      }
       // Small grid
       .grid-small & {
         @include span-columns(3);
@@ -14,13 +19,95 @@
       }
       // Medium grid
       .grid-medium & {
-        @include span-columns(4);
-        @include omega(3n);
+        // In Ding frontpage layout & Ding2 site template
+        .frontpage-layout &,
+        .ding2-site-template .ding2-site-template & {
+          @include span-columns(4);
+          @include omega(3n);
+          // Tablet
+          @include media($tablet) {
+            @include omega-reset(3n, 12);
+            @include span-columns(6);
+            @include omega(2n);
+          }
+
+          // Mobile
+          @include media($mobile) {
+            @include omega-reset(2n, 12);
+            width: 100%;
+            margin-right: 0 !important;
+            margin-bottom: 0;
+          }
+
+        }
+        // In Default panel layout (Two sidebars, content in middle)
+        .default-panel-layout .primary-content & {
+          @include span-columns(4 of 8);
+          @include omega(2n);
+          // Tablet
+          @include media($tablet) {
+            @include span-columns(6);
+          }
+          // Mobile
+          @include media($mobile) {
+            @include span-columns(12);
+          }
+        }
+        .default-panel-layout .attachments-wrapper & {
+          @include span-columns(4);
+          @include omega(3n);
+          // Tablet
+          @include media($tablet) {
+            @include omega-reset(3n, 12);
+            @include span-columns(6);
+            @include omega(2n);
+          }
+          // Mobile
+          @include media($mobile) {
+            @include omega-reset(2n, 12);
+            width: 100%;
+            margin-right: 0 !important;
+          }
+        }
       }
       // Large grid
       .grid-large & {
         @include span-columns(6);
         @include omega(2n);
+      }
+    }
+    .grid-sizer {
+      // Medium grid
+      .grid-medium & {
+        // In Ding frontpage layout & Ding2 site template
+        .frontpage-layout &,
+        .ding2-site-template .ding2-site-template & {
+          width: getColumn(4);
+        }
+        // In Default panel layout (Two sidebars, content in middle)
+        .default-panel-layout .primary-content & {
+          width: getColumn(4 of 8);
+        }
+        .default-panel-layout .attachments-wrapper & {
+          width: getColumn(4);
+        }
+      }
+    }
+    .grid-gutter {
+      // Medium grid
+      .grid-medium & {
+        // In Ding frontpage layout & Ding2 site template
+        .frontpage-layout &,
+        .ding2-site-template .ding2-site-template & {
+          width: getGutter();
+        }
+        // In Default panel layout (Two sidebars, content in middle)
+        .default-panel-layout .primary-content & {
+          width: getGutter(8);
+        }
+        .default-panel-layout .attachments-wrapper & {
+          width: getGutter();
+        }
       }
     }
     // List
@@ -29,12 +116,21 @@
       list-style: none;
     }
   }
+
+  &.max-two-rows,
+  &.slide-on-mobile {
+    .more-link {
+      @include media($mobile) {
+        margin-top: -54px;
+      }
+    }
+  }
 }
 
+// ==========================================================================
+// View ding news
+// ==========================================================================
 
-// ==========================================================================
-// View din news
-// ==========================================================================
 .view-ding-news {
   // First child large
   &.first-child-large {
@@ -42,22 +138,262 @@
       .views-row {
         // First child
         &:first-child {
-          // Medium grid
+          // Medium grid 
           .grid-medium & {
-            @include span-columns(8);
+            // In Ding frontpage layout
+            .frontpage-layout & {
+              @include span-columns(8);
+              // Tablet
+              @include media($tablet) {
+                width: 100%;
+                margin-right: 0;
+              }
+            }
+            // In Default panel layout (Two sidebars, content in middle)
+            .default-panel-layout .primary-content & {
+              width: 100%;
+              margin-right: 0;
+            }
           }
         }
         // Medium grid
         .grid-medium & {
-          @include omega-reset(3n, 12);
-          &:nth-child(5n + 2) {
-            margin-right: 0;
+          // In Ding frontpage layout
+          .frontpage-layout & {
+            @include omega-reset(3n, 12);
+            &:nth-child(3n + 2) {
+              margin-right: 0;
+            }
+            &:nth-child(3n + 3) {
+              clear: left;
+            }
+            // Tablet
+            @include media($tablet) {
+              @include omega-reset(2n, 12);
+              &:nth-child(3n + 2) {
+                margin-right: getGutter();
+              }
+              &:nth-child(3n + 3) {
+                clear: none;
+              }
+              &:nth-child(2n + 1) {
+                margin-right: 0;
+              }
+              &:nth-child(2n + 2) {
+                clear: left;
+              }
+            }
+
+            // Mobile
+            @include media($mobile) {
+              width: 100%;
+              margin: 0 !important;
+              clear: none !important;
+              //display: block !important;
+            }
           }
-          &:nth-child(5n + 3) {
-            clear: left;
+          // In Default panel layout (Two sidebars, content in middle)
+          .default-panel-layout .primary-content & {
+            @include omega-reset(2n, 8);
+            &:nth-child(2n + 3) {
+              margin-right: 0;
+            }
+            &:nth-child(2n + 4) {
+              clear: left;
+            }
+            // Tablet
+            @include media($tablet) {
+              @include omega-reset(2n, 12);
+            }
           }
         }
       }
     }
   }
+  // Slide on mobile
+  &.slide-on-mobile {
+    // Mobile
+    @include media($mobile) {
+      .view-content {
+        .views-row {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+// ==========================================================================
+// View ding event
+// ==========================================================================
+
+.view-ding-event {
+  .view-content {
+    .group-separator {
+      .separator-title {
+        @include font('header-large');
+        width: 100%;
+        float: left;
+        padding: 15px 15px 10px;
+        margin-bottom: 15px;
+        background-color: $grey-dark;
+        color: $white;
+        &::first-letter {
+          text-transform: uppercase;
+        }
+        span {
+          @include font('base');
+          display: block;
+        }
+      }
+      .view-elements {
+        float: left;
+        width: 100%;
+      }
+      .views-row {
+        margin-bottom: 10px !important;
+        margin-right: 0 !important;
+        &:last-child {
+          margin-bottom: 30px !important;
+        }
+      }
+    }
+  }
+  .more-link {
+    margin-top: 20px;
+  }
+  // Max two rows
+  &.max-two-rows {
+    width: 100%;
+    float: left;
+
+    .view-content {
+      .views-row {
+        margin-bottom: 10px;
+      }
+      .grid-sizer {
+        width: getColumn(4);
+      }
+      .grid-gutter {
+        width: getGutter();
+      }
+      // Tablet
+      @include media($tablet) {
+        .grid-sizer {
+          width: getColumn(6);
+        }
+      }
+    }
+    // No flex
+    &.no-flex {
+      .view-content {
+        .views-row {
+          @include span-columns(4);
+          @include omega(3n);
+          // Tablet
+          @include media($tablet) {
+            @include omega-reset(3n, 12);
+            @include span-columns(6);
+            @include omega(2n);
+          }
+          // Mobile
+          @include media($mobile) {
+            @include span-columns(12);
+            display: block !important;
+          }
+        }
+      }
+    }
+    // Flex
+    &.flex {
+      .view-content {
+        .view-elements-inner {
+          height: 400px;
+          display: flex;
+          flex-flow: column wrap;
+          align-items: flex-start;
+          .views-row {
+            width: getColumn(4);
+            margin-right: getGutter();
+          }
+          // Tablet
+          @include media($tablet) {
+            height: 600px;
+            .views-row {
+              width: getColumn(6);
+              margin-right: getGutter();
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+// ==========================================================================
+// View ding library list
+// ==========================================================================
+
+.view-ding-library.view-display-id-ding_library_libraries_list {
+  .views-row {
+    margin-bottom: 0;
+    padding: 15px 0;
+    border-top: 1px solid $charcoal-opacity-light;
+    &:last-child {
+      border-bottom: 1px solid $charcoal-opacity-light;
+    }
+  }
+}
+
+// ==========================================================================
+// View ding groups
+// ==========================================================================
+
+.view-ding-groups {
+
+  .views-row {
+    margin-bottom: getGutter();
+    &:nth-child(1),
+    &:nth-child(2) {
+      @include span-columns(6);
+      // Mobile
+      @include media($mobile) {
+        @include span-columns(12);
+      }
+    }
+    &:nth-child(2) {
+      @include omega();
+    }
+    &:nth-child(n+3) {
+      @include span-columns(3);
+    }
+    &:nth-child(4n+6) {
+      @include omega();
+    }
+    &:nth-child(4n+7) {
+      clear: left;
+    }
+
+  }
+  // Tablet
+  @include media($tablet) {
+    .view-content {
+      .views-row {
+        @include span-columns(4);
+        @include omega(3n);
+      }
+    }
+  }
+  // Mobile
+  @include media($mobile) {
+    .view-content {
+      .views-row {
+        width: 100%;
+        margin: 0 !important;
+        clear: none !important;
+      }
+    }
+  }
+
 }

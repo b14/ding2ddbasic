@@ -1,0 +1,104 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(-360deg); } }
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg); }
+  to {
+    -moz-transform: rotate(-360deg); } }
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(-360deg);
+    -moz-transform: rotate(-360deg);
+    -ms-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    transform: rotate(-360deg); } }
+.pane-reservations, .pane-bookmarks, .pane-loans {
+  width: 100%;
+  float: left;
+  margin-bottom: 30px; }
+  .pane-reservations .actions-container, .pane-bookmarks .actions-container, .pane-loans .actions-container {
+    position: relative;
+    float: left;
+    width: 100%;
+    float: left;
+    padding: 10px;
+    margin-bottom: 30px;
+    background-color: #808285; }
+    @media screen and (max-width: 600px) {
+      .pane-reservations .actions-container .select-all, .pane-bookmarks .actions-container .select-all, .pane-loans .actions-container .select-all {
+        width: 100%;
+        float: left; } }
+    .pane-reservations .actions-container .select-all .form-item, .pane-bookmarks .actions-container .select-all .form-item, .pane-loans .actions-container .select-all .form-item {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      transform: translateY(-50%); }
+      @media screen and (max-width: 600px) {
+        .pane-reservations .actions-container .select-all .form-item, .pane-bookmarks .actions-container .select-all .form-item, .pane-loans .actions-container .select-all .form-item {
+          position: static;
+          -webkit-transform: translateY(0%);
+          -moz-transform: translateY(0%);
+          -ms-transform: translateY(0%);
+          -o-transform: translateY(0%);
+          transform: translateY(0%); } }
+      .pane-reservations .actions-container .select-all .form-item label, .pane-bookmarks .actions-container .select-all .form-item label, .pane-loans .actions-container .select-all .form-item label {
+        color: #fff; }
+    .pane-reservations .actions-container .action-buttons, .pane-bookmarks .actions-container .action-buttons, .pane-loans .actions-container .action-buttons {
+      width: calc(100% - 180px);
+      float: right; }
+      @media screen and (max-width: 950px) {
+        .pane-reservations .actions-container .action-buttons, .pane-bookmarks .actions-container .action-buttons, .pane-loans .actions-container .action-buttons {
+          width: calc(100% - 130px); } }
+      @media screen and (max-width: 600px) {
+        .pane-reservations .actions-container .action-buttons, .pane-bookmarks .actions-container .action-buttons, .pane-loans .actions-container .action-buttons {
+          width: 100%;
+          float: left; } }
+      .pane-reservations .actions-container .action-buttons > div, .pane-bookmarks .actions-container .action-buttons > div, .pane-loans .actions-container .action-buttons > div {
+        float: left;
+        display: block;
+        margin-right: 2.4911%;
+        width: 48.75445%; }
+        .pane-reservations .actions-container .action-buttons > div:last-child, .pane-bookmarks .actions-container .action-buttons > div:last-child, .pane-loans .actions-container .action-buttons > div:last-child {
+          margin-right: 0; }
+        @media screen and (max-width: 600px) {
+          .pane-reservations .actions-container .action-buttons > div, .pane-bookmarks .actions-container .action-buttons > div, .pane-loans .actions-container .action-buttons > div {
+            width: 100%;
+            margin-bottom: 10px; } }
+  .pane-reservations .action-buttons, .pane-bookmarks .action-buttons, .pane-loans .action-buttons {
+    float: left; }
+    .pane-reservations .action-buttons > div, .pane-bookmarks .action-buttons > div, .pane-loans .action-buttons > div {
+      background: none; }
+      .pane-reservations .action-buttons > div.delete-reservations input, .pane-reservations .action-buttons > div.delete-bookmarks input, .pane-bookmarks .action-buttons > div.delete-reservations input, .pane-bookmarks .action-buttons > div.delete-bookmarks input, .pane-loans .action-buttons > div.delete-reservations input, .pane-loans .action-buttons > div.delete-bookmarks input {
+        background-color: #E22045;
+        color: #fff; }
+        .pane-reservations .action-buttons > div.delete-reservations input:disabled, .pane-reservations .action-buttons > div.delete-bookmarks input:disabled, .pane-bookmarks .action-buttons > div.delete-reservations input:disabled, .pane-bookmarks .action-buttons > div.delete-bookmarks input:disabled, .pane-loans .action-buttons > div.delete-reservations input:disabled, .pane-loans .action-buttons > div.delete-bookmarks input:disabled {
+          background-color: #8d8f91;
+          color: rgba(38, 38, 38, 0.54); }
+      .pane-reservations .action-buttons > div.update-reservations, .pane-reservations .action-buttons > div.renew-loan-button, .pane-bookmarks .action-buttons > div.update-reservations, .pane-bookmarks .action-buttons > div.renew-loan-button, .pane-loans .action-buttons > div.update-reservations, .pane-loans .action-buttons > div.renew-loan-button {
+        padding: 0; }
+        .pane-reservations .action-buttons > div.update-reservations input, .pane-reservations .action-buttons > div.renew-loan-button input, .pane-bookmarks .action-buttons > div.update-reservations input, .pane-bookmarks .action-buttons > div.renew-loan-button input, .pane-loans .action-buttons > div.update-reservations input, .pane-loans .action-buttons > div.renew-loan-button input {
+          background-color: #24D273;
+          color: #fff; }
+          .pane-reservations .action-buttons > div.update-reservations input:disabled, .pane-reservations .action-buttons > div.renew-loan-button input:disabled, .pane-bookmarks .action-buttons > div.update-reservations input:disabled, .pane-bookmarks .action-buttons > div.renew-loan-button input:disabled, .pane-loans .action-buttons > div.update-reservations input:disabled, .pane-loans .action-buttons > div.renew-loan-button input:disabled {
+            background-color: #8d8f91;
+            color: rgba(38, 38, 38, 0.54); }
+
+/*# sourceMappingURL=pane-reservations.css.map */

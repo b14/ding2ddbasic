@@ -9,6 +9,29 @@
 .user-login-form .submit-button-with-icon .color-and-icon:after {
   content: "\e90b"; }
 
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(-360deg); } }
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg); }
+  to {
+    -moz-transform: rotate(-360deg); } }
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(-360deg);
+    -moz-transform: rotate(-360deg);
+    -ms-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    transform: rotate(-360deg); } }
 .user-login-form {
   -webkit-transition: margin-bottom 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
   -moz-transition: margin-bottom 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -50,12 +73,19 @@
       left: 50%; }
     .user-login-form .close-user-login:hover:after {
       color: #4d898e; }
+    @media screen and (max-width: 600px) {
+      .user-login-form .close-user-login {
+        display: none; } }
   .user-login-form .form-item {
     width: 100%;
     float: left;
     margin: 0 0 15px; }
     .user-login-form .form-item > label {
       display: none; }
+    .user-login-form .form-item .description {
+      display: none; }
+  .user-login-form .form-actions {
+    margin-bottom: 20px; }
   .user-login-form .submit-button-with-icon .color-and-icon {
     position: relative;
     -webkit-transition: background-color 300ms cubic-bezier(0.165, 0.84, 0.44, 1), color 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -87,26 +117,15 @@
       -moz-transition: color 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
       transition: color 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
       right: 7px; }
-    .user-login-form .submit-button-with-icon .color-and-icon:hover {
+    .no-touch .user-login-form .submit-button-with-icon .color-and-icon:hover {
       background-color: #808285;
       color: #fff; }
-      .user-login-form .submit-button-with-icon .color-and-icon:hover:after {
+      .no-touch .user-login-form .submit-button-with-icon .color-and-icon:hover:after {
         color: #fff; }
   .user-login-form .submit-button-with-icon:hover .color-and-icon {
     background-color: #808285; }
   .user-login-form .form-links {
-    -webkit-transition: opacity 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
-    -moz-transition: opacity 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
-    transition: opacity 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
-    position: absolute;
-    bottom: 10px;
-    right: 0;
-    opacity: 0; }
-    .topbar-is-open .user-login-form .form-links {
-      -webkit-transition: opacity 300ms 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
-      -moz-transition: opacity 300ms 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
-      transition: opacity 300ms 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
-      opacity: 1; }
+    clear: both; }
     .user-login-form .form-links ul {
       margin: 0;
       list-style: none; }

@@ -1,0 +1,53 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(-360deg); } }
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg); }
+  to {
+    -moz-transform: rotate(-360deg); } }
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(-360deg);
+    -moz-transform: rotate(-360deg);
+    -ms-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    transform: rotate(-360deg); } }
+.panel-pane.pane-profile2 h2 {
+  font-family: "FaktPro-Light", sans-serif;
+  font-size: 40px;
+  line-height: 44px;
+  color: #4d898e; }
+  @media screen and (max-width: 600px) {
+    .panel-pane.pane-profile2 h2 {
+      font-size: 30px;
+      line-height: 36px; } }
+.panel-pane.pane-profile2 .content > .field {
+  float: left;
+  display: block;
+  margin-right: 2.4911%;
+  width: 48.75445%;
+  margin-bottom: 10px; }
+  .panel-pane.pane-profile2 .content > .field:last-child {
+    margin-right: 0; }
+  .panel-pane.pane-profile2 .content > .field:nth-child(2n) {
+    margin-right: 0; }
+  .panel-pane.pane-profile2 .content > .field:nth-child(2n+1) {
+    clear: left; }
+  .panel-pane.pane-profile2 .content > .field .field-label {
+    color: #4d898e; }
+
+/*# sourceMappingURL=pane-profile2.css.map */

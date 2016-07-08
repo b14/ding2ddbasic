@@ -10,6 +10,14 @@
 // Add-ons for Bourbon Neat
 // ==========================================================================
 
+// Adds an actual width the the Bourbon Neat outer-container mixin.
+//
+@mixin wrapper() {
+  @include outer-container;
+  width: $wrapper-width;
+  //width: $outer_width;
+}
+
 // Omega reset
 @mixin omega-reset($nth, $columns) {
   &:nth-child(#{$nth}) { margin-right: flex-gutter($columns); }
@@ -57,8 +65,17 @@
 %icon-plus {
   content: "\e909";
 }
+%icon-minus {
+  content: "\e90d";
+}
 %icon-check {
   content: "\e906";
+}
+%icon-clock{
+  content: "\e90e";
+}
+%icon-spinner {
+  content: "\e90f";
 }
 
 // Place-icon
@@ -132,12 +149,14 @@
     @include transition(color $speed $ease);
     right: 7px;
   }
-  // Hover
-  &:hover {
-    background-color: $background-color-hover;
-    color: $color-hover;
-    &:after {
+  // Hover for non touch devices
+  .no-touch & {
+    &:hover {
+      background-color: $background-color-hover;
       color: $color-hover;
+      &:after {
+        color: $color-hover;
+      }
     }
   }
 }
@@ -152,55 +171,44 @@
 //
 // Styleguide 3.1.4
 
-@mixin arrow-button($icon) {
-  @include place-icon($icon, $charcoal-opacity-dark);
-  @include transition(background-color $speed $ease);
-  width: 68px;
-  height: 54px;
-  padding: 0;
-  background-color: $grey;
-  border-radius: $round-corner;
+@mixin arrow-button(
+  $icon
+  ) {
   &:after {
-    @include transition(color $speed $ease);  
-    right: 7px;
+    @extend %icon-#{$icon};
+    @include transition(
+      background-color $speed $ease,
+      color $speed $ease
+    );
+    position: absolute;
+    display: block;
+    width: 68px;
+    height: 54px;
+    font-family: 'icomoon';
+    font-size: 54px;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    text-align: center;
+    background-color: $grey;
+    color: $charcoal-opacity-dark;
+    border-radius: $round-corner;
+    @include media($mobile) {
+      width: 54px;
+    }
   }
-  &:hover {
-    background-color: $grey-dark;
-    &:after {
-      color: $white-opacity-dark;
+  // Hover for non touch devices
+  .no-touch & {
+    &:hover {
+      &:after {
+        background-color: $grey-dark;
+        color: $white-opacity-dark;
+      }
     }
   }
 }
-//@mixin arrow-button(
-//  $icon, 
-//  $size: 54px
-//  ) {
-//  @extend %icon-#{$icon};
-//  @include transition(
-//    background-color $speed $ease,
-//    color $speed $ease
-//  );
-//  display: block;
-//  width: 68px;
-//  height: 54px;
-//  font-family: 'icomoon';
-//  font-size: $size;
-//  speak: none;
-//  font-style: normal;
-//  font-weight: normal;
-//  font-variant: normal;
-//  text-transform: none;
-//  line-height: 1;
-//  text-align: center;
-//  background-color: $grey;
-//  color: $charcoal-opacity-dark;
-//  border-radius: $round-corner;
-//  &:hover {
-//    background-color: $grey-dark;
-//    &:after {
-//      color: $white-opacity-dark;
-//    }
-//  }
-//}
 
 

@@ -1,4 +1,4 @@
-@import 'base';
+@import '../base.scss';
 
 
 // Base
@@ -16,20 +16,30 @@ html, body {
   @include font('base');
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: $charcoal;
+  color: $color-standard-text;
 }
 body {
+  @include transition(background-color $speed $ease);
   padding-top: $header-height; // Compensate for fixed header
   background-color: $white;
-  @include transition(background-color $speed $ease);
   // Toolbar
   &.toolbar {
     padding-top: $header-height + 65px !important;
   }
   // When topbar is open
-  &.topbar-is-open {
+  &.topbar-is-open,
+  &.overlay-is-active {
+    @include transition(background-color 0 $ease);
     background-color: $charcoal;
     overflow: hidden;
+  }
+  // When second level menu is visible
+  &.has-second-level-menu {
+    padding-top: $header-height-second-level-menu; // Compensate for fixed header
+    // Tablet
+    @include media($tablet) {
+      padding-top: $header-height; // Compensate for fixed header
+    }
   }
 }
 
@@ -42,7 +52,7 @@ body {
 //
 // Styleguide 1.1.1
 
-h1,h2,h3 {
+h1,h2,h3,h4 {
   margin-top: 0;
   font-weight: $weight-normal;
 }
@@ -59,10 +69,14 @@ h3 {
   @include font('header-small');
   margin-bottom: 20px;
 }
+h4 {
+  @include font('base-bold');
+  margin-bottom: 20px;
+}
 
 // Paragraph
 p {
-  margin-bottom: $distance-paragraph;
+  margin: 0 0 $distance-paragraph;
 }
 
 // Images
@@ -72,6 +86,11 @@ img {
   height: auto;
 }
 
+img.file-icon {
+  display: none;
+}
+
+
 // Links
 //
 // Markup:
@@ -80,6 +99,7 @@ img {
 // Styleguide 1.1.2
 
 a {
+  @include transition(color $speed $ease);
   text-decoration: none;
   color: $color-text;
   &:hover {
@@ -87,7 +107,27 @@ a {
   }
 }
 
+// Strong and bold
+strong,
+b {
+  @include font('base-bold'); 
+}
+
 // Lists
 ul {
   margin: 0 0 $distance-paragraph;
+  padding: 0;
+  li {
+    // In grid small
+    .grid-small & {
+      @include span-columns(3);
+      @include omega(4n);
+      margin-bottom: getGutter();
+    }
+  }
+}
+
+// Label
+label {
+  font-weight: normal;
 }

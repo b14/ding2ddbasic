@@ -1,0 +1,53 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(-360deg); } }
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg); }
+  to {
+    -moz-transform: rotate(-360deg); } }
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(-360deg);
+    -moz-transform: rotate(-360deg);
+    -ms-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    transform: rotate(-360deg); } }
+table {
+  width: 100%; }
+  table thead {
+    font-family: "FaktPro-SemiBold", sans-serif; }
+  table th {
+    padding-bottom: 10px;
+    border-bottom: none;
+    font-weight: normal; }
+  table tbody {
+    border-top: none; }
+  table tr.even,
+  table tr.odd {
+    border-bottom: none;
+    padding: 0; }
+  table tr.even {
+    background-color: transparent; }
+  table tr.odd {
+    background-color: #e5e5e5; }
+  table td {
+    padding-top: 20px;
+    padding-bottom: 20px; }
+    table td:first-child {
+      padding-left: 15px; }
+
+/*# sourceMappingURL=table.css.map */

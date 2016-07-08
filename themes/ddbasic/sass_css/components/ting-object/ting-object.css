@@ -1,0 +1,424 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.ting-object.list-item-style > .inner .search-result--heading-type:after {
+  content: "\e901"; }
+
+.ting-object.list-item-style > .inner .search-result--heading-type.js-toggled:after {
+  content: "\e905"; }
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(-360deg); } }
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg); }
+  to {
+    -moz-transform: rotate(-360deg); } }
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(-360deg);
+    -moz-transform: rotate(-360deg);
+    -ms-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    transform: rotate(-360deg); } }
+.ting-object.view-mode-full .ting-object-left {
+  float: left;
+  display: block;
+  margin-right: 2.4911%;
+  width: 23.13167%;
+  min-height: 1px; }
+  .ting-object.view-mode-full .ting-object-left:last-child {
+    margin-right: 0; }
+  @media screen and (max-width: 600px) {
+    .ting-object.view-mode-full .ting-object-left {
+      width: auto;
+      float: none; }
+      .ting-object.view-mode-full .ting-object-left .ting-cover {
+        float: left;
+        display: block;
+        margin-right: 2.4911%;
+        width: 31.6726%;
+        float: left; }
+        .ting-object.view-mode-full .ting-object-left .ting-cover:last-child {
+          margin-right: 0; }
+        .ting-object.view-mode-full .ting-object-left .ting-cover:last-child {
+          margin-right: inherit; } }
+.ting-object.view-mode-full .ting-object-right {
+  float: left;
+  display: block;
+  margin-right: 2.4911%;
+  width: 74.37722%;
+  margin-right: 0; }
+  .ting-object.view-mode-full .ting-object-right:last-child {
+    margin-right: 0; }
+  @media screen and (max-width: 600px) {
+    .ting-object.view-mode-full .ting-object-right {
+      width: auto;
+      float: none; } }
+  .ting-object.view-mode-full .ting-object-right .ting-object-right-meta {
+    float: left; }
+    @media screen and (max-width: 600px) {
+      .ting-object.view-mode-full .ting-object-right .ting-object-right-meta {
+        float: left;
+        display: block;
+        margin-right: 2.4911%;
+        width: 65.8363%;
+        margin-right: 0px; }
+        .ting-object.view-mode-full .ting-object-right .ting-object-right-meta:last-child {
+          margin-right: 0; } }
+  .ting-object.view-mode-full .ting-object-right .ting-object-right-content {
+    float: left;
+    display: block;
+    margin-right: 3.34928%;
+    width: 54.06699%;
+    margin-bottom: 20px; }
+    .ting-object.view-mode-full .ting-object-right .ting-object-right-content:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 600px) {
+      .ting-object.view-mode-full .ting-object-right .ting-object-right-content {
+        width: auto; } }
+  .ting-object.view-mode-full .ting-object-right .ting-object-right-actions {
+    float: left;
+    display: block;
+    margin-right: 3.34928%;
+    width: 31.10048%;
+    margin-right: 0;
+    float: right; }
+    .ting-object.view-mode-full .ting-object-right .ting-object-right-actions:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 600px) {
+      .ting-object.view-mode-full .ting-object-right .ting-object-right-actions {
+        float: left;
+        display: block;
+        margin-right: 3.34928%;
+        width: 100%;
+        margin-top: 20px; }
+        .ting-object.view-mode-full .ting-object-right .ting-object-right-actions:last-child {
+          margin-right: 0; } }
+.ting-object.view-mode-full .ting-object-inner-wrapper .field-name-ting-series {
+  margin-top: 30px; }
+.ting-object.view-mode-full .ting-object-inner-wrapper .action-button {
+  display: block;
+  margin-bottom: 15px; }
+  @media screen and (max-width: 600px) {
+    .ting-object.view-mode-full .ting-object-inner-wrapper .action-button {
+      float: left;
+      display: block;
+      margin-right: 2.4911%;
+      width: 48.75445%;
+      margin-bottom: 10px;
+      padding-right: 0px; }
+      .ting-object.view-mode-full .ting-object-inner-wrapper .action-button:last-child {
+        margin-right: 0; } }
+.ting-object.view-mode-full .ting-object-inner-wrapper .field-name-ting-type ul {
+  margin: 0;
+  list-style: none; }
+  .ting-object.view-mode-full .ting-object-inner-wrapper .field-name-ting-type ul li {
+    margin: 0;
+    color: rgba(38, 38, 38, 0.54); }
+.ting-object.view-mode-full .ting-object-inner-wrapper .field-name-ting-title h2 {
+  font-family: "FaktPro-SemiBold", sans-serif;
+  font-size: 30px;
+  line-height: 34px;
+  margin-bottom: 5px; }
+  @media screen and (max-width: 600px) {
+    .ting-object.view-mode-full .ting-object-inner-wrapper .field-name-ting-title h2 {
+      font-size: 18px;
+      line-height: 24px; } }
+.ting-object.view-mode-full .ting-object-inner-wrapper .field-name-ting-author {
+  font-family: "FaktPro-SemiBold", sans-serif;
+  font-size: 18px;
+  line-height: 24px; }
+.ting-object.view-mode-full .ting-object-inner-wrapper .field-name-ting-abstract {
+  margin: 30px 0;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(38, 38, 38, 0.2); }
+.ting-object.view-mode-full .ting-object-inner-wrapper .field-name-ting-subjects {
+  margin-bottom: 30px; }
+  @media screen and (max-width: 600px) {
+    .ting-object.view-mode-full .ting-object-inner-wrapper .field-name-ting-subjects {
+      margin-bottom: 0px; } }
+.ting-object.view-mode-full .ting-object-inner-wrapper .group-material-details {
+  clear: both; }
+  .ting-object.view-mode-full .ting-object-inner-wrapper .group-material-details .field-group-format-wrapper {
+    margin-top: 20px; }
+    .ting-object.view-mode-full .ting-object-inner-wrapper .group-material-details .field-group-format-wrapper > .field .field-label {
+      width: 100px;
+      float: left; }
+.ting-object.view-mode-teaser > .inner {
+  position: relative;
+  width: 100%;
+  padding-top: 130%;
+  background: #808285;
+  /* book-cover */ }
+  .ting-object.view-mode-teaser > .inner .ting-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /* gradient */ }
+    .ting-object.view-mode-teaser > .inner .ting-cover img {
+      max-width: none;
+      max-height: none;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%); }
+      .ting-object.view-mode-teaser > .inner .ting-cover img.scale-height {
+        height: 100%;
+        width: auto; }
+      .ting-object.view-mode-teaser > .inner .ting-cover img.scale-width {
+        width: 100%;
+        height: auto; }
+    .ting-object.view-mode-teaser > .inner .ting-cover:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      content: "";
+      background: linear-gradient(#262626 30%, transparent 100%);
+      -webkit-transition: opacity 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      -moz-transition: opacity 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      transition: opacity 300ms cubic-bezier(0.165, 0.84, 0.44, 1); }
+  .ting-object.view-mode-teaser > .inner .group_text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: left 300ms cubic-bezier(0.165, 0.84, 0.44, 1), width 300ms cubic-bezier(0.165, 0.84, 0.44, 1), background 300ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    -moz-transition: left 300ms cubic-bezier(0.165, 0.84, 0.44, 1), width 300ms cubic-bezier(0.165, 0.84, 0.44, 1), background 300ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: left 300ms cubic-bezier(0.165, 0.84, 0.44, 1), width 300ms cubic-bezier(0.165, 0.84, 0.44, 1), background 300ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1); }
+    .ting-object.view-mode-teaser > .inner .group_text .field-name-ting-details-type {
+      color: #fff;
+      padding: 20px 20px 0px 20px; }
+    .ting-object.view-mode-teaser > .inner .group_text .field-name-ting-title h2 {
+      margin-bottom: 0px;
+      padding: 0px 20px;
+      font-family: "FaktPro-SemiBold", sans-serif;
+      font-size: 30px;
+      line-height: 34px;
+      width: 100%;
+      -webkit-transition: width 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      -moz-transition: width 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      transition: width 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      color: #fff; }
+      @media screen and (max-width: 600px) {
+        .ting-object.view-mode-teaser > .inner .group_text .field-name-ting-title h2 {
+          font-size: 18px;
+          line-height: 24px; } }
+    .ting-object.view-mode-teaser > .inner .group_text .field-name-ting-author {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 0px 20px;
+      color: #4d898e;
+      font-family: "FaktPro-SemiBold", sans-serif;
+      font-size: 18px;
+      line-height: 24px;
+      -webkit-transition: width 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      -moz-transition: width 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      transition: width 300ms cubic-bezier(0.165, 0.84, 0.44, 1); }
+      .ting-object.view-mode-teaser > .inner .group_text .field-name-ting-author a:hover {
+        color: #4d898e; }
+    .ting-object.view-mode-teaser > .inner .group_text .field-name-ting-abstract {
+      width: 100%;
+      padding: 0px 20px;
+      color: white;
+      opacity: 0; }
+      .ting-object.view-mode-teaser > .inner .group_text .field-name-ting-abstract .full {
+        display: none; }
+  .no-touch .ting-object.view-mode-teaser > .inner:hover .ting-cover:after {
+    opacity: 0;
+    -webkit-transition: opacity 300ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    -moz-transition: opacity 300ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: opacity 300ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1); }
+  .no-touch .ting-object.view-mode-teaser > .inner:hover .field-name-ting-title h2, .no-touch
+  .ting-object.view-mode-teaser > .inner:hover .field-name-ting-author {
+    width: 63.07692%;
+    -webkit-transition: width 150ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    -moz-transition: width 150ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: width 150ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1); }
+  .ting-object.view-mode-teaser > .inner:hover .group_text {
+    /* Referencing outer container */ }
+    .no-touch .ting-object.view-mode-teaser > .inner:hover .group_text {
+      z-index: 100;
+      width: 158.53659%;
+      left: 100%;
+      background: #262626;
+      box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.3);
+      -webkit-transition: left 300ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1), width 150ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1), background 300ms cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 300ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      -moz-transition: left 300ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1), width 150ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1), background 300ms cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 300ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      transition: left 300ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1), width 150ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1), background 300ms cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 300ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1); }
+      .no-touch .ting-object.view-mode-teaser > .inner:hover .group_text .field-name-ting-abstract {
+        -webkit-transition: opacity 300ms 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+        -moz-transition: opacity 300ms 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition: opacity 300ms 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+        opacity: 1; }
+    .no-touch .field-name-field-ding-news-materials .field-items .field-item:nth-child(4n) .ting-object.view-mode-teaser > .inner:hover .group_text, .no-touch .field-name-field-ding-news-materials .field-items .field-item:nth-child(4n - 1) .ting-object.view-mode-teaser > .inner:hover .group_text {
+      left: -158.53659%; }
+.ting-object.list-item-style {
+  position: relative;
+  width: 100%; }
+  .ting-object.list-item-style > .inner {
+    -webkit-transition: background-color 300ms cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    -moz-transition: background-color 300ms cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: background-color 300ms cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    cursor: auto;
+    width: 100%;
+    float: left;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: #e5e5e5; }
+    .ting-object.list-item-style > .inner .ting-object-left {
+      float: left;
+      width: 24.05405%;
+      margin-right: 1.89189%;
+      min-height: 1px; }
+    .ting-object.list-item-style > .inner .ting-object-right {
+      float: left;
+      display: block;
+      margin-right: 3.78378%;
+      width: 61.08108%;
+      margin-right: 0; }
+      .ting-object.list-item-style > .inner .ting-object-right:last-child {
+        margin-right: 0; }
+    .ting-object.list-item-style > .inner .search-result--heading-type:after {
+      -webkit-transition: background-color 300ms cubic-bezier(0.165, 0.84, 0.44, 1), color 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      -moz-transition: background-color 300ms cubic-bezier(0.165, 0.84, 0.44, 1), color 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      transition: background-color 300ms cubic-bezier(0.165, 0.84, 0.44, 1), color 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      position: absolute;
+      display: block;
+      width: 68px;
+      height: 54px;
+      font-family: 'icomoon';
+      font-size: 54px;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      text-align: center;
+      background-color: #e5e5e5;
+      color: rgba(38, 38, 38, 0.54);
+      border-radius: 5px; }
+      @media screen and (max-width: 600px) {
+        .ting-object.list-item-style > .inner .search-result--heading-type:after {
+          width: 54px; } }
+    .no-touch .ting-object.list-item-style > .inner .search-result--heading-type:hover:after {
+      background-color: #808285;
+      color: rgba(255, 255, 255, 0.54); }
+    .ting-object.list-item-style > .inner .search-result--heading-type.js-toggled:after {
+      -webkit-transition: background-color 300ms cubic-bezier(0.165, 0.84, 0.44, 1), color 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      -moz-transition: background-color 300ms cubic-bezier(0.165, 0.84, 0.44, 1), color 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      transition: background-color 300ms cubic-bezier(0.165, 0.84, 0.44, 1), color 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      position: absolute;
+      display: block;
+      width: 68px;
+      height: 54px;
+      font-family: 'icomoon';
+      font-size: 54px;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      text-align: center;
+      background-color: #e5e5e5;
+      color: rgba(38, 38, 38, 0.54);
+      border-radius: 5px; }
+      @media screen and (max-width: 600px) {
+        .ting-object.list-item-style > .inner .search-result--heading-type.js-toggled:after {
+          width: 54px; } }
+    .no-touch .ting-object.list-item-style > .inner .search-result--heading-type.js-toggled:hover:after {
+      background-color: #808285;
+      color: rgba(255, 255, 255, 0.54); }
+    .ting-object.list-item-style > .inner .search-result--heading-type.js-toggled:after {
+      display: none; }
+    .ting-object.list-item-style > .inner .search-result--heading-type:after {
+      display: none; }
+    @media screen and (max-width: 600px) {
+      .ting-object.list-item-style > .inner .search-result--heading-type:after {
+        display: block;
+        top: 15px;
+        right: 0;
+        cursor: pointer; }
+      .ting-object.list-item-style > .inner .search-result--heading-type.js-toggled:after {
+        display: block; } }
+    .ting-object.list-item-style > .inner .field-name-ting-title {
+      margin-top: 5px; }
+      .ting-object.list-item-style > .inner .field-name-ting-title h2 {
+        font-family: "FaktPro-SemiBold", sans-serif;
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 0; }
+        .ting-object.list-item-style > .inner .field-name-ting-title h2 a {
+          color: #262626; }
+          .ting-object.list-item-style > .inner .field-name-ting-title h2 a:hover {
+            color: #4d898e; }
+    .ting-object.list-item-style > .inner .field-name-ting-abstract {
+      margin: 20px 0; }
+    .ting-object.list-item-style > .inner .field-name-ting-series {
+      margin-bottom: 20px; }
+    .ting-object.list-item-style > .inner .search-result--availability {
+      padding-top: 20px;
+      border-top: 1px solid rgba(38, 38, 38, 0.2); }
+      .ting-object.list-item-style > .inner .search-result--availability p {
+        margin-bottom: 0; }
+        .ting-object.list-item-style > .inner .search-result--availability p a {
+          margin: 0 10px 0 5px; }
+    .ting-object.list-item-style > .inner:hover {
+      background-color: #fff;
+      box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.3); }
+    @media screen and (max-width: 600px) {
+      .ting-object.list-item-style > .inner {
+        position: relative;
+        padding: 15px 0px;
+        background: none;
+        border-top: 1px solid rgba(38, 38, 38, 0.2); }
+        .ting-object.list-item-style > .inner .ting-object-right {
+          float: left;
+          display: block;
+          margin-right: 3.78378%;
+          width: 74.05405%; }
+          .ting-object.list-item-style > .inner .ting-object-right:last-child {
+            margin-right: 0; }
+        .ting-object.list-item-style > .inner .ting-object-left {
+          display: none; }
+        .ting-object.list-item-style > .inner .field-name-ting-title {
+          margin-top: 0; }
+        .ting-object.list-item-style > .inner .field-name-ting-series,
+        .ting-object.list-item-style > .inner .field-name-ting-abstract {
+          margin: 0; }
+        .ting-object.list-item-style > .inner .search-result--availability {
+          padding-top: 0;
+          border-top: 0; }
+        .ting-object.list-item-style > .inner .hide-wrap {
+          position: relative;
+          display: none;
+          margin-top: 20px; }
+          .ting-object.list-item-style > .inner .hide-wrap .field-items {
+            margin-bottom: 10px; }
+        .ting-object.list-item-style > .inner:hover {
+          background: none;
+          box-shadow: none; } }
+.ting-object.view-mode-collection-list {
+  margin-bottom: 10px; }
+
+/*# sourceMappingURL=ting-object.css.map */

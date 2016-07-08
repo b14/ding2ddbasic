@@ -1,0 +1,12 @@
+@import '../../base.scss';
+
+.pane-search-result-count {
+  .search-string,
+  .count {
+    @include font('header-small');
+  }
+  
+  .count {
+    color: $charcoal-opacity-dark;
+  } 
+}

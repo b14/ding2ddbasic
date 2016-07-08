@@ -1,0 +1,46 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(-360deg); } }
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg); }
+  to {
+    -moz-transform: rotate(-360deg); } }
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(-360deg);
+    -moz-transform: rotate(-360deg);
+    -ms-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    transform: rotate(-360deg); } }
+#ding-loan-loans-form > div > .select-all {
+  position: relative;
+  float: left;
+  width: 100%;
+  float: left;
+  padding: 23px 20px;
+  margin: 10px 0 10px 0;
+  background-color: #808285; }
+  @media screen and (max-width: 600px) {
+    #ding-loan-loans-form > div > .select-all {
+      padding: 10px; } }
+  #ding-loan-loans-form > div > .select-all .form-item {
+    margin: 0;
+    color: #fff; }
+    #ding-loan-loans-form > div > .select-all .form-item.form-disabled label:before {
+      visibility: hidden; }
+
+/*# sourceMappingURL=form-loans.css.map */

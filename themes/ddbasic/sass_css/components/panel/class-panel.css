@@ -1,0 +1,286 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.panel-pane.pane-all-opening-hours .pane-title:after {
+  content: "\e901"; }
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(-360deg); } }
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg); }
+  to {
+    -moz-transform: rotate(-360deg); } }
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(-360deg);
+    -moz-transform: rotate(-360deg);
+    -ms-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    transform: rotate(-360deg); } }
+.panel-pane .pane-content .pane-title {
+  font-family: "FaktPro-Light", sans-serif;
+  font-size: 40px;
+  line-height: 44px;
+  color: #4d898e;
+  margin-bottom: 20px; }
+  @media screen and (max-width: 600px) {
+    .panel-pane .pane-content .pane-title {
+      font-size: 30px;
+      line-height: 36px; } }
+  @media screen and (max-width: 600px) {
+    .panel-pane .pane-content .pane-title {
+      margin-bottom: 10px; } }
+.panel-pane .more-link {
+  min-width: 23.13167%;
+  float: left; }
+
+.panel-pane.hide-overflow-before .panel-pane-inner {
+  position: relative; }
+  .panel-pane.hide-overflow-before .panel-pane-inner:before {
+    background-color: #fff;
+    background-image: -webkit-linear-gradient(bottom, #fff 30px, #f1f2f2 100%);
+    background-image: linear-gradient(to top,#fff 30px, #f1f2f2 100%);
+    content: '';
+    position: absolute;
+    z-index: 150;
+    top: 0;
+    right: 100%;
+    height: 100%;
+    width: calc(50vw - 50%);
+    background-color: red; }
+
+.panel-pane.ding-library-address, .panel-pane.ding-library-contact {
+  margin-bottom: 40px; }
+  .panel-pane.ding-library-address .panel-pane-inner .pane-title, .panel-pane.ding-library-contact .panel-pane-inner .pane-title {
+    font-family: "FaktPro-SemiBold", sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(38, 38, 38, 0.2);
+    margin-bottom: 25px;
+    color: #262626; }
+  .default-panel-layout .primary-content .panel-pane.ding-library-address, .default-panel-layout .primary-content .panel-pane.ding-library-contact {
+    float: left;
+    display: block;
+    margin-right: 3.78378%;
+    width: 48.10811%; }
+    .default-panel-layout .primary-content .panel-pane.ding-library-address:last-child, .default-panel-layout .primary-content .panel-pane.ding-library-contact:last-child {
+      margin-right: 0; }
+.panel-pane.ding-library-contact .library-contact-phone .library-contact-phone-label {
+  width: 100px;
+  float: left; }
+.panel-pane.ding-library-contact .library-contact-email .library-contact-email-label {
+  width: 100px;
+  float: left; }
+.default-panel-layout .primary-content .panel-pane.ding-library-contact {
+  margin-right: 0; }
+
+.panel-pane.js-opening-hours-toggle-element {
+  width: 100%;
+  float: left;
+  margin-top: 20px;
+  margin-bottom: 30px; }
+  .panel-pane.js-opening-hours-toggle-element .pane-title {
+    display: none; }
+  .default-panel-layout .primary-content .panel-pane.js-opening-hours-toggle-element .day .name {
+    float: left;
+    display: block;
+    margin-right: 3.78378%;
+    width: 22.16216%; }
+    .default-panel-layout .primary-content .panel-pane.js-opening-hours-toggle-element .day .name:last-child {
+      margin-right: 0; }
+  .default-panel-layout .primary-content .panel-pane.js-opening-hours-toggle-element .day .times {
+    float: left;
+    display: block;
+    margin-right: 3.78378%;
+    width: 74.05405%;
+    margin-right: 0; }
+    .default-panel-layout .primary-content .panel-pane.js-opening-hours-toggle-element .day .times:last-child {
+      margin-right: 0; }
+    .default-panel-layout .primary-content .panel-pane.js-opening-hours-toggle-element .day .times .instance {
+      float: left;
+      display: block;
+      margin-right: 5.10949%;
+      width: 29.92701%; }
+      .default-panel-layout .primary-content .panel-pane.js-opening-hours-toggle-element .day .times .instance:last-child {
+        margin-right: 0; }
+      .default-panel-layout .primary-content .panel-pane.js-opening-hours-toggle-element .day .times .instance:nth-child(3n) {
+        margin-right: 0; }
+      .default-panel-layout .primary-content .panel-pane.js-opening-hours-toggle-element .day .times .instance:nth-child(3n+1) {
+        clear: left; }
+
+.panel-pane.pane-all-opening-hours .pane-title {
+  position: relative; }
+  .panel-pane.pane-all-opening-hours .pane-title:after {
+    -webkit-transition: background-color 300ms cubic-bezier(0.165, 0.84, 0.44, 1), color 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    -moz-transition: background-color 300ms cubic-bezier(0.165, 0.84, 0.44, 1), color 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: background-color 300ms cubic-bezier(0.165, 0.84, 0.44, 1), color 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: absolute;
+    display: block;
+    width: 68px;
+    height: 54px;
+    font-family: 'icomoon';
+    font-size: 54px;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    text-align: center;
+    background-color: #e5e5e5;
+    color: rgba(38, 38, 38, 0.54);
+    border-radius: 5px; }
+    @media screen and (max-width: 600px) {
+      .panel-pane.pane-all-opening-hours .pane-title:after {
+        width: 54px; } }
+  .no-touch .panel-pane.pane-all-opening-hours .pane-title:hover:after {
+    background-color: #808285;
+    color: rgba(255, 255, 255, 0.54); }
+  .panel-pane.pane-all-opening-hours .pane-title:after {
+    display: none; }
+@media screen and (max-width: 600px) {
+  .panel-pane.pane-all-opening-hours .pane-title {
+    cursor: pointer; }
+    .panel-pane.pane-all-opening-hours .pane-title:after {
+      display: block;
+      top: -10px;
+      right: 0;
+      background-color: #e5e5e5;
+      color: rgba(38, 38, 38, 0.54); }
+  .panel-pane.pane-all-opening-hours .pane-content {
+    display: none; } }
+
+.panel-pane.pane-menu-title h2,
+.panel-pane.pane-page-title h2 {
+  font-family: "FaktPro-Light", sans-serif;
+  font-size: 40px;
+  line-height: 44px;
+  margin-top: 15px;
+  margin-bottom: 46px;
+  color: #4d898e; }
+  @media screen and (max-width: 600px) {
+    .panel-pane.pane-menu-title h2,
+    .panel-pane.pane-page-title h2 {
+      font-size: 30px;
+      line-height: 36px; } }
+
+.panel-pane.pane-ding-news-ding-news-list {
+  margin-top: 105px; }
+  @media screen and (max-width: 950px) {
+    .panel-pane.pane-ding-news-ding-news-list {
+      margin-top: 0; } }
+
+.panel-pane.pane-search-result-count .pane-content {
+  margin-bottom: 20px; }
+  .panel-pane.pane-search-result-count .pane-content .page-title {
+    margin-bottom: 5px; }
+
+.panel-pane.pane-search-backends fieldset {
+  border-top: 1px solid rgba(38, 38, 38, 0.2); }
+
+.panel-pane.search-help {
+  width: 100%;
+  float: left;
+  padding: 40px 0;
+  border-top: 1px solid rgba(38, 38, 38, 0.2); }
+  .panel-pane.search-help .pane-title {
+    font-family: "FaktPro-SemiBold", sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    color: #262626;
+    margin-bottom: 0; }
+  .panel-pane.search-help .pane-content {
+    float: left;
+    display: block;
+    margin-right: 3.78378%;
+    width: 61.08108%; }
+    .panel-pane.search-help .pane-content:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 950px) {
+      .panel-pane.search-help .pane-content {
+        float: left;
+        display: block;
+        margin-right: 2.4911%;
+        width: 65.8363%; }
+        .panel-pane.search-help .pane-content:last-child {
+          margin-right: 0; } }
+    @media screen and (max-width: 600px) {
+      .panel-pane.search-help .pane-content {
+        width: 100%; } }
+    .panel-pane.search-help .pane-content .button {
+      float: left; }
+
+.panel-pane.pane-ding-facetbrowser fieldset {
+  border-top: 1px solid rgba(38, 38, 38, 0.2); }
+  .panel-pane.pane-ding-facetbrowser fieldset:last-child {
+    border-bottom: 1px solid rgba(38, 38, 38, 0.2); }
+.panel-pane.pane-ding-facetbrowser form > div > a.expand {
+  display: none; }
+
+.panel-pane.pane-debts {
+  margin-bottom: 25px; }
+  .panel-pane.pane-debts:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .panel-pane.pane-debts .total-amount {
+    width: 100%;
+    float: left;
+    margin: 10px 0; }
+  .panel-pane.pane-debts .pay-button {
+    float: left;
+    display: block;
+    margin-right: 2.4911%;
+    width: 48.75445%; }
+    .panel-pane.pane-debts .pay-button:last-child {
+      margin-right: 0; }
+    .panel-pane.pane-debts .pay-button:nth-child(2n) {
+      margin-right: 0; }
+    .panel-pane.pane-debts .pay-button:nth-child(2n+1) {
+      clear: left; }
+
+#dibs-cards-supported .card-name {
+  font-weight: normal; }
+
+.panel-pane.pane-user-name {
+  display: none;
+  padding-top: 12px; }
+  .logged-in .panel-pane.pane-user-name {
+    display: block; }
+  .panel-pane.pane-user-name h2 {
+    margin: 0;
+    font-family: "FaktPro-Normal", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    text-align: right; }
+  .panel-pane.pane-user-name .pane-content {
+    font-family: "FaktPro-SemiBold", sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: right;
+    color: #4d898e; }
+
+.panel-pane.pane-import input[type=text] {
+  background-color: #cccccc;
+  color: #262626;
+  border-radius: 0; }
+
+.panel-pane.pane-staff-profile .pane-title,
+.pane-ding-news-ding-news-list-user .pane-title {
+  margin-top: 15px; }
+
+/*# sourceMappingURL=class-panel.css.map */

@@ -7,3 +7,7 @@ $column: 68px;
 $gutter: 28px;
 $grid-columns: 12;
 $max-width: 1124px;
+
+$notebook: new-breakpoint(max-width 1100px 12);
+$tablet: new-breakpoint(max-width 950px 12);
+$mobile: new-breakpoint(max-width 600px 12);

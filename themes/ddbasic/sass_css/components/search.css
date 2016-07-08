@@ -3,6 +3,128 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+.page-search-ting .secondary-content .expand-search:after {
+  content: "\e901"; }
+
+.page-search-ting .secondary-content .expand-search.expanded:after {
+  content: "\e905"; }
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(-360deg); } }
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg); }
+  to {
+    -moz-transform: rotate(-360deg); } }
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(-360deg);
+    -moz-transform: rotate(-360deg);
+    -ms-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    transform: rotate(-360deg); } }
+.page-search-ting .secondary-content .expand-search {
+  display: none;
+  position: relative;
+  -webkit-transition: background-color 300ms cubic-bezier(0.165, 0.84, 0.44, 1), color 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -moz-transition: background-color 300ms cubic-bezier(0.165, 0.84, 0.44, 1), color 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: background-color 300ms cubic-bezier(0.165, 0.84, 0.44, 1), color 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  width: 100%;
+  float: left;
+  border-radius: 5px;
+  padding: 20px 80px 14px 15px;
+  background-color: #f66d70;
+  color: #fff; }
+  .page-search-ting .secondary-content .expand-search:after {
+    font-family: 'icomoon';
+    font-size: 54px;
+    color: #fff;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    display: block;
+    position: absolute;
+    top: 0; }
+  .page-search-ting .secondary-content .expand-search:after {
+    -webkit-transition: color 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    -moz-transition: color 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: color 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    right: 7px; }
+  .no-touch .page-search-ting .secondary-content .expand-search:hover {
+    background-color: #808285;
+    color: #fff; }
+    .no-touch .page-search-ting .secondary-content .expand-search:hover:after {
+      color: #fff; }
+  @media screen and (max-width: 950px) {
+    .page-search-ting .secondary-content .expand-search {
+      display: block;
+      background: #000;
+      cursor: pointer; }
+      .page-search-ting .secondary-content .expand-search:hover {
+        display: block;
+        background: #000; } }
+  .page-search-ting .secondary-content .expand-search.expanded {
+    background: #e5e5e5;
+    margin-bottom: 15px;
+    color: rgba(38, 38, 38, 0.54); }
+    .page-search-ting .secondary-content .expand-search.expanded:after {
+      color: rgba(38, 38, 38, 0.54); }
+      .page-search-ting .secondary-content .expand-search.expanded:after:after {
+        -webkit-transition: background-color 300ms cubic-bezier(0.165, 0.84, 0.44, 1), color 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+        -moz-transition: background-color 300ms cubic-bezier(0.165, 0.84, 0.44, 1), color 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition: background-color 300ms cubic-bezier(0.165, 0.84, 0.44, 1), color 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+        position: absolute;
+        display: block;
+        width: 68px;
+        height: 54px;
+        font-family: 'icomoon';
+        font-size: 54px;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        text-align: center;
+        background-color: #e5e5e5;
+        color: rgba(38, 38, 38, 0.54);
+        border-radius: 5px; }
+        @media screen and (max-width: 600px) {
+          .page-search-ting .secondary-content .expand-search.expanded:after:after {
+            width: 54px; } }
+      .no-touch .page-search-ting .secondary-content .expand-search.expanded:after:hover:after {
+        background-color: #808285;
+        color: rgba(255, 255, 255, 0.54); }
+@media screen and (max-width: 950px) {
+  .page-search-ting .secondary-content .hide-wrap {
+    float: left;
+    display: block;
+    margin-right: 2.4911%;
+    width: 100%;
+    display: none;
+    -webkit-transition: max-height 300ms ease-out, opacity 150ms ease-out;
+    -moz-transition: max-height 300ms ease-out, opacity 150ms ease-out;
+    transition: max-height 300ms ease-out, opacity 150ms ease-out; }
+    .page-search-ting .secondary-content .hide-wrap:last-child {
+      margin-right: 0; }
+    .page-search-ting .secondary-content .hide-wrap.open {
+      -webkit-transition: max-height 300ms ease-in, opacity 300ms ease-in;
+      -moz-transition: max-height 300ms ease-in, opacity 300ms ease-in;
+      transition: max-height 300ms ease-in, opacity 300ms ease-in;
+      opacity: 1; } }
+
 .pane-search-per-page {
   float: left;
   display: block;
@@ -10,6 +132,14 @@
   width: 48.10811%; }
   .pane-search-per-page:last-child {
     margin-right: 0; }
+  @media screen and (max-width: 950px) {
+    .pane-search-per-page {
+      float: left;
+      display: block;
+      margin-right: 2.4911%;
+      width: 100%; }
+      .pane-search-per-page:last-child {
+        margin-right: 0; } }
 
 .pane-ting-search-sort-form {
   float: left;
@@ -19,9 +149,15 @@
   margin-right: 0; }
   .pane-ting-search-sort-form:last-child {
     margin-right: 0; }
-
-.pane-search-result {
-  float: left; }
+  @media screen and (max-width: 950px) {
+    .pane-ting-search-sort-form {
+      float: left;
+      display: block;
+      margin-right: 2.4911%;
+      width: 100%;
+      padding-bottom: 40px; }
+      .pane-ting-search-sort-form:last-child {
+        margin-right: 0; } }
 
 .ting_search-results {
   margin: 0;
@@ -31,7 +167,8 @@
     float: left;
     width: 100%;
     margin-bottom: 10px; }
-    .ting_search-results .search-result .search-snippet-info > p {
-      margin: 0; }
+    @media screen and (max-width: 600px) {
+      .ting_search-results .search-result {
+        margin: 0px; } }
 
 /*# sourceMappingURL=search.css.map */

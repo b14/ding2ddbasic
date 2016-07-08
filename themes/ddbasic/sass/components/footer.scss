@@ -1,4 +1,4 @@
-@import 'base';
+@import '../base.scss';
 
 .footer {
   background-color: $charcoal;
@@ -11,19 +11,91 @@
     }
   }
   .footer-inner {
-    @include outer-container;
-    padding: 50px 0 100px;
+    @include wrapper;
+    padding: 50px 0;
+    
+    @include media($mobile){
+      width: auto;
+      padding: 0;
+    }
     > .panel-pane {
       @include span-columns(3);
       @include omega(4n);
+      margin-bottom: 50px;
+      
       .pane-title {
         @include font('header-small');
+        @include arrow-button(arrow-down);
+
+        
+        &.js-toggled { // js toggled arrow colors on hover
+          @include arrow-button(arrow-up);
+          &:after {
+            background-color: $black;
+            color: $white;
+          }
+        }
+        
+        &:after {  
+          display: none; // hide arrow on desktop
+        }
+      }
+      
+      .pane-content {
+        ul {
+          display: block !important;
+        }
+      }
+      
+      // Mobile
+      @include media($mobile) {
+        @include span-columns(12);
+        margin-bottom: 0px;
+        
+        .pane-title {
+          position: relative;
+          display: inline-block;
+          width: 100%;
+          padding: 12px 5%;
+          margin-bottom: 0px;
+          line-height: 54px;    
+          border-bottom: 1px solid black;         
+              
+          h2 {
+            margin-bottom: 0px;         
+          }
+          
+          &:after { // show arrow on mobile
+            display: inline;
+            top: 12px;
+            right: 5%;      
+            background: $black;
+            color: $white;
+          }
+        }
+        
+        .pane-content {          
+          position: relative;
+          display: none;
+          border-bottom: 1px solid $black;
+          
+          ul li {
+            line-height: 30px;
+          }
+          
+          > * { // all first children of pane-content
+            margin: 20px;
+          }     
+        }
       }
     }
   }
+  
   // When topbar is open
-  .topbar-is-open & {
+  .topbar-is-open &,
+  .overlay-is-active & {
     opacity: 0.5;
     pointer-events: none;
   }
 }
+
