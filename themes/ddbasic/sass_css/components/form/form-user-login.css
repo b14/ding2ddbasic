@@ -10,23 +10,33 @@
   content: "\e90b"; }
 
 @-webkit-keyframes spin {
-  from {
+  0% {
     -webkit-transform: rotate(0deg); }
-  to {
+  50% {
+    -webkit-transform: rotate(-180deg); }
+  100% {
     -webkit-transform: rotate(-360deg); } }
 @-moz-keyframes spin {
-  from {
+  0% {
     -moz-transform: rotate(0deg); }
-  to {
+  50% {
+    -moz-transform: rotate(-180deg); }
+  100% {
     -moz-transform: rotate(-360deg); } }
 @keyframes spin {
-  from {
+  0% {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     -o-transform: rotate(0deg);
     transform: rotate(0deg); }
-  to {
+  50% {
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg); }
+  100% {
     -webkit-transform: rotate(-360deg);
     -moz-transform: rotate(-360deg);
     -ms-transform: rotate(-360deg);
@@ -122,7 +132,7 @@
       color: #fff; }
       .no-touch .user-login-form .submit-button-with-icon .color-and-icon:hover:after {
         color: #fff; }
-  .user-login-form .submit-button-with-icon:hover .color-and-icon {
+  .no-touch .user-login-form .submit-button-with-icon:hover .color-and-icon {
     background-color: #808285; }
   .user-login-form .form-links {
     clear: both; }

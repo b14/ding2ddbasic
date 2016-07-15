@@ -73,17 +73,38 @@
       });
     }
   };
+  
   // Hover functions for ting object teasers
+  function ting_teaser_hover(element_to_hover){
+    element_to_hover.mouseenter( function() {
+      if($('body').hasClass('has-touch')) {
+        return;
+      }
+      var hovered = $(this),
+          window_width = $(window).width(),
+          position_of_hovered = hovered.offset();
+      // If hovered element is left of window center
+      if(position_of_hovered.left < (window_width / 2)) {
+        hovered.find('.group-text').css('left', '100%');
+      } else {
+        hovered.find('.group-text').css('left', '-158.53659%');
+      }
+      // Set timeout to make shure element is still above while it animates out
+      setTimeout(function(){
+        element_to_hover.css('z-index', '');
+        hovered.css('z-index', '2');
+      }, 300);
+    });
+    element_to_hover.mouseleave(function() {
+      $(this).find('.group-text').css('left', '0');
+    });
+  }
+  $(document).ajaxComplete(function() {
+    ting_teaser_hover($('.ting-object.view-mode-teaser > .inner'));
+  });
   Drupal.behaviors.ding_ting_teaser_hover = {
     attach: function(context, settings) {
-      $('.ting-object.view-mode-teaser > .inner .group_text', context).mouseenter(function() {
-        var $hovered = $(this);
-        // Set timeout to make shure element is still above while it animates out
-        setTimeout(function(){
-          $('.ting-object.view-mode-teaser > .inner .group_text').css('z-index', '');
-          $hovered.css('z-index', '1000');
-        }, 300);
-      });
+      ting_teaser_hover($('.ting-object.view-mode-teaser > .inner', context));
     }
   };
 
@@ -100,87 +121,38 @@
     return str.length > (max - 3) ? str.substring(0,max-3) + '...' : str; 
   }
   
-/*
-  // Hover functions to ensure title max width
-  Drupal.behaviors.ding_ting_teaser_title_and_author_width = {
-    attach: function(context, settings) {
-       var containerWidth = $('.ting-object.view-mode-teaser > .inner .group_text').css('width');
-        $('.ting-object.view-mode-teaser .field-name-ting-title h2, .ting-object.view-mode-teaser .field-name-ting-author').each(function(){
-          $(this).css('max-width', containerWidth);
-        });    
-    }
-  };
-*/
-  
-  
-  // Ting teaser slider
-  // @TODO should only be a slider when "related material", not "materials"
-  //Drupal.behaviors.ding_ting_teaser_slider = {
-  //  attach: function(context, settings) {
-  //    return;
-  //    var slider = $('.field-type-ting-reference > .field-items', context);
-  //
-  //    slider.slick({
-  //      infinite: false,
-  //      slidesToShow: 4,
-  //      slidesToScroll: 4,
-  //      arrows: true,
-  //      responsive: [
-  //          {
-  //            breakpoint: 1024,
-  //            settings: {
-  //              slidesToShow: 3,
-  //              slidesToScroll: 3
-  //              
-  //            }
-  //          },
-  //          {
-  //            breakpoint: 600,
-  //            settings: {
-  //              slidesToShow: 2,
-  //              slidesToScroll: 2
-  //            }
-  //          },
-  //          {
-  //            breakpoint: 480,
-  //            settings: {
-  //              slidesToShow: 1,
-  //              slidesToScroll: 1
-  //            }
-  //          }
-  //        ]
-  //     });
-  //  }
-  //};
-
   
   // Ting teaser image proportions
+  function adapt_images(images){
+    $(images).each(function() {
+      var image = new Image();
+      image.src = $(this).attr("src");
+      var that = $(this);
+      image.onload = function() {
+        var img_height = this.height;
+        var img_width = this.width;
+        var img_format = img_width/img_height;
+        var standart_form = 0.7692; /* format of our container */
+          
+        if(img_format >= standart_form) {
+          that.addClass('scale-height');
+        } else if (img_width < img_height) {
+          that.addClass('scale-width');
+        }
+      };            
+    });
+  }
+  $(document).ajaxComplete(function() {
+    adapt_images($('.ting-object.view-mode-teaser img'));
+  });
+  
   Drupal.behaviors.ding_ting_teaser_image_width = {
     attach: function(context, settings) {
-      var images = $('.ting-object.view-mode-teaser img');
-      
-      $(images).each(function() {
-        var image = new Image();
-        image.src = $(this).attr("src");
-        var that = $(this);
-        
-        image.onload = function() {
-          var img_height = this.height;
-          var img_width = this.width;
-          var img_format = img_width/img_height;
-          var standart_form = 0.7692; /* format of our container */
-            
-          if(img_format >= standart_form) {
-            that.addClass('scale-height');
-          } else if (img_width < img_height) {
-            that.addClass('scale-width');
-          }
-        };            
-      });
+      adapt_images($('.ting-object.view-mode-teaser img'));  
     }
   };
   
-  // Ting teaser image proportions
+  // Ting teaser mobile
   Drupal.behaviors.ding_ting_object_list_mobile = {
     attach: function(context, settings) {
       $('.ting-object.view-mode-search-result .inner', context).each(function(){
@@ -190,7 +162,7 @@
       
       
       $('.search-result--heading-type', context).click(function(){
-        if ($(window).width() < 600) { //@TODO change this to Phils resposinve script??
+        if ($(window).width() < 600) { //@TODO change to ddbasic.breakpoint
           $(this).toggleClass('js-toggled');
           $(this).parent().parent().find('.hide-wrap').slideToggle("fast");  
         }        

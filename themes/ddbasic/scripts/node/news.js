@@ -4,7 +4,7 @@
    */
   Drupal.behaviors.hover_view_ding_news_first_child_large = {
     attach: function(context, settings) {
-      if($('.is-mobile').is(':hidden')) {
+      if($('.is-mobile').is(':hidden')) { // @TODO change to ddbasic.breakpoint
         var text_element_height;
         $('.view-ding-news.first-child-large .views-row:first-child', context).mouseenter(function() {
           text_element_height = $(this).outerHeight() - $(this).find('.news-text').outerHeight();

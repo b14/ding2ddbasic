@@ -31,6 +31,7 @@
 //}
 ?>
 <div <?php if (!empty($css_id)) { print 'id="' . $css_id . '"'; } ?> class="<?php echo $add_class; ?> default-panel-layout">
+  <?php if(!empty($content['left_sidebar']) || !empty($content['main_content'])) : ?>
   <div class="left-and-main-content">
     <div class="layout-wrapper">
       <?php if (!empty($content['left_sidebar'])): ?>
@@ -43,6 +44,7 @@
       </div>      
     </div>
   </div>
+  <?php endif; ?>
   <?php if (!empty($content['attachment_1_1'])): ?>
     <div class="attachments-wrapper attachments-1-1">
       <div class="attachment-first">

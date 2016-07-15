@@ -7,23 +7,33 @@
   content: "\e906"; }
 
 @-webkit-keyframes spin {
-  from {
+  0% {
     -webkit-transform: rotate(0deg); }
-  to {
+  50% {
+    -webkit-transform: rotate(-180deg); }
+  100% {
     -webkit-transform: rotate(-360deg); } }
 @-moz-keyframes spin {
-  from {
+  0% {
     -moz-transform: rotate(0deg); }
-  to {
+  50% {
+    -moz-transform: rotate(-180deg); }
+  100% {
     -moz-transform: rotate(-360deg); } }
 @keyframes spin {
-  from {
+  0% {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     -o-transform: rotate(0deg);
     transform: rotate(0deg); }
-  to {
+  50% {
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg); }
+  100% {
     -webkit-transform: rotate(-360deg);
     -moz-transform: rotate(-360deg);
     -ms-transform: rotate(-360deg);
@@ -55,7 +65,7 @@
         .panel-pane.pane-taxonomy-menu ul.sub-menu li a.active:after {
           font-family: 'icomoon';
           font-size: 28px;
-          color: #fff;
+          color: #ffffff;
           speak: none;
           font-style: normal;
           font-weight: normal;

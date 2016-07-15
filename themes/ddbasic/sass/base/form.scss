@@ -52,7 +52,7 @@ legend {
 // Input type text and password
 //
 // Markup:
-// <input placeholder="Input type text" type="text">
+// <input placeholder="Input type text" type="text"></br></br>
 // <input placeholder="Input type password" type="password">
 //
 // Styleguide 1.2.1
@@ -111,10 +111,10 @@ input[type="radio"]  {
 
 // Checkbox
 //
-// input[type="checkbox"]:checked   - When checkbox is checked
+// :checked   - When checkbox is checked
 //
 // Markup:
-// <input type="checkbox" class="{$modifiers}>  
+// <input type="checkbox" class="{{modifier_class}}">  
 // <label>Label</label>
 //
 // Styleguide 1.2.2
@@ -140,10 +140,10 @@ input[type="checkbox"] {
 
 // Radiobutton
 //
-// input[type="radio"]:checked   - When radiobutton is selected
+// :checked   - When radiobutton is selected
 //
 // Markup:
-// <input type="radio" class="{$modifiers}"> 
+// <input type="radio" class="{{modifier_class}}"> 
 // <label>Label</label>
 //
 // Styleguide 1.2.3
@@ -251,10 +251,10 @@ select {
 
 // Submit
 //
-// input[type="submit"]:hover   - Hover styling
+// :hover   - Hover styling
 //
 // Markup:
-// <input type="submit" value="Submit" class="{$modifiers}">
+// <input type="submit" value="Submit" class="{{modifier_class}}">
 //
 // Styleguide 1.2.5
 

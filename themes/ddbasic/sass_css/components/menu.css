@@ -7,23 +7,33 @@ ul.main-menu-third-level li a.active-trail:after, ul.main-menu-third-level li a.
   content: "\e903"; }
 
 @-webkit-keyframes spin {
-  from {
+  0% {
     -webkit-transform: rotate(0deg); }
-  to {
+  50% {
+    -webkit-transform: rotate(-180deg); }
+  100% {
     -webkit-transform: rotate(-360deg); } }
 @-moz-keyframes spin {
-  from {
+  0% {
     -moz-transform: rotate(0deg); }
-  to {
+  50% {
+    -moz-transform: rotate(-180deg); }
+  100% {
     -moz-transform: rotate(-360deg); } }
 @keyframes spin {
-  from {
+  0% {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     -o-transform: rotate(0deg);
     transform: rotate(0deg); }
-  to {
+  50% {
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg); }
+  100% {
     -webkit-transform: rotate(-360deg);
     -moz-transform: rotate(-360deg);
     -ms-transform: rotate(-360deg);
@@ -94,10 +104,10 @@ ul.main-menu-second-level li.expanded {
           border-bottom: 1px solid rgba(38, 38, 38, 0.2); } }
     .main-menu-wrapper > ul.main-menu > li.leaf a,
     .main-menu-wrapper > ul.main-menu > li.expanded a {
-      color: #fff; }
+      color: #ffffff; }
       .main-menu-wrapper > ul.main-menu > li.leaf a:after,
       .main-menu-wrapper > ul.main-menu > li.expanded a:after {
-        background-color: #fff; }
+        background-color: #ffffff; }
         @media screen and (max-width: 950px) {
           .main-menu-wrapper > ul.main-menu > li.leaf a:after,
           .main-menu-wrapper > ul.main-menu > li.expanded a:after {
@@ -137,7 +147,7 @@ ul.main-menu-second-level li.leaf {
   ul.main-menu-second-level li.leaf a {
     color: #fff; }
     ul.main-menu-second-level li.leaf a:after {
-      background-color: #fff; }
+      background-color: #ffffff; }
 
 ul.main-menu-third-level li {
   margin-bottom: 20px; }

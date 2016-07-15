@@ -9,7 +9,8 @@
   <meta name="viewport" content="width=device-width">
 
   <link rel="stylesheet" href="kss-assets/kss.css">
-  
+  <link rel="stylesheet" href="../gulp_css/bundle.css">
+
 </head>
 <body id="kss-node">
 
@@ -68,7 +69,31 @@
               <li class="kss-nav__menu-item">
                 <a class="kss-nav__menu-link" href="section-2.html#kssref-2-1-5">
                   <span class="kss-nav__ref kss-nav__ref-child">2.1.5</span
+                  ><span class="kss-nav__name">Image styling 16:9</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-2.html#kssref-2-1-6">
+                  <span class="kss-nav__ref kss-nav__ref-child">2.1.6</span
                   ><span class="kss-nav__name">Pager</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-2.html#kssref-2-1-7">
+                  <span class="kss-nav__ref kss-nav__ref-child">2.1.7</span
+                  ><span class="kss-nav__name">Share Button</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-2.html#kssref-2-1-8">
+                  <span class="kss-nav__ref kss-nav__ref-child">2.1.8</span
+                  ><span class="kss-nav__name">Select list</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-2.html#kssref-2-1-9">
+                  <span class="kss-nav__ref kss-nav__ref-child">2.1.9</span
+                  ><span class="kss-nav__name">Grid classes</span>
                 </a>
               </li>
             </ul>
@@ -76,6 +101,11 @@
       <li class="kss-nav__menu-item">
         <a class="kss-nav__menu-link" href="section-3.html">
           <span class="kss-nav__ref">3</span><span class="kss-nav__name">Configuration</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-4.html">
+          <span class="kss-nav__ref">4</span><span class="kss-nav__name">Layout</span>
         </a>
       </li>
     </ul>
@@ -169,30 +199,30 @@ no matter what context they appear in.</p>
 
           <div class="kss-modifier__example">
             <div class="more-link">
- <a class="{$modifiers}">More link</a>
+ <a class="[modifier class]">More link</a>
 </div>
           </div>
 
             <div class="kss-modifier__name kss-style">
-              .more-link a:hover
+              :hover
             </div>
             <div class="kss-modifier__description kss-style">
               hover
             </div>
             <div class="kss-modifier__example">
               <div class="more-link">
- <a class="{$modifiers}">More link</a>
+ <a class="pseudo-class-hover">More link</a>
 </div>
             </div>
         </div>
           <div class="kss-markup kss-style">
             <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class&#x3D;&quot;more-link&quot;&gt;
- &lt;a class&#x3D;&quot;{$modifiers}&quot;&gt;More link&lt;/a&gt;
+ &lt;a class&#x3D;&quot;[modifier class]&quot;&gt;More link&lt;/a&gt;
 &lt;/div&gt;</code></pre>
           </div>
 
         <div class="kss-source kss-style">
-          Source: <code>components/class.scss</code>, line 26
+          Source: <code>components/class.scss</code>, line 56
         </div>
 
     </section>
@@ -212,7 +242,7 @@ no matter what context they appear in.</p>
         </h3>
 
           <div class="kss-description">
-            <p>@TODO - Description</p>
+            <p>Place button class on any element to style it as a button</p>
 
           </div>
 
@@ -228,25 +258,25 @@ no matter what context they appear in.</p>
             </div>
 
           <div class="kss-modifier__example">
-            <div class="button" class="{$modifiers}">Button</div>
+            <div class="button [modifier class]">Button</div>
           </div>
 
             <div class="kss-modifier__name kss-style">
-              .button:hover
+              :hover
             </div>
             <div class="kss-modifier__description kss-style">
               hover
             </div>
             <div class="kss-modifier__example">
-              <div class="button" class="{$modifiers}">Button</div>
+              <div class="button pseudo-class-hover">Button</div>
             </div>
         </div>
           <div class="kss-markup kss-style">
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class&#x3D;&quot;button&quot; class&#x3D;&quot;{$modifiers}&quot;&gt;Button&lt;/div&gt;</code></pre>
+            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class&#x3D;&quot;button [modifier class]&quot;&gt;Button&lt;/div&gt;</code></pre>
           </div>
 
         <div class="kss-source kss-style">
-          Source: <code>components/class.scss</code>, line 51
+          Source: <code>components/class.scss</code>, line 99
         </div>
 
     </section>
@@ -265,10 +295,6 @@ no matter what context they appear in.</p>
           </a>
         </h3>
 
-          <div class="kss-description">
-            <p>@TODO - Description</p>
-
-          </div>
 
       </div>
 
@@ -282,34 +308,34 @@ no matter what context they appear in.</p>
             </div>
 
           <div class="kss-modifier__example">
-            <div class="action-button" class="{$modifiers}">Button</div>
+            <div class="action-button [modifier class]">Button</div>
           </div>
 
             <div class="kss-modifier__name kss-style">
-              .action-button:hover
+              :hover
             </div>
             <div class="kss-modifier__description kss-style">
               hover
             </div>
             <div class="kss-modifier__example">
-              <div class="action-button" class="{$modifiers}">Button</div>
+              <div class="action-button pseudo-class-hover">Button</div>
             </div>
             <div class="kss-modifier__name kss-style">
-              &amp;.reserve-button
+              .reserve-button
             </div>
             <div class="kss-modifier__description kss-style">
               button for reserving material
             </div>
             <div class="kss-modifier__example">
-              <div class="action-button" class="{$modifiers}">Button</div>
+              <div class="action-button reserve-button">Button</div>
             </div>
         </div>
           <div class="kss-markup kss-style">
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class&#x3D;&quot;action-button&quot; class&#x3D;&quot;{$modifiers}&quot;&gt;Button&lt;/div&gt;</code></pre>
+            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class&#x3D;&quot;action-button [modifier class]&quot;&gt;Button&lt;/div&gt;</code></pre>
           </div>
 
         <div class="kss-source kss-style">
-          Source: <code>components/class.scss</code>, line 78
+          Source: <code>components/class.scss</code>, line 114
         </div>
 
     </section>
@@ -330,7 +356,85 @@ no matter what context they appear in.</p>
 
           <div class="kss-description">
             <p>In order to place icon on submit-button we wrap it in a div with the class &quot;submit-button-with-icon&quot;
-and place an empty div before it with the class &quot;color-and-icon&quot;</p>
+and place an empty div before it with the class &quot;color-and-icon&quot;.
+Specific icons and hover styles are placed on specific classes in scss</p>
+
+          </div>
+
+      </div>
+
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Examples
+          </div>
+
+            <div class="kss-modifier__default-name kss-style">
+              Default styling
+            </div>
+
+          <div class="kss-modifier__example">
+            <div class="submit-button-with-icon [modifier class]">
+<div class="color-and-icon"></div>
+<input type="submit" value="Submit button with icon">
+</div>
+          </div>
+
+            <div class="kss-modifier__name kss-style">
+              .example-icon
+            </div>
+            <div class="kss-modifier__description kss-style">
+              example icon
+            </div>
+            <div class="kss-modifier__example">
+              <div class="submit-button-with-icon example-icon">
+<div class="color-and-icon"></div>
+<input type="submit" value="Submit button with icon">
+</div>
+            </div>
+            <div class="kss-modifier__name kss-style">
+              .example-icon:hover
+            </div>
+            <div class="kss-modifier__description kss-style">
+              example-icon hover
+            </div>
+            <div class="kss-modifier__example">
+              <div class="submit-button-with-icon example-icon pseudo-class-hover">
+<div class="color-and-icon"></div>
+<input type="submit" value="Submit button with icon">
+</div>
+            </div>
+        </div>
+          <div class="kss-markup kss-style">
+            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class&#x3D;&quot;submit-button-with-icon [modifier class]&quot;&gt;
+&lt;div class&#x3D;&quot;color-and-icon&quot;&gt;&lt;/div&gt;
+&lt;input type&#x3D;&quot;submit&quot; value&#x3D;&quot;Submit button with icon&quot;&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+
+        <div class="kss-source kss-style">
+          Source: <code>components/class.scss</code>, line 144
+        </div>
+
+    </section>
+    <section id="kssref-2-1-5" class="kss-section kss-section--depth-3">
+
+      <div class="kss-style">
+        <h3 class="kss-title kss-title--level-3">
+          <a class="kss-title__permalink" href="#kssref-2-1-5">
+            <span class="kss-title__ref">
+              2.1.5
+              <span class="kss-title__permalink-hash">
+                  #permalink
+              </span>
+            </span>
+            Image styling 16:9
+          </a>
+        </h3>
+
+          <div class="kss-description">
+            <p>The class image-styling-16-9 keeps a 16:9 format for images in teasers even if the image is another format.
+This is done by adding a box around the image.
+The class can also be used on an element with a background-image</p>
 
           </div>
 
@@ -343,32 +447,34 @@ and place an empty div before it with the class &quot;color-and-icon&quot;</p>
 
 
           <div class="kss-modifier__example">
-            <div class="submit-button-with-icon">
-<div class="color-and-icon"></div>
-<input type="submit" value="Submit button with icon">
+            <div class="node-teaser">
+<div class="image-styling-16-9">
+<img src="" />
+</div>
 </div>
           </div>
 
         </div>
           <div class="kss-markup kss-style">
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class&#x3D;&quot;submit-button-with-icon&quot;&gt;
-&lt;div class&#x3D;&quot;color-and-icon&quot;&gt;&lt;/div&gt;
-&lt;input type&#x3D;&quot;submit&quot; value&#x3D;&quot;Submit button with icon&quot;&gt;
+            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class&#x3D;&quot;node-teaser&quot;&gt;
+&lt;div class&#x3D;&quot;image-styling-16-9&quot;&gt;
+&lt;img src&#x3D;&quot;&quot; /&gt;
+&lt;/div&gt;
 &lt;/div&gt;</code></pre>
           </div>
 
         <div class="kss-source kss-style">
-          Source: <code>components/class.scss</code>, line 106
+          Source: <code>components/class.scss</code>, line 260
         </div>
 
     </section>
-    <section id="kssref-2-1-5" class="kss-section kss-section--depth-3">
+    <section id="kssref-2-1-6" class="kss-section kss-section--depth-3">
 
       <div class="kss-style">
         <h3 class="kss-title kss-title--level-3">
-          <a class="kss-title__permalink" href="#kssref-2-1-5">
+          <a class="kss-title__permalink" href="#kssref-2-1-6">
             <span class="kss-title__ref">
-              2.1.5
+              2.1.6
               <span class="kss-title__permalink-hash">
                   #permalink
               </span>
@@ -390,7 +496,7 @@ and place an empty div before it with the class &quot;color-and-icon&quot;</p>
             <ul class="pager">
 <li class="pager-previous"><a>previous</a></li>
 <li class="pager-item"><a>1</a></li>
-<li class="pager-current"><a>2</a></li>
+<li class="pager-current">2</li>
 <li class="pager-item"><a>3</a></li>
 <li class="pager-next"><a>next</a></li>
 </ul>
@@ -401,14 +507,246 @@ and place an empty div before it with the class &quot;color-and-icon&quot;</p>
             <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ul class&#x3D;&quot;pager&quot;&gt;
 &lt;li class&#x3D;&quot;pager-previous&quot;&gt;&lt;a&gt;previous&lt;/a&gt;&lt;/li&gt;
 &lt;li class&#x3D;&quot;pager-item&quot;&gt;&lt;a&gt;1&lt;/a&gt;&lt;/li&gt;
-&lt;li class&#x3D;&quot;pager-current&quot;&gt;&lt;a&gt;2&lt;/a&gt;&lt;/li&gt;
+&lt;li class&#x3D;&quot;pager-current&quot;&gt;2&lt;/li&gt;
 &lt;li class&#x3D;&quot;pager-item&quot;&gt;&lt;a&gt;3&lt;/a&gt;&lt;/li&gt;
 &lt;li class&#x3D;&quot;pager-next&quot;&gt;&lt;a&gt;next&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
           </div>
 
         <div class="kss-source kss-style">
-          Source: <code>components/class.scss</code>, line 138
+          Source: <code>components/class.scss</code>, line 302
+        </div>
+
+    </section>
+    <section id="kssref-2-1-7" class="kss-section kss-section--depth-3">
+
+      <div class="kss-style">
+        <h3 class="kss-title kss-title--level-3">
+          <a class="kss-title__permalink" href="#kssref-2-1-7">
+            <span class="kss-title__ref">
+              2.1.7
+              <span class="kss-title__permalink-hash">
+                  #permalink
+              </span>
+            </span>
+            Share Button
+          </a>
+        </h3>
+
+
+      </div>
+
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Example
+          </div>
+
+
+          <div class="kss-modifier__example">
+            <div class="social-share-container">
+<div class="inner">
+<div class="label">Share this</div>
+<div class="share-buttons">
+<a href="#" class="fb-share">Facebook</a>
+<a href="#" class="twitter-share">Twitter</a>
+<a href="#" class="mail-share">E-mail</a>
+</div>
+</div>
+</div>
+          </div>
+
+        </div>
+          <div class="kss-markup kss-style">
+            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class&#x3D;&quot;social-share-container&quot;&gt;
+&lt;div class&#x3D;&quot;inner&quot;&gt;
+&lt;div class&#x3D;&quot;label&quot;&gt;Share this&lt;/div&gt;
+&lt;div class&#x3D;&quot;share-buttons&quot;&gt;
+&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;fb-share&quot;&gt;Facebook&lt;/a&gt;
+&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;twitter-share&quot;&gt;Twitter&lt;/a&gt;
+&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;mail-share&quot;&gt;E-mail&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+
+        <div class="kss-source kss-style">
+          Source: <code>components/class.scss</code>, line 544
+        </div>
+
+    </section>
+    <section id="kssref-2-1-8" class="kss-section kss-section--depth-3">
+
+      <div class="kss-style">
+        <h3 class="kss-title kss-title--level-3">
+          <a class="kss-title__permalink" href="#kssref-2-1-8">
+            <span class="kss-title__ref">
+              2.1.8
+              <span class="kss-title__permalink-hash">
+                  #permalink
+              </span>
+            </span>
+            Select list
+          </a>
+        </h3>
+
+
+      </div>
+
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Example
+          </div>
+
+
+          <div class="kss-modifier__example">
+            <div class="select-list">
+  <h2 class="list-title sub-menu-title">Select library</h2>
+  <ul class="list-items">
+    <li><a href="#linkone" class="list-item">Somelink</a></li>
+    <li><a href="#linktwo" class="list-item active">Anotherlink (active)</a></li>
+    <li><a href="#linkthree" class="list-item">Last link</a></li>
+  </ul>
+</div>
+          </div>
+
+        </div>
+          <div class="kss-markup kss-style">
+            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class&#x3D;&quot;select-list&quot;&gt;
+  &lt;h2 class&#x3D;&quot;list-title sub-menu-title&quot;&gt;Select library&lt;/h2&gt;
+  &lt;ul class&#x3D;&quot;list-items&quot;&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#linkone&quot; class&#x3D;&quot;list-item&quot;&gt;Somelink&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#linktwo&quot; class&#x3D;&quot;list-item active&quot;&gt;Anotherlink (active)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;#linkthree&quot; class&#x3D;&quot;list-item&quot;&gt;Last link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+
+        <div class="kss-source kss-style">
+          Source: <code>components/select-list.scss</code>, line 6
+        </div>
+
+    </section>
+    <section id="kssref-2-1-9" class="kss-section kss-section--depth-3">
+
+      <div class="kss-style">
+        <h3 class="kss-title kss-title--level-3">
+          <a class="kss-title__permalink" href="#kssref-2-1-9">
+            <span class="kss-title__ref">
+              2.1.9
+              <span class="kss-title__permalink-hash">
+                  #permalink
+              </span>
+            </span>
+            Grid classes
+          </a>
+        </h3>
+
+          <div class="kss-description">
+            <p>Add classes grid-small, grid-medium or grid-large to panel to float rows in desired grid</p>
+
+          </div>
+
+      </div>
+
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Example
+          </div>
+
+
+          <div class="kss-modifier__example">
+            <div class="panel-pane">
+<div class="pane-content">
+<div class="frontpage-layout">
+<div class="panel-pane grid-small">
+<div class="panel-pane-inner">
+ View in panel with grid-small class
+<div class="view">
+<div class="view-content">
+<div class="views-row dummy-row"></div>
+<div class="views-row dummy-row"></div>
+<div class="views-row dummy-row"></div>
+<div class="views-row dummy-row"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="panel-pane grid-medium">
+<div class="panel-pane-inner">
+ View in panel with grid-medium class
+<div class="view">
+<div class="view-content">
+<div class="views-row dummy-row"></div>
+<div class="views-row dummy-row"></div>
+<div class="views-row dummy-row"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="panel-pane grid-large">
+<div class="panel-pane-inner">
+ View in panel with grid-large class
+<div class="view">
+<div class="view-content">
+<div class="views-row dummy-row"></div>
+<div class="views-row dummy-row"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+          </div>
+
+        </div>
+          <div class="kss-markup kss-style">
+            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class&#x3D;&quot;panel-pane&quot;&gt;
+&lt;div class&#x3D;&quot;pane-content&quot;&gt;
+&lt;div class&#x3D;&quot;frontpage-layout&quot;&gt;
+&lt;div class&#x3D;&quot;panel-pane grid-small&quot;&gt;
+&lt;div class&#x3D;&quot;panel-pane-inner&quot;&gt;
+ View in panel with grid-small class
+&lt;div class&#x3D;&quot;view&quot;&gt;
+&lt;div class&#x3D;&quot;view-content&quot;&gt;
+&lt;div class&#x3D;&quot;views-row dummy-row&quot;&gt;&lt;/div&gt;
+&lt;div class&#x3D;&quot;views-row dummy-row&quot;&gt;&lt;/div&gt;
+&lt;div class&#x3D;&quot;views-row dummy-row&quot;&gt;&lt;/div&gt;
+&lt;div class&#x3D;&quot;views-row dummy-row&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;panel-pane grid-medium&quot;&gt;
+&lt;div class&#x3D;&quot;panel-pane-inner&quot;&gt;
+ View in panel with grid-medium class
+&lt;div class&#x3D;&quot;view&quot;&gt;
+&lt;div class&#x3D;&quot;view-content&quot;&gt;
+&lt;div class&#x3D;&quot;views-row dummy-row&quot;&gt;&lt;/div&gt;
+&lt;div class&#x3D;&quot;views-row dummy-row&quot;&gt;&lt;/div&gt;
+&lt;div class&#x3D;&quot;views-row dummy-row&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;panel-pane grid-large&quot;&gt;
+&lt;div class&#x3D;&quot;panel-pane-inner&quot;&gt;
+ View in panel with grid-large class
+&lt;div class&#x3D;&quot;view&quot;&gt;
+&lt;div class&#x3D;&quot;view-content&quot;&gt;
+&lt;div class&#x3D;&quot;views-row dummy-row&quot;&gt;&lt;/div&gt;
+&lt;div class&#x3D;&quot;views-row dummy-row&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+
+        <div class="kss-source kss-style">
+          Source: <code>components/view/view.scss</code>, line 16
         </div>
 
     </section>

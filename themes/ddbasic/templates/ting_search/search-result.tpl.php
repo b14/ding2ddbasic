@@ -64,6 +64,7 @@
  * @ingroup themeable
  */
 ?>
+
 <li class="<?php print $classes; ?>"<?php print $attributes; ?>>
   <div class="search-snippet-info">
     <?php if ($snippet): ?>

@@ -11,11 +11,13 @@ var sass = require('gulp-sass');
 var cleanCSS = require('gulp-clean-css');
 var concatCss = require('gulp-concat-css');
 var gulpStylelint = require('gulp-stylelint');
+var gdeb = require('gulp-debug');
 
 
 // We only want to process our own non-processed JavaScript files.
-var jsPath = './scripts/ddbasic.!(*.min).js';
-var sassPath = './sass/**/*.scss';
+// var jsPath = './scripts/ddbasic.!(*.min).js';
+var jsPath = ['./scripts/**/*.js', '!./scripts/contrib/*'];
+var sassPath = ['./sass/**/*.scss', , '!./sass/contrib/**'];
 
 gulp.task('jshint', 'Run Javascript through JSHint',
   function() {
@@ -34,10 +36,10 @@ gulp.task('uglify', 'Minify JavaScript using Uglify',
       }).on('error', gutil.log))
       // Use gulp-rename to change the name of processed files.
       // We keep them in the same folder as the originals.
-      .pipe(rename(function (path) {
-        path.extname = '.min.js';
-      }))
-      .pipe(gulp.dest('./scripts'));
+      // .pipe(rename(function (path) {
+        // path.extname = '.min.js';
+      // }))
+      .pipe(gulp.dest('./scripts/min'));
   }
 );
 
@@ -48,7 +50,7 @@ gulp.task('sass', 'Process SCSS using libsass',
         syntax: 'scss',
         failAfterError: false,
         reporters: [
-          {formatter: 'string', console: true, save: 'stylelint'},
+          {formatter: 'string', console: true},
         ]
       }))
       .pipe(sass({outputStyle: 'compressed'})

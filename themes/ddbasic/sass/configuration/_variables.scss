@@ -2,6 +2,8 @@
 // ==========================================================================
 // Color
 // ==========================================================================
+@import 'colors';
+
 $black: #000;
 $black-overlay: rgba(0, 0, 0, 0.8);
 
@@ -27,22 +29,6 @@ $red-text: $red;
 $yellow: #FFCA5F;
 $yellow-text: darken($yellow, 15);
 
-$color-primary: #4d898e; // @TODO selected by user
-$color-secondary: #f66d70; // @TODO selected by user
-//$color-secondary: null; // @TODO selected by user
-
-@if $color-secondary == null {
-  $color-secondary: $color-primary !global;
-}
-
-$color-text: #4d898e; // @TODO selected by user
-$color-text-on-primary: $white; // @TODO selected by user
-$color-text-on-secondary: $white; // @TODO selected by user
-
-@if $color-text-on-secondary == null {
-  $color-text-on-secondary: $color-text-on-primary !global;
-}
-
 
 // ==========================================================================
 // Distance
@@ -60,6 +46,7 @@ $wrapper-width: 90%;
 $round-corner: 5px;
 $box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.3);
 $box-padding: 15px;
+$disabled: 0.3;
 
 // ==========================================================================
 // Transition

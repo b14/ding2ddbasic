@@ -21,7 +21,9 @@
     "gulp-concat-css": "^2.3.0",
     "gulp-stylelint": "^2.0.2",
     "stylelint-config-standard":"^10.0.0",
-    "gulp-filter": "^4.0.0"
+    
+    "gulp-filter": "^4.0.0",
+    "gulp-debug": "^2.1.2"
     
   },
   "devDependencies": {

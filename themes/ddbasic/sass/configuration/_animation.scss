@@ -1,10 +1,13 @@
 
 // Spin
 @include keyframes(spin) {
-  from {
+  0% {
     @include transform(rotate(0deg));
   }
-  to {
+  50% {
+    @include transform(rotate(-180deg));
+  }
+  100% {
     @include transform(rotate(-360deg));
   }
 }

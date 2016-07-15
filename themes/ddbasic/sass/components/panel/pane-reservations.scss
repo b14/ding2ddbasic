@@ -4,11 +4,36 @@
 // User material item
 // ==========================================================================
 
-//@TODO create common class for .pane-reservations and .pane-bookmarks
-.pane-reservations, .pane-bookmarks, .pane-loans {
+//@TODO create common class
+.pane-reservations, 
+.pane-bookmarks, 
+.pane-loans, 
+.pane-debts {
   width: 100%;
   float: left;
   margin-bottom: 30px;
+  
+  .title-container {
+    h2.pane-title {
+      width: calc(100% - 184px);
+      float: left;
+      
+      @include media($mobile) {
+        width: 100%;
+      }
+    }
+    a.print-button {
+      display: block; 
+      float: right;
+      width: 164px;
+      padding-right: 60px;
+      margin-top: -10px;
+      @include media($mobile) {
+        display: none;
+      }
+    }
+  }
+  
   .actions-container {
     position: relative;
     float: left;
@@ -60,7 +85,30 @@
         @include media($mobile){
           width: 100%;
           margin-bottom: 10px;
-        }  
+        }
+        
+        &.renew-all {
+          a {
+            @include font('base');
+            @include transition(background-color $speed $ease, color $speed $ease);
+            display: block;
+            width: 100%;
+            height: $element-height;
+            padding: 23px 15px 18px;
+            border: none;
+            border-radius: $round-corner;
+            color: $charcoal-opacity-dark;
+            background-color: lighten($grey-dark, 5%);
+            line-height: 1em;
+            text-align: left;
+            cursor: pointer;
+            &:hover {
+              background-color: $green;
+              color: $white;
+            }
+          }
+        }
+          
       }
     }
   }
@@ -81,7 +129,8 @@
       }
       
       &.update-reservations,
-      &.renew-loan-button {
+      &.renew-loan-button,
+      &.renew-all {
         padding: 0;
         input {
           background-color: $green;
@@ -92,6 +141,15 @@
           }
         }
       }
+    }
+  }
+}
+
+//Dont display print button on second panel.pane-reservations
+.pane-reservations + .pane-reservations {
+  .title-container {
+    a.print-button {
+      display: none;
     }
   }
 }

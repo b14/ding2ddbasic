@@ -1,7 +1,4 @@
 
-// Extends
-//
-// Styleguide 3.2
 
 %button {
   @include transition(
@@ -13,9 +10,12 @@
   padding: 20px 80px 14px 15px;
   background-color: $grey;
   color: $charcoal;
-  &:hover {
-    background-color: $color-secondary;
-    color: $color-text-on-secondary;
+  // Hover for non touch devices
+  .no-touch & {
+    &:hover {
+      background-color: $color-secondary;
+      color: $color-text-on-secondary;
+    }
   }
   
   @include media($mobile) {

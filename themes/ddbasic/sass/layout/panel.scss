@@ -1,5 +1,10 @@
 @import '../base.scss';
 
+// Layout
+//
+// Styleguide 4.
+
+
 //
 // Extra facetbrowsers
 // @TODO should these be removed from the panel?
@@ -17,6 +22,29 @@
     
     
     // Ding frontpage layout
+    //
+    // Markup:
+    // <div class="panel-pane">
+    // <div class="pane-content">
+    // <div class="frontpage-layout">
+    // <div class="panel-pane">
+    // <div class="panel-pane-inner">
+    //  Panel
+    // <div class="dummy-content"></div>
+    // </div>
+    // </div>
+    // <div class="panel-pane">
+    // <div class="panel-pane-inner">
+    //  Panel
+    // <div class="dummy-content"></div>
+    // </div>
+    // </div>
+    // </div>
+    // </div>
+    // </div>
+    //
+    // Styleguide 4.1
+    
     .frontpage-layout {
       .panel-pane {
         @include linear-gradient(to top, $white 30px, $grey-light 100%);
@@ -27,7 +55,31 @@
         }
       }
     }
+    
     // Ding2 Site template
+    //
+    // Markup:
+    // <div class="panel-pane">
+    // <div class="pane-content">
+    // <div class="ding2-site-template">
+    // <div class="panel-pane">
+    // <div class="panel-pane-inner">
+    //  Panel
+    // <div class="dummy-content"></div>
+    // </div>
+    // </div>
+    // <div class="panel-pane">
+    // <div class="panel-pane-inner">
+    //  Panel
+    // <div class="dummy-content"></div>
+    // </div>
+    // </div>
+    // </div>
+    // </div>
+    // </div>
+    //
+    // Styleguide 4.2
+    
     .ding2-site-template {
       .panel-pane {
         @include linear-gradient(to top, $white 30px, $grey-light 100%);
@@ -39,7 +91,38 @@
       }
     }
     
-    // Default panel layout (Two sidebars, content in middle)
+    // Default panel layout
+    //
+    // Markup:
+    // <div class="panel-pane">
+    // <div class="pane-content">
+    // <div class="default-panel-layout">
+    // <div class="left-and-main-content">
+    // <div class="layout-wrapper">
+    // <div class="secondary-content">
+    //  Secondary content
+    // <div class="dummy-content"></div>
+    // </div>
+    // <div class="primary-content">
+    //  Primary content
+    // <div class="dummy-content"></div>
+    // </div>
+    // </div>
+    // </div>
+    // <div class="attachments-wrapper">
+    // <div class="panel-pane">
+    // <div class="panel-pane-inner">
+    //  Attachment
+    // <div class="dummy-content"></div>
+    // </div>
+    // </div>
+    // </div>
+    // </div>
+    // </div>
+    // </div>
+    //
+    // Styleguide 4.3
+    
     .default-panel-layout {
       .left-and-main-content {
         @include linear-gradient(to top, $white 30px, $grey-light 100%);
@@ -66,7 +149,7 @@
         }
       }
       .attachments-wrapper {
-        .panel-pane {
+        .panel-pane:not(.pane-tags-list-ding-content-tags) {
           @include linear-gradient(to top, $white 30px, $grey-light 100%);
           .panel-pane-inner {
             @include wrapper;
@@ -78,3 +161,4 @@
     }
   }
 }
+

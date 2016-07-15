@@ -7,23 +7,33 @@
   content: "\e907"; }
 
 @-webkit-keyframes spin {
-  from {
+  0% {
     -webkit-transform: rotate(0deg); }
-  to {
+  50% {
+    -webkit-transform: rotate(-180deg); }
+  100% {
     -webkit-transform: rotate(-360deg); } }
 @-moz-keyframes spin {
-  from {
+  0% {
     -moz-transform: rotate(0deg); }
-  to {
+  50% {
+    -moz-transform: rotate(-180deg); }
+  100% {
     -moz-transform: rotate(-360deg); } }
 @keyframes spin {
-  from {
+  0% {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     -o-transform: rotate(0deg);
     transform: rotate(0deg); }
-  to {
+  50% {
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg); }
+  100% {
     -webkit-transform: rotate(-360deg);
     -moz-transform: rotate(-360deg);
     -ms-transform: rotate(-360deg);
@@ -39,10 +49,11 @@
   padding: 20px 80px 14px 15px;
   background-color: #e5e5e5;
   color: #262626; }
-  #sliding-popup.sliding-popup-bottom .popup-content #popup-buttons .agree-button:hover,
-  #sliding-popup.sliding-popup-bottom .popup-content #popup-buttons .find-more-button:hover {
+  .no-touch #sliding-popup.sliding-popup-bottom .popup-content #popup-buttons .agree-button:hover, #sliding-popup.sliding-popup-bottom .popup-content #popup-buttons .no-touch .agree-button:hover,
+  .no-touch #sliding-popup.sliding-popup-bottom .popup-content #popup-buttons .find-more-button:hover,
+  #sliding-popup.sliding-popup-bottom .popup-content #popup-buttons .no-touch .find-more-button:hover {
     background-color: #f66d70;
-    color: #fff; }
+    color: #ffffff; }
   @media screen and (max-width: 600px) {
     #sliding-popup.sliding-popup-bottom .popup-content #popup-buttons .agree-button,
     #sliding-popup.sliding-popup-bottom .popup-content #popup-buttons .find-more-button {

@@ -259,7 +259,10 @@
   }
   .pay-button {
     @include span-columns(6);
-    @include omega(2n);
+    //@include omega(2n);
+  }
+  .pay-button + .pay-button {
+    margin-right: 0;
   }
 }
 

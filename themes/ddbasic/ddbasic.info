@@ -16,6 +16,7 @@
   stylesheets[all][] = sass_css/components/field.css
   stylesheets[all][] = sass_css/components/footer.css
   stylesheets[all][] = sass_css/components/header.css
+  stylesheets[all][] = sass_css/components/kss.css
   stylesheets[all][] = sass_css/components/menu.css
   stylesheets[all][] = sass_css/components/opening-hours.css
   stylesheets[all][] = sass_css/components/search.css 
@@ -24,6 +25,8 @@
   stylesheets[all][] = sass_css/components/cookie.css
   stylesheets[all][] = sass_css/components/ui-datepicker.css
   stylesheets[all][] = sass_css/components/entity-profile2.css 
+  stylesheets[all][] = sass_css/components/messages.css
+  stylesheets[all][] = sass_css/components/rs-carousel.css
   
   stylesheets[all][] = sass_css/components/form/form-components.css
   stylesheets[all][] = sass_css/components/form/form-user-login.css
@@ -35,6 +38,7 @@
   stylesheets[all][] = sass_css/components/node/group.css
   stylesheets[all][] = sass_css/components/node/library.css
   stylesheets[all][] = sass_css/components/node/news.css
+  stylesheets[all][] = sass_css/components/node/node.css
   
   stylesheets[all][] = sass_css/components/panel/class-panel.css
   stylesheets[all][] = sass_css/components/panel/pane-ding-facetbrowser.css
@@ -51,24 +55,25 @@
   stylesheets[all][] = sass_css/components/ting-object/material-item.css
     
   stylesheets[all][] = sass_css/components/view/view.css
-
   
   stylesheets[all][] = sass_css/layout/panel.css
   stylesheets[all][] = scripts/contrib/slick.css
   
+  stylesheets[print][] = sass_css/print.css
 
 ;----------// JavaScripts
   scripts[] = scripts/contrib/imagesloaded.pkgd.min.js
   scripts[] = scripts/contrib/masonry.pkgd.min.js
   scripts[] = scripts/contrib/slick.js
 
-  scripts[] = scripts/jquery.cookie.js
-  scripts[] = scripts/respond.min.js
-  scripts[] = scripts/jquery.scrollto.js
-  scripts[] = scripts/html5shiv.js
-  scripts[] = scripts/equalize.min.js
-  scripts[] = scripts/scalefix.js
-  scripts[] = scripts/selectivizr-min.js
+  scripts[] = scripts/contrib/jquery.cookie.js
+  scripts[] = scripts/contrib/respond.min.js
+  scripts[] = scripts/contrib/jquery.scrollto.js
+  scripts[] = scripts/contrib/html5shiv.js
+  scripts[] = scripts/contrib/equalize.min.js
+  scripts[] = scripts/contrib/scalefix.js
+  scripts[] = scripts/contrib/selectivizr-min.js
+  
   scripts[] = scripts/site.js
   _scripts[] = scripts/ddbasic.topbar.menu.min.js
   _scripts[] = scripts/ddbasic.common.min.js

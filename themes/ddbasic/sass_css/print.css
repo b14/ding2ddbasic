@@ -1,0 +1,41 @@
+@media print {
+  body {
+    padding-top: 0; }
+
+  .site-header,
+  .footer {
+    display: none; }
+
+  .secondary-content {
+    display: none !important; }
+
+  .primary-content {
+    width: 100% !important; }
+
+  a.print-button,
+  .actions-container,
+  .ask-vopros-tab,
+  .pane-page-messages {
+    display: none !important; }
+
+  .pane-title {
+    width: 100% !important; }
+
+  .material-item .left-column {
+    min-width: 0; }
+    .material-item .left-column .item-checkbox {
+      display: none; }
+    .material-item .left-column .ting-cover {
+      margin-left: 0px; }
+  .material-item.odd {
+    background-color: #cccccc;
+    -webkit-print-color-adjust: exact; }
+
+  .select-all {
+    -webkit-print-color-adjust: exact; }
+    .select-all label.option {
+      padding-left: 0; }
+      .select-all label.option:before {
+        display: none; } }
+
+/*# sourceMappingURL=print.css.map */

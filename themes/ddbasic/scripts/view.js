@@ -24,10 +24,10 @@
     $(window).bind('resize.ding_event_masonry', function (evt) {
       switch (ddbasic.breakpoint.is('mobile', 'event_masonry')) {
         case ddbasic.breakpoint.IN:
-          $('.view-ding-event .group-separator .view-elements').masonry('destroy');
+          $('.view-ding-event .group-separator .view-elements, .view-tags-list .group-separator.ding-event .view-elements').masonry('destroy');
           break;
         case ddbasic.breakpoint.OUT:
-          $('.view-ding-event .group-separator .view-elements').masonry({
+          $('.view-ding-event .group-separator .view-elements, .view-tags-list .group-separator.ding-event .view-elements').masonry({
             itemSelector: '.views-row',
             columnWidth: '.grid-sizer',
             gutter: '.grid-gutter',
@@ -63,7 +63,6 @@
         }
         else {
           $('.view-ding-event.max-two-rows').addClass('flex');
-          console.log('4');
           rows.each(function( index ) {
             if ($(this).children('.node-teaser').hasClass('has-image')) {
               row_total = row_total + 2;

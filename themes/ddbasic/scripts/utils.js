@@ -12,19 +12,19 @@
   }
 
   /**
-   *
+   * Helper for only running code once when entering or leaving a breakpoint.
    */
   scope.ddbasic.breakpoint = {
-    /** */
+    /** Moving into the breakpoint. */
     IN: true,
-    
-    /** */
+
+    /** Moving out of the breakpoint. */
     OUT: false,
-    
-    /** */
+
+    /** Breakpoint already tested. */
     NOP: null,
 
-    /** */
+    /** Check if  */
     is: function (breakpoint, identifier) {
       var
         $checker = $('.is-' + breakpoint),
@@ -49,16 +49,5 @@
       delete _bpi[identifier];
     }
   }
-
-  $(window).on('resize', function () {
-    switch (ddbasic.breakpoint.is('mobile', 'namegoeshere')) {
-      case ddbasic.breakpoint.IN:
-        console.log('IN: mobile');
-        break;
-      case ddbasic.breakpoint.OUT:
-        console.log('OUT: mobile');
-        break;
-    }
-  });
 
 })(this, jQuery);

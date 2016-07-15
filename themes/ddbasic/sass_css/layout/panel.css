@@ -4,23 +4,33 @@
   box-sizing: border-box; }
 
 @-webkit-keyframes spin {
-  from {
+  0% {
     -webkit-transform: rotate(0deg); }
-  to {
+  50% {
+    -webkit-transform: rotate(-180deg); }
+  100% {
     -webkit-transform: rotate(-360deg); } }
 @-moz-keyframes spin {
-  from {
+  0% {
     -moz-transform: rotate(0deg); }
-  to {
+  50% {
+    -moz-transform: rotate(-180deg); }
+  100% {
     -moz-transform: rotate(-360deg); } }
 @keyframes spin {
-  from {
+  0% {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     -o-transform: rotate(0deg);
     transform: rotate(0deg); }
-  to {
+  50% {
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg); }
+  100% {
     -webkit-transform: rotate(-360deg);
     -moz-transform: rotate(-360deg);
     -ms-transform: rotate(-360deg);
@@ -107,18 +117,18 @@
           width: 100%; }
           .panel-pane .pane-content .default-panel-layout .left-and-main-content .layout-wrapper .primary-content:last-child {
             margin-right: 0; } }
-.panel-pane .pane-content .default-panel-layout .attachments-wrapper .panel-pane {
+.panel-pane .pane-content .default-panel-layout .attachments-wrapper .panel-pane:not(.pane-tags-list-ding-content-tags) {
   background-color: #fff;
   background-image: -webkit-linear-gradient(bottom, #fff 30px, #f1f2f2 100%);
   background-image: linear-gradient(to top,#fff 30px, #f1f2f2 100%); }
-  .panel-pane .pane-content .default-panel-layout .attachments-wrapper .panel-pane .panel-pane-inner {
+  .panel-pane .pane-content .default-panel-layout .attachments-wrapper .panel-pane:not(.pane-tags-list-ding-content-tags) .panel-pane-inner {
     max-width: 1124px;
     margin-left: auto;
     margin-right: auto;
     width: 90%;
     position: relative;
     padding: 40px 0 30px; }
-    .panel-pane .pane-content .default-panel-layout .attachments-wrapper .panel-pane .panel-pane-inner:after {
+    .panel-pane .pane-content .default-panel-layout .attachments-wrapper .panel-pane:not(.pane-tags-list-ding-content-tags) .panel-pane-inner:after {
       content: "";
       display: table;
       clear: both; }

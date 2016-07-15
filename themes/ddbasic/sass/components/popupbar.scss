@@ -1,18 +1,5 @@
 @import '../base.scss';
-//@import 'class';
 
-// Select list
-//
-// Markup:
-// <div class="popupbar">
-//   <div class="popupbar-container">
-//     <div class="popupbar-content"></div>
-//     <div class="popupbar-content selected"></div>
-//     <div class="popupbar-close"></div>
-//   </div>
-// </div>
-//
-// Styleguide 5.1.6
 .popupbar {
   @include transition(
     transform $speed $ease,

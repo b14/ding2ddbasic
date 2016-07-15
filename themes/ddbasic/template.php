@@ -220,6 +220,7 @@ function ddbasic_menu_tree__user_menu($vars) {
  * Overwrite views row classes
  */
 function ddbasic_preprocess_views_view(&$vars) {
+  
   switch ($vars['name']) {
     case 'ding_event':
       switch ($vars['view']->current_display) {
@@ -271,6 +272,14 @@ function ddbasic_preprocess_views_view(&$vars) {
  * Overwrite views row classes
  */
 function ddbasic_preprocess_views_view_unformatted(&$vars) {
+  // Add type class to tags_list view
+  if($vars['view']->name == 'tags_list') {
+    $nodes = array_values($vars['view']->style_plugin->row_plugin->nodes);
+    reset($vars['rows']);
+    $first_key = key($vars['rows']);
+    $first_node = $nodes[$first_key];
+    $vars['type_class'] = drupal_html_class($first_node->type);
+  }
   // Class names for overwriting.
   $row_first = "first";
   $row_last  = "last";
@@ -573,7 +582,7 @@ function ddbasic_load_plugins() {
   if (theme_get_setting('load_equalize')) {
 
     // Add the script.
-    drupal_add_js($theme_path . '/scripts/equalize.min.js');
+    drupal_add_js($theme_path . '/scripts/contrib/equalize.min.js');
 
     // Add variable to js so we can check if it is set.
     drupal_add_js(array('ddbasic' => array('load_equalize' => theme_get_setting('load_equalize'))), 'setting');
@@ -893,6 +902,7 @@ function ddbasic_preprocess_form_element(&$variables) {
   }
   
 }
+
 
 /**
  * Implements hook_preprocess_ting_search_carousel_collection().

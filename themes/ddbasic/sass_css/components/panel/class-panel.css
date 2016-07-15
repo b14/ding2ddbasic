@@ -7,23 +7,33 @@
   content: "\e901"; }
 
 @-webkit-keyframes spin {
-  from {
+  0% {
     -webkit-transform: rotate(0deg); }
-  to {
+  50% {
+    -webkit-transform: rotate(-180deg); }
+  100% {
     -webkit-transform: rotate(-360deg); } }
 @-moz-keyframes spin {
-  from {
+  0% {
     -moz-transform: rotate(0deg); }
-  to {
+  50% {
+    -moz-transform: rotate(-180deg); }
+  100% {
     -moz-transform: rotate(-360deg); } }
 @keyframes spin {
-  from {
+  0% {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     -o-transform: rotate(0deg);
     transform: rotate(0deg); }
-  to {
+  50% {
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg); }
+  100% {
     -webkit-transform: rotate(-360deg);
     -moz-transform: rotate(-360deg);
     -ms-transform: rotate(-360deg);
@@ -247,10 +257,8 @@
     width: 48.75445%; }
     .panel-pane.pane-debts .pay-button:last-child {
       margin-right: 0; }
-    .panel-pane.pane-debts .pay-button:nth-child(2n) {
-      margin-right: 0; }
-    .panel-pane.pane-debts .pay-button:nth-child(2n+1) {
-      clear: left; }
+  .panel-pane.pane-debts .pay-button + .pay-button {
+    margin-right: 0; }
 
 #dibs-cards-supported .card-name {
   font-weight: normal; }

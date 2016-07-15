@@ -143,8 +143,6 @@
         overflow: hidden;
         
         img {
-          max-width:none;
-          max-height:none;
           position: absolute;
           left: 50%;
           top: 50%;
@@ -153,10 +151,12 @@
           &.scale-height {
             height: 100%;
             width: auto;
+            max-width: none;
           }
           &.scale-width {
             width: 100%;
             height: auto;
+            max-height: none;
           }
         }
         
@@ -247,32 +247,21 @@
           }
         }
         
-        .group_text {
+        .group-text {
           .no-touch & {
-            z-index: 100;
-            width: getColumn(3 of 2);
-            left: 100%;
-            background: $charcoal;
-            box-shadow: $box-shadow;
-                  
             @include transition(
               left $speed $hover-delay $ease,
               width $speed-fast $hover-delay $ease,
               background $speed $ease,
               box-shadow $speed $hover-delay $ease
             );
-        
+            z-index: 10;
+            width: getColumn(3 of 2);
+            background: $charcoal;
+            box-shadow: $box-shadow;
             .field-name-ting-abstract {
               @include transition(opacity $speed 0.7s $ease);
               opacity: 1;
-            }
-          }
-          
-          /* Referencing outer container */
-          .field-name-field-ding-news-materials .field-items .field-item:nth-child(4n) &,
-          .field-name-field-ding-news-materials .field-items .field-item:nth-child(4n - 1) & {
-            .no-touch & {
-              left: - getColumn(3 of 2);
             }
           }
         }        
@@ -420,34 +409,5 @@
   
   &.view-mode-collection-list { 
     margin-bottom: 10px;
-  }
-}
-
-.field-name-field-ding-news-materials {
-  .field-item {
-    //&:nth-child(4n-3),
-    //&:nth-child(4n-2),
-    //&:nth-child(4n-1){
-      .ting-object.view-mode-teaser {
-        >.inner {  
-          &:hover {
-            .group_text {
-              
-            }
-          }
-        }
-      }
-    //}
-    &:nth-child(4n) {
-      .ting-object.view-mode-teaser {
-        >.inner { 
-          &:hover {
-            .group_text {
-             
-            }
-          }
-        } 
-      }
-    }
   }
 }

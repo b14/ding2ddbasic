@@ -50,7 +50,7 @@
         
         width: 28px;
         height: 28px;
-        
+        margin: 0;
         &.form-disabled {
           visibility: hidden;
         }
@@ -87,13 +87,25 @@
     }
     
     .item-title {
-      width: calc(100% - 190px);
+      width: 100%;
       float: left;
       margin: 10px 0 10px 0;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
       color: $color-primary;
+      &.has-message {
+        width: calc(100% - 190px);
+        @include media($mobile) {
+          width: 100%;
+        }
+      }
+      #ding-bookmark-remove-form & {
+        width: calc(100% - 170px);
+        @include media($mobile) {
+          width: 100%;
+        }
+      }
       @include media($mobile) {
         width: 100%;
         min-height: 50px;
@@ -128,10 +140,15 @@
       float: left;
       margin: 0;
       padding: 0;
-      
-      li {
+      #ding-bookmark-remove-form & {
+        width: calc(100% - 170px);
+        @include media($mobile) {
+          width: 100%;
+        }
+      }
+      > li {
         float: left;
-        margin-right: 30px;
+        margin: 0 30px 10px 0;
         list-style: none;
         
         #ding-loan-loans-form & {
@@ -156,15 +173,29 @@
         &.material-number {
           display: none;
         }
+        
+        &.pickup-id {
+          display: none;
+        }
       }
-/*
       li.reserve {
         list-style: none;
-        display: block;
-        clear: both;
-        float: right;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        @include transform(translateY(-50%));
+        margin: 0;
+        a {
+          display: block;
+        }
+        
+        @include media($mobile){
+          @include transform(translateY(0%));
+          position: static;
+          float: left;
+        }
+        
       }
-*/
     }
   }
   &.odd {
@@ -185,3 +216,5 @@
     }
   }
 }
+
+

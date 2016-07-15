@@ -1,0 +1,77 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg); }
+  50% {
+    -webkit-transform: rotate(-180deg); }
+  100% {
+    -webkit-transform: rotate(-360deg); } }
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg); }
+  50% {
+    -moz-transform: rotate(-180deg); }
+  100% {
+    -moz-transform: rotate(-360deg); } }
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  50% {
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg); }
+  100% {
+    -webkit-transform: rotate(-360deg);
+    -moz-transform: rotate(-360deg);
+    -ms-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    transform: rotate(-360deg); } }
+.node.view-mode-search-result .content {
+  -webkit-transition: background-color 300ms cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -moz-transition: background-color 300ms cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: background-color 300ms cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  min-height: 104px;
+  cursor: auto;
+  width: 100%;
+  float: left;
+  padding: 15px;
+  box-sizing: border-box;
+  background-color: #e5e5e5; }
+  .node.view-mode-search-result .content h3.title {
+    width: 74.05405%;
+    margin-bottom: 0;
+    color: #262626; }
+    .node.view-mode-search-result .content h3.title:hover {
+      color: #4d898e; }
+    @media screen and (max-width: 950px) {
+      .node.view-mode-search-result .content h3.title {
+        width: 82.91815%; } }
+    @media screen and (max-width: 600px) {
+      .node.view-mode-search-result .content h3.title {
+        width: 100%; } }
+  .node.view-mode-search-result .content .field-type-text-long {
+    float: left;
+    display: block;
+    margin-right: 3.78378%;
+    width: 74.05405%;
+    margin-top: 10px; }
+    .node.view-mode-search-result .content .field-type-text-long:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 950px) {
+      .node.view-mode-search-result .content .field-type-text-long {
+        width: 82.91815%; } }
+    @media screen and (max-width: 600px) {
+      .node.view-mode-search-result .content .field-type-text-long {
+        width: 100%; } }
+
+/*# sourceMappingURL=node.css.map */

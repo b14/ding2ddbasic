@@ -4,23 +4,33 @@
   box-sizing: border-box; }
 
 @-webkit-keyframes spin {
-  from {
+  0% {
     -webkit-transform: rotate(0deg); }
-  to {
+  50% {
+    -webkit-transform: rotate(-180deg); }
+  100% {
     -webkit-transform: rotate(-360deg); } }
 @-moz-keyframes spin {
-  from {
+  0% {
     -moz-transform: rotate(0deg); }
-  to {
+  50% {
+    -moz-transform: rotate(-180deg); }
+  100% {
     -moz-transform: rotate(-360deg); } }
 @keyframes spin {
-  from {
+  0% {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     -o-transform: rotate(0deg);
     transform: rotate(0deg); }
-  to {
+  50% {
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg); }
+  100% {
     -webkit-transform: rotate(-360deg);
     -moz-transform: rotate(-360deg);
     -ms-transform: rotate(-360deg);
@@ -376,5 +386,38 @@
     width: 100%;
     margin: 0 !important;
     clear: none !important; } }
+
+.view-tags-list .group-separator {
+  background-color: #fff;
+  background-image: -webkit-linear-gradient(bottom, #fff 30px, #f1f2f2 100%);
+  background-image: linear-gradient(to top,#fff 30px, #f1f2f2 100%); }
+  .view-tags-list .group-separator .group-inner {
+    max-width: 1124px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    position: relative;
+    padding: 40px 0 30px; }
+    .view-tags-list .group-separator .group-inner:after {
+      content: "";
+      display: table;
+      clear: both; }
+    .view-tags-list .group-separator .group-inner .separator-title {
+      font-family: "FaktPro-Light", sans-serif;
+      font-size: 40px;
+      line-height: 44px;
+      color: #4d898e;
+      margin-bottom: 30px; }
+      @media screen and (max-width: 600px) {
+        .view-tags-list .group-separator .group-inner .separator-title {
+          font-size: 30px;
+          line-height: 36px; } }
+
+.view-node-search-result ul.search-result > li {
+  width: 100%;
+  float: left;
+  list-style: none;
+  margin-left: 0;
+  margin-bottom: 10px; }
 
 /*# sourceMappingURL=view.css.map */

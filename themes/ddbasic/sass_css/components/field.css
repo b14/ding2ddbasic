@@ -4,23 +4,33 @@
   box-sizing: border-box; }
 
 @-webkit-keyframes spin {
-  from {
+  0% {
     -webkit-transform: rotate(0deg); }
-  to {
+  50% {
+    -webkit-transform: rotate(-180deg); }
+  100% {
     -webkit-transform: rotate(-360deg); } }
 @-moz-keyframes spin {
-  from {
+  0% {
     -moz-transform: rotate(0deg); }
-  to {
+  50% {
+    -moz-transform: rotate(-180deg); }
+  100% {
     -moz-transform: rotate(-360deg); } }
 @keyframes spin {
-  from {
+  0% {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     -o-transform: rotate(0deg);
     transform: rotate(0deg); }
-  to {
+  50% {
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg); }
+  100% {
     -webkit-transform: rotate(-360deg);
     -moz-transform: rotate(-360deg);
     -ms-transform: rotate(-360deg);
@@ -76,6 +86,17 @@ div.search-field-in-content--message {
   padding: 20px 15px;
   margin-bottom: 30px;
   background-color: #4d898e;
-  color: #fff; }
+  color: #ffffff; }
+
+.field-name-ting-reference-reverse .search-results ul {
+  margin: 0; }
+  .field-name-ting-reference-reverse .search-results ul li.search-result {
+    width: 100%;
+    float: left;
+    margin-bottom: 10px;
+    list-style: none; }
+    .field-name-ting-reference-reverse .search-results ul li.search-result .view-mode-search-result {
+      width: 100%;
+      float: left; }
 
 /*# sourceMappingURL=field.css.map */

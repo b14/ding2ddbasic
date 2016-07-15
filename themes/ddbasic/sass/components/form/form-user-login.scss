@@ -54,9 +54,12 @@
       position: absolute;
       background-color: $color-secondary;
     }
-    &:hover {
-      .color-and-icon {
-        background-color: $grey-dark;
+    // Hover for non touch devices
+    .no-touch & {
+      &:hover {
+        .color-and-icon {
+          background-color: $grey-dark;
+        }
       }
     }
   }

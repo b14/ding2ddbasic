@@ -1,0 +1,148 @@
+@import '../base.scss';
+
+// ==========================================================================
+// RS carousel overwrites
+// ==========================================================================
+
+.rs-carousel {
+  // Title
+  .rs-carousel-title {
+    @include font('header-large');
+    color: $color-text;
+    margin-bottom: 20px;
+    // Mobile
+    @include media($mobile) {
+      margin-bottom: 10px;
+    }
+  }
+  // Items
+  .rs-carousel-items {
+    position: relative;
+    padding-bottom: 80px;
+    .rs-carousel-mask {
+      // Item
+      .rs-carousel-item {
+        width: 260px;
+        margin-right: 28px;
+        text-align: left;
+        &:last-child {
+          margin-right: 0;
+        }
+        // Tablet
+        @include media($tablet) {
+          width: 218px;
+          margin-right: 18px;
+        }
+        // Mobile
+        @include media($mobile) {
+          width: 218px;
+          margin-right: 18px;
+        }
+      }
+    }
+    // Prev/Next
+    .rs-carousel-action {
+      position: absolute;
+      &.rs-carousel-action-prev {
+        @include arrow-button(arrow-left);
+        left: auto;
+        right: 80px;
+        // Mobile
+        @include media($mobile) {
+          right: 66px;
+        }
+      }
+      &.rs-carousel-action-next {
+        @include arrow-button(arrow-right);
+      }
+      &.rs-carousel-action-prev, 
+      &.rs-carousel-action-next {
+        @include transition(
+          opacity $speed $ease
+        );
+        top: auto;
+        bottom: 0;
+        width: 68px;
+        height: 54px;
+        background-image: none;
+        margin-top: 0;
+        opacity: $disabled;
+        // Mobile
+        @include media($mobile) {
+          width: 54px;
+        }
+        &:after {
+          bottom: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          text-indent: 0;
+        }
+        // Hover
+        &:not(.rs-carousel-action-active) {
+          &:hover {
+            cursor: default;
+            &:after {
+              background-color: $grey;
+              color: $charcoal-opacity-dark;
+            }
+          }
+        }
+        &.rs-carousel-action-active {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  // Pagination
+  .rs-carousel-pagination {
+    display: none;
+  }
+  
+  // Tabs
+  .rs-carousel-tabs {
+    .rs-carousel-list-tabs {
+      width: calc(100% - 160px);
+      float: left;
+      margin-top: -54px;
+      .rs-carousel-item {
+        width: auto !important;
+        float: left;
+        margin-right: 10px;
+        a {
+          @extend %button;
+        }
+        &.active {
+          a {
+            background-color: $grey-dark;
+            color: $white;
+            &:hover {
+              background-color: $grey-dark;
+              color: $white;
+              cursor: default;
+            }
+          }
+        }
+      }
+      // Tablet
+      @include media($tablet) {
+        display: none;
+      }
+    }
+    .rs-carousel-select {
+      display: none;
+      width: calc(100% - 160px);
+      float: left;
+      margin-top: -54px;
+      // Tablet
+      @include media($tablet) {
+        display: block;
+      }
+      // Mobile
+      @include media($mobile) {
+        width: calc(100% - 128px);
+      }
+    }
+  }
+}
+

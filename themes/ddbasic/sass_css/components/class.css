@@ -18,7 +18,10 @@ a.topbar-link-signout:after {
 a.topbar-link-menu:after {
   content: "\e908"; }
 
-a.topbar-link-user:after {
+a.print-button:after {
+  content: "\e90a"; }
+
+.submit-button-with-icon.example-icon .color-and-icon:after, a.topbar-link-user:after {
   content: "\e90b"; }
 
 a.topbar-link-search:after {
@@ -27,27 +30,34 @@ a.topbar-link-search:after {
 a.topbar-link-opening-hours:after {
   content: "\e90e"; }
 
-.search-overlay--wrapper .search-overlay--inner .icon-spinner:after {
-  content: "\e90f"; }
-
 @-webkit-keyframes spin {
-  from {
+  0% {
     -webkit-transform: rotate(0deg); }
-  to {
+  50% {
+    -webkit-transform: rotate(-180deg); }
+  100% {
     -webkit-transform: rotate(-360deg); } }
 @-moz-keyframes spin {
-  from {
+  0% {
     -moz-transform: rotate(0deg); }
-  to {
+  50% {
+    -moz-transform: rotate(-180deg); }
+  100% {
     -moz-transform: rotate(-360deg); } }
 @keyframes spin {
-  from {
+  0% {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     -o-transform: rotate(0deg);
     transform: rotate(0deg); }
-  to {
+  50% {
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg); }
+  100% {
     -webkit-transform: rotate(-360deg);
     -moz-transform: rotate(-360deg);
     -ms-transform: rotate(-360deg);
@@ -62,9 +72,9 @@ a.topbar-link-opening-hours:after {
   padding: 20px 80px 14px 15px;
   background-color: #e5e5e5;
   color: #262626; }
-  .button:hover, a.topbar-link-user-account:hover, a.topbar-link-user-account.js-active {
+  .no-touch .button:hover, .no-touch a.topbar-link-user-account:hover, .no-touch a.topbar-link-user-account.js-active {
     background-color: #f66d70;
-    color: #fff; }
+    color: #ffffff; }
   @media screen and (max-width: 600px) {
     .button, a.topbar-link-user-account {
       padding: 20px 20px 14px 15px; } }
@@ -140,7 +150,7 @@ body > .ding2-site-template {
         text-indent: 100%;
         white-space: nowrap;
         overflow: hidden;
-        width: 76px; }
+        width: 96px; }
         .more-link a:after {
           display: none; }
         .more-link a:before {
@@ -163,7 +173,7 @@ body > .ding2-site-template {
     background-color: #000; }
   .action-button:hover {
     background-color: #f66d70;
-    color: #fff; }
+    color: #ffffff; }
 
 .submit-button-with-icon {
   position: relative; }
@@ -180,6 +190,43 @@ body > .ding2-site-template {
     position: relative;
     z-index: 2;
     background-color: transparent; }
+  .submit-button-with-icon.example-icon .color-and-icon {
+    position: relative;
+    -webkit-transition: background-color 300ms cubic-bezier(0.165, 0.84, 0.44, 1), color 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    -moz-transition: background-color 300ms cubic-bezier(0.165, 0.84, 0.44, 1), color 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: background-color 300ms cubic-bezier(0.165, 0.84, 0.44, 1), color 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    width: 100%;
+    float: left;
+    border-radius: 5px;
+    padding: 20px 80px 14px 15px;
+    background-color: #f66d70;
+    color: #fff;
+    position: absolute; }
+    .submit-button-with-icon.example-icon .color-and-icon:after {
+      font-family: 'icomoon';
+      font-size: 54px;
+      color: #fff;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      display: block;
+      position: absolute;
+      top: 0; }
+    .submit-button-with-icon.example-icon .color-and-icon:after {
+      -webkit-transition: color 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      -moz-transition: color 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      transition: color 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      right: 7px; }
+    .no-touch .submit-button-with-icon.example-icon .color-and-icon:hover {
+      background-color: #808285;
+      color: #fff; }
+      .no-touch .submit-button-with-icon.example-icon .color-and-icon:hover:after {
+        color: #fff; }
+  .no-touch .submit-button-with-icon.example-icon:hover .color-and-icon {
+    background-color: #808285; }
 
 a.topbar-link-user {
   position: relative;
@@ -369,6 +416,41 @@ a.topbar-link-signout {
 a.topbar-link-user-account {
   padding-right: 14px;
   background-color: #fff; }
+
+a.print-button {
+  position: relative;
+  -webkit-transition: background-color 300ms cubic-bezier(0.165, 0.84, 0.44, 1), color 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -moz-transition: background-color 300ms cubic-bezier(0.165, 0.84, 0.44, 1), color 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: background-color 300ms cubic-bezier(0.165, 0.84, 0.44, 1), color 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  width: 100%;
+  float: left;
+  border-radius: 5px;
+  padding: 20px 80px 14px 15px;
+  background-color: #cccccc;
+  color: rgba(38, 38, 38, 0.54); }
+  a.print-button:after {
+    font-family: 'icomoon';
+    font-size: 54px;
+    color: rgba(38, 38, 38, 0.54);
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    display: block;
+    position: absolute;
+    top: 0; }
+  a.print-button:after {
+    -webkit-transition: color 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    -moz-transition: color 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: color 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    right: 7px; }
+  .no-touch a.print-button:hover {
+    background-color: #808285;
+    color: #fff; }
+    .no-touch a.print-button:hover:after {
+      color: #fff; }
 
 .node-teaser .image-styling-16-9 {
   display: block;
@@ -623,7 +705,8 @@ a.js-opening-hours-toggle {
     background-color: #4d898e;
     text-align: center; }
     .search-overlay--wrapper .search-overlay--inner .icon-spinner {
-      position: relative;
+      background-image: url("../../images/spinner.png");
+      background-size: 100% auto;
       -webkit-animation: spin 1s linear infinite;
       -moz-animation: spin 1s linear infinite;
       animation: spin 1s linear infinite;
@@ -631,19 +714,10 @@ a.js-opening-hours-toggle {
       width: 84px;
       height: 84px;
       margin-bottom: 20px; }
-      .search-overlay--wrapper .search-overlay--inner .icon-spinner:after {
-        font-family: 'icomoon';
-        font-size: 84px;
-        color: #fff;
-        speak: none;
-        font-style: normal;
-        font-weight: normal;
-        font-variant: normal;
-        text-transform: none;
-        line-height: 1;
-        display: block;
-        position: absolute;
-        top: 0; }
+      @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
+        .search-overlay--wrapper .search-overlay--inner .icon-spinner {
+          background-image: url("../../images/spinner@x2.png");
+          background-size: 100% auto; } }
     .search-overlay--wrapper .search-overlay--inner .search-overlay--text {
       color: #fff;
       margin-bottom: 15px; }
@@ -736,7 +810,7 @@ a.js-opening-hours-toggle {
   transition: opacity 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
   position: absolute;
   bottom: 0px;
-  text-indent: -100px;
+  text-indent: -9999px;
   width: 68px;
   height: 54px;
   overflow: hidden;
@@ -757,8 +831,6 @@ a.js-opening-hours-toggle {
     text-indent: 0; }
   .slick-slider .slick-arrow:focus {
     outline: 0px; }
-  .slick-slider .slick-arrow.slick-disabled {
-    opacity: 0.3; }
   .slick-slider .slick-arrow.slick-prev {
     right: 80px; }
     .slick-slider .slick-arrow.slick-prev:after {
@@ -818,5 +890,12 @@ a.js-opening-hours-toggle {
     .no-touch .slick-slider .slick-arrow.slick-next:hover:after {
       background-color: #808285;
       color: rgba(255, 255, 255, 0.54); }
+  .slick-slider .slick-arrow.slick-prev.slick-disabled, .slick-slider .slick-arrow.slick-next.slick-disabled {
+    opacity: 0.3; }
+    .slick-slider .slick-arrow.slick-prev.slick-disabled:hover, .slick-slider .slick-arrow.slick-next.slick-disabled:hover {
+      cursor: default; }
+      .slick-slider .slick-arrow.slick-prev.slick-disabled:hover:after, .slick-slider .slick-arrow.slick-next.slick-disabled:hover:after {
+        background-color: #e5e5e5;
+        color: rgba(38, 38, 38, 0.54); }
 
 /*# sourceMappingURL=class.css.map */

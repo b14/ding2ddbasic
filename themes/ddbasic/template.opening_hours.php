@@ -35,11 +35,17 @@ function ddbasic_preprocess_ding_ddbasic_all_opening_hours(&$variables) {
         'name' => l($library, 'node/' . $instance->nid),
       );
     }
+
+    if(!empty($instance->notice)) {
+      $notice = '<span class="notice">' . $instance->notice . '</span>';
+    } else {
+      $notice = '';
+    }
     
     $structured[$library]['cols'][$category_weight] = t('@from - @to', array(
       '@from' => $instance->start_time,
       '@to' => $instance->end_time,
-    ));
+    )) . $notice;
     
     if (!isset($categories[$category_weight])) {
       $categories[$category_weight] = _ddbasic_opening_hours_get_category_name($instance->category_tid);
@@ -92,11 +98,17 @@ function ddbasic_preprocess_opening_hours_week(&$variables) {
         $structured[$day]['extra']['class'] = array('today');
       }
     }
-
+    
+    if(!empty($instance->notice)) {
+      $notice = '<span class="notice">' . $instance->notice . '</span>';
+    } else {
+      $notice = '';
+    }
+    
     $structured[$day]['cols'][$category_weight] = t('@from - @to', array(
       '@from' => $instance->start_time,
       '@to' => $instance->end_time,
-    ));
+    )) . $notice;
 
     if (!isset($categories[$category_weight])) {
       $categories[$category_weight] = _ddbasic_opening_hours_get_category_name($instance->category_tid);

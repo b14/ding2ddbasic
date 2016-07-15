@@ -78,66 +78,69 @@ function ddbasic_preprocess_node(&$variables, $hook) {
 
   // Add "read more" links to event, news and e-resource in search result view
   // mode.
-  if ($variables['view_mode'] == 'search_result') {
-    switch ($variables['node']->type) {
-      case 'ding_event':
-        $more_link = array(
-          '#theme' => 'link',
-          '#text' => '<i class="icon-chevron-right"></i>',
-          '#path' => 'node/' . $variables['nid'],
-          '#options' => array(
-            'attributes' => array(
-              'title' => $variables['title'],
-            ),
-            'html' => TRUE,
-          ),
-          '#prefix' => '<div class="event-arrow-link">',
-          '#surfix' => '</div>',
-          '#weight' => 6,
-        );
-
-        $variables['content']['group_right_col_search']['more_link'] = $more_link;
-        break;
-
-      case 'ding_news':
-        $more_link = array(
-          '#theme' => 'link',
-          '#text' => t('Read more'),
-          '#path' => 'node/' . $variables['nid'],
-          '#options' => array(
-            'attributes' => array(
-              'title' => $variables['title'],
-            ),
-            'html' => FALSE,
-          ),
-          '#prefix' => '<span class="news-link">',
-          '#surfix' => '</span>',
-          '#weight' => 6,
-        );
-
-        $variables['content']['group_right_col_search']['more_link'] = $more_link;
-        break;
-
-      case 'ding_eresource':
-        $more_link = array(
-          '#theme' => 'link',
-          '#text' => t('Read more'),
-          '#path' => 'node/' . $variables['nid'],
-          '#options' => array(
-            'attributes' => array(
-              'title' => $variables['title'],
-            ),
-            'html' => FALSE,
-          ),
-          '#prefix' => '<span class="eresource-link">',
-          '#surfix' => '</span>',
-          '#weight' => 6,
-        );
-
-        $variables['content']['group_right_col_search']['more_link'] = $more_link;
-        break;
-    }
-  }
+  //
+  // @B14 outcommentet
+  //if ($variables['view_mode'] == 'search_result') {
+  //  
+  //  switch ($variables['node']->type) {
+  //    case 'ding_event':
+  //      $more_link = array(
+  //        '#theme' => 'link',
+  //        '#text' => '<i class="icon-chevron-right"></i>',
+  //        '#path' => 'node/' . $variables['nid'],
+  //        '#options' => array(
+  //          'attributes' => array(
+  //            'title' => $variables['title'],
+  //          ),
+  //          'html' => TRUE,
+  //        ),
+  //        '#prefix' => '<div class="event-arrow-link">',
+  //        '#surfix' => '</div>',
+  //        '#weight' => 6,
+  //      );
+  //
+  //      $variables['content']['group_right_col_search']['more_link'] = $more_link;
+  //      break;
+  //
+  //    case 'ding_news':
+  //      $more_link = array(
+  //        '#theme' => 'link',
+  //        '#text' => t('Read more'),
+  //        '#path' => 'node/' . $variables['nid'],
+  //        '#options' => array(
+  //          'attributes' => array(
+  //            'title' => $variables['title'],
+  //          ),
+  //          'html' => FALSE,
+  //        ),
+  //        '#prefix' => '<span class="news-link">',
+  //        '#surfix' => '</span>',
+  //        '#weight' => 6,
+  //      );
+  //
+  //      $variables['content']['group_right_col_search']['more_link'] = $more_link;
+  //      break;
+  //
+  //    case 'ding_eresource':
+  //      $more_link = array(
+  //        '#theme' => 'link',
+  //        '#text' => t('Read more'),
+  //        '#path' => 'node/' . $variables['nid'],
+  //        '#options' => array(
+  //          'attributes' => array(
+  //            'title' => $variables['title'],
+  //          ),
+  //          'html' => FALSE,
+  //        ),
+  //        '#prefix' => '<span class="eresource-link">',
+  //        '#surfix' => '</span>',
+  //        '#weight' => 6,
+  //      );
+  //
+  //      $variables['content']['group_right_col_search']['more_link'] = $more_link;
+  //      break;
+  //  }
+  //}
 
   // For search result view mode move title into left col. group.
   if (isset($variables['content']['group_right_col_search'])) {
@@ -179,6 +182,7 @@ function ddbasic_preprocess_node(&$variables, $hook) {
       ))
     );
   }
+  // dpm($variables);
 }
 
 /**

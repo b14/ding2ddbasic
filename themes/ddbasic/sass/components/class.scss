@@ -57,11 +57,11 @@ body > .ding2-site-template {
 //
 // A link button used to link to more content of same type as in the context of the link button
 //
-// .more-link a:hover  - hover
+// :hover  - hover
 //
 // Markup:
 // <div class="more-link">
-//  <a class="{$modifiers}">More link</a>
+//  <a class="{{modifier_class}}">More link</a>
 // </div>
 //
 //Styleguide 2.1.1
@@ -74,13 +74,13 @@ body > .ding2-site-template {
     &:after {
       color: $charcoal-opacity-dark;
     }
-    
+    // Mobile
     @include media($mobile) {
       padding: 20px 20px 14px 15px; //@TODO padding should be like this for all buttons, mobile
       text-indent: 100%;
       white-space: nowrap;
       overflow: hidden;
-      width: 76px;
+      width: 96px;
       &:after {
         display: none; // hide arrow on mobile
       }
@@ -98,12 +98,12 @@ body > .ding2-site-template {
 
 // Button
 //
-// @TODO - Description
+// Place button class on any element to style it as a button
 //
-// .button:hover  - hover
+// :hover  - hover
 //
 // Markup:
-// <div class="button" class="{$modifiers}">Button</div>
+// <div class="button {{modifier_class}}">Button</div>
 // 
 // Styleguide 2.1.2
 
@@ -113,13 +113,11 @@ body > .ding2-site-template {
 
 // Action Button
 //
-// @TODO - Description
-//
-// .action-button:hover   - hover
-// &.reserve-button       - button for reserving material
+// :hover   - hover
+// .reserve-button       - button for reserving material
 //
 // Markup:
-// <div class="action-button" class="{$modifiers}">Button</div>
+// <div class="action-button {{modifier_class}}">Button</div>
 // 
 // Styleguide 2.1.3
 
@@ -146,10 +144,14 @@ body > .ding2-site-template {
 // Submit-button with icon
 //
 // In order to place icon on submit-button we wrap it in a div with the class "submit-button-with-icon" 
-// and place an empty div before it with the class "color-and-icon"
+// and place an empty div before it with the class "color-and-icon".
+// Specific icons and hover styles are placed on specific classes in scss
+//
+// .example-icon        - example icon
+// .example-icon:hover  - example-icon hover
 //
 // Markup:
-// <div class="submit-button-with-icon">
+// <div class="submit-button-with-icon {{modifier_class}}">
 // <div class="color-and-icon"></div>
 // <input type="submit" value="Submit button with icon">
 // </div>
@@ -172,6 +174,21 @@ body > .ding2-site-template {
     position: relative;
     z-index: 2;
     background-color: transparent;
+  }
+  // Example icon
+  &.example-icon {
+    .color-and-icon {
+      @include button(profile, $white);
+      position: absolute;
+    }
+    // Hover for non touch devices
+    .no-touch & {
+      &:hover {
+        .color-and-icon {
+          background-color: $grey-dark;
+        }
+      }
+    }
   }
 }
 
@@ -232,13 +249,26 @@ a.topbar-link-user-account {
   }
 }
 
+a.print-button {
+  @include button(print, $charcoal-opacity-dark, $grey-medium);
+}
+
 // ==========================================================================
 // Image styles
 // ==========================================================================
 
-// Image styling 16:9 keeps a 16:9 format even i the image is another format.
-// This is done by adding a box around the image
+// Image styling 16:9 
 //
+// The class image-styling-16-9 keeps a 16:9 format for images in teasers even if the image is another format.
+// This is done by adding a box around the image.
+// The class can also be used on an element with a background-image
+//
+// Markup:
+// <div class="node-teaser">
+// <div class="image-styling-16-9">
+// <img src="" />
+// </div>
+// </div>
 //
 // Styleguide 2.1.5
 
@@ -275,7 +305,7 @@ a.topbar-link-user-account {
 // <ul class="pager">
 // <li class="pager-previous"><a>previous</a></li>
 // <li class="pager-item"><a>1</a></li>
-// <li class="pager-current"><a>2</a></li>
+// <li class="pager-current">2</li>
 // <li class="pager-item"><a>3</a></li>
 // <li class="pager-next"><a>next</a></li>
 // </ul>
@@ -481,12 +511,18 @@ ul.tabs.primary {
     background-color: $color-primary;
     text-align: center;
     .icon-spinner {
-      @include place-icon(spinner, $white, 84px);
+      //@include place-icon(spinner, $white, 84px);
+      background-image: url('../../images/spinner.png'); // Changed to background-image because the center was of in icomoon
+      background-size: 100% auto;
       @include animation(spin 1.0s linear infinite);
       display: inline-block;
       width: 84px;
       height: 84px;
       margin-bottom: 20px;
+      @include hidpi() {
+        background-image: url('../../images/spinner@x2.png');
+        background-size: 100% auto;
+      }
     }
     .search-overlay--text {
       color: $white;
@@ -509,15 +545,17 @@ ul.tabs.primary {
 //
 // Markup:
 // <div class="social-share-container">
-// <div class="label">Share this news</div>
+// <div class="inner">
+// <div class="label">Share this</div>
 // <div class="share-buttons">
 // <a href="#" class="fb-share">Facebook</a>
 // <a href="#" class="twitter-share">Twitter</a>
 // <a href="#" class="mail-share">E-mail</a>
 // </div>
 // </div>
+// </div>
 //
-// Styleguide 2.1.695
+// Styleguide 2.1.7
 
 .social-share-container {
   @include span-columns(6 of 8);
@@ -618,7 +656,7 @@ ul.tabs.primary {
     );
     position: absolute;
     bottom: 0px;
-    text-indent: -100px;
+    text-indent: -9999px;
     width: 68px;
     height: 54px;
     overflow: hidden;
@@ -645,29 +683,33 @@ ul.tabs.primary {
       outline: 0px;
     }
     
-    &.slick-disabled {
-      opacity: 0.3;
-    }
-    
     &.slick-prev {
       right: 80px;
       @include arrow-button(arrow-left);
+      // Mobile
       @include media($mobile) {
         right: 66px;
       }
     }
+    
     &.slick-next {
       right: 0;
       @include arrow-button(arrow-right);
     }
-  }
-}
-
-.slick-list {
-  //margin-left: -20px !important;
-  
-  .slick-slide {
-    //margin-left: 20px;
+    &.slick-prev,
+    &.slick-next {
+      &.slick-disabled {
+        opacity: $disabled;
+        // Hover
+        &:hover {
+          cursor: default;
+          &:after {
+            background-color: $grey;
+            color: $charcoal-opacity-dark;
+          }
+        }
+      }
+    }
   }
 }
 

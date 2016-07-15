@@ -10,23 +10,33 @@
   content: "\e905"; }
 
 @-webkit-keyframes spin {
-  from {
+  0% {
     -webkit-transform: rotate(0deg); }
-  to {
+  50% {
+    -webkit-transform: rotate(-180deg); }
+  100% {
     -webkit-transform: rotate(-360deg); } }
 @-moz-keyframes spin {
-  from {
+  0% {
     -moz-transform: rotate(0deg); }
-  to {
+  50% {
+    -moz-transform: rotate(-180deg); }
+  100% {
     -moz-transform: rotate(-360deg); } }
 @keyframes spin {
-  from {
+  0% {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     -o-transform: rotate(0deg);
     transform: rotate(0deg); }
-  to {
+  50% {
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg); }
+  100% {
     -webkit-transform: rotate(-360deg);
     -moz-transform: rotate(-360deg);
     -ms-transform: rotate(-360deg);
@@ -171,18 +181,18 @@
     overflow: hidden;
     /* gradient */ }
     .ting-object.view-mode-teaser > .inner .ting-cover img {
-      max-width: none;
-      max-height: none;
       position: absolute;
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%); }
       .ting-object.view-mode-teaser > .inner .ting-cover img.scale-height {
         height: 100%;
-        width: auto; }
+        width: auto;
+        max-width: none; }
       .ting-object.view-mode-teaser > .inner .ting-cover img.scale-width {
         width: 100%;
-        height: auto; }
+        height: auto;
+        max-height: none; }
     .ting-object.view-mode-teaser > .inner .ting-cover:after {
       position: absolute;
       top: 0;
@@ -253,24 +263,19 @@
     -webkit-transition: width 150ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
     -moz-transition: width 150ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
     transition: width 150ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1); }
-  .ting-object.view-mode-teaser > .inner:hover .group_text {
-    /* Referencing outer container */ }
-    .no-touch .ting-object.view-mode-teaser > .inner:hover .group_text {
-      z-index: 100;
-      width: 158.53659%;
-      left: 100%;
-      background: #262626;
-      box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.3);
-      -webkit-transition: left 300ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1), width 150ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1), background 300ms cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 300ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
-      -moz-transition: left 300ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1), width 150ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1), background 300ms cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 300ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
-      transition: left 300ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1), width 150ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1), background 300ms cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 300ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1); }
-      .no-touch .ting-object.view-mode-teaser > .inner:hover .group_text .field-name-ting-abstract {
-        -webkit-transition: opacity 300ms 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
-        -moz-transition: opacity 300ms 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
-        transition: opacity 300ms 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
-        opacity: 1; }
-    .no-touch .field-name-field-ding-news-materials .field-items .field-item:nth-child(4n) .ting-object.view-mode-teaser > .inner:hover .group_text, .no-touch .field-name-field-ding-news-materials .field-items .field-item:nth-child(4n - 1) .ting-object.view-mode-teaser > .inner:hover .group_text {
-      left: -158.53659%; }
+  .no-touch .ting-object.view-mode-teaser > .inner:hover .group-text {
+    -webkit-transition: left 300ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1), width 150ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1), background 300ms cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 300ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    -moz-transition: left 300ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1), width 150ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1), background 300ms cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 300ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: left 300ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1), width 150ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1), background 300ms cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 300ms 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    z-index: 10;
+    width: 158.53659%;
+    background: #262626;
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.3); }
+    .no-touch .ting-object.view-mode-teaser > .inner:hover .group-text .field-name-ting-abstract {
+      -webkit-transition: opacity 300ms 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+      -moz-transition: opacity 300ms 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+      transition: opacity 300ms 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+      opacity: 1; }
 .ting-object.list-item-style {
   position: relative;
   width: 100%; }

@@ -109,3 +109,25 @@ div.search-field-in-content--message {
   background-color: $color-primary;
   color: $color-text-on-primary;
 }
+
+// ==========================================================================
+// Ting reference reverse
+// ==========================================================================
+
+.field-name-ting-reference-reverse {
+  .search-results {
+    ul {
+      margin: 0;
+      li.search-result {
+        width: 100%;
+        float: left;
+        margin-bottom: 10px;
+        list-style: none;
+        .view-mode-search-result {
+          width: 100%;
+          float: left;
+        }
+      }
+    }
+  }
+}

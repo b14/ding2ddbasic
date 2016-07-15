@@ -9,7 +9,8 @@
   <meta name="viewport" content="width=device-width">
 
   <link rel="stylesheet" href="kss-assets/kss.css">
-  
+  <link rel="stylesheet" href="../gulp_css/bundle.css">
+
 </head>
 <body id="kss-node">
 
@@ -84,6 +85,12 @@
                   ><span class="kss-nav__name">Submit</span>
                 </a>
               </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-1.html#kssref-1-3">
+                  <span class="kss-nav__ref ">1.3</span
+                  ><span class="kss-nav__name">Table</span>
+                </a>
+              </li>
             </ul>
       </li>
       <li class="kss-nav__menu-item">
@@ -94,6 +101,11 @@
       <li class="kss-nav__menu-item">
         <a class="kss-nav__menu-link" href="section-3.html">
           <span class="kss-nav__ref">3</span><span class="kss-nav__name">Configuration</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-4.html">
+          <span class="kss-nav__ref">4</span><span class="kss-nav__name">Layout</span>
         </a>
       </li>
     </ul>
@@ -187,7 +199,7 @@
           </div>
 
         <div class="kss-source kss-style">
-          Source: <code>base/standard.scss</code>, line 36
+          Source: <code>base/standard.scss</code>, line 46
         </div>
 
     </section>
@@ -211,21 +223,33 @@
 
         <div class="kss-modifier__wrapper">
           <div class="kss-modifier__heading kss-style">
-            Example
+            Examples
           </div>
 
+            <div class="kss-modifier__default-name kss-style">
+              Default styling
+            </div>
 
           <div class="kss-modifier__example">
-            <a>Link</a>
+            <a class="[modifier class]">Link</a>
           </div>
 
+            <div class="kss-modifier__name kss-style">
+              :hover
+            </div>
+            <div class="kss-modifier__description kss-style">
+              hover
+            </div>
+            <div class="kss-modifier__example">
+              <a class="pseudo-class-hover">Link</a>
+            </div>
         </div>
           <div class="kss-markup kss-style">
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;a&gt;Link&lt;/a&gt;</code></pre>
+            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;a class&#x3D;&quot;[modifier class]&quot;&gt;Link&lt;/a&gt;</code></pre>
           </div>
 
         <div class="kss-source kss-style">
-          Source: <code>base/standard.scss</code>, line 75
+          Source: <code>base/standard.scss</code>, line 94
         </div>
 
     </section>
@@ -278,18 +302,18 @@
 
 
           <div class="kss-modifier__example">
-            <input placeholder="Input type text" type="text">
+            <input placeholder="Input type text" type="text"></br></br>
 <input placeholder="Input type password" type="password">
           </div>
 
         </div>
           <div class="kss-markup kss-style">
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;input placeholder&#x3D;&quot;Input type text&quot; type&#x3D;&quot;text&quot;&gt;
+            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;input placeholder&#x3D;&quot;Input type text&quot; type&#x3D;&quot;text&quot;&gt;&lt;/br&gt;&lt;/br&gt;
 &lt;input placeholder&#x3D;&quot;Input type password&quot; type&#x3D;&quot;password&quot;&gt;</code></pre>
           </div>
 
         <div class="kss-source kss-style">
-          Source: <code>base/form.scss</code>, line 56
+          Source: <code>base/form.scss</code>, line 52
         </div>
 
     </section>
@@ -321,28 +345,28 @@
             </div>
 
           <div class="kss-modifier__example">
-            <input type="checkbox" class="{$modifiers}>
+            <input type="checkbox" class="[modifier class]">
 <label>Label</label>
           </div>
 
             <div class="kss-modifier__name kss-style">
-              input[type&#x3D;&quot;checkbox&quot;]:checked
+              :checked
             </div>
             <div class="kss-modifier__description kss-style">
               When checkbox is checked
             </div>
             <div class="kss-modifier__example">
-              <input type="checkbox" class="{$modifiers}>
+              <input type="checkbox" class="pseudo-class-checked">
 <label>Label</label>
             </div>
         </div>
           <div class="kss-markup kss-style">
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;input type&#x3D;&quot;checkbox&quot; class&#x3D;&quot;{$modifiers}&gt;
+            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;input type&#x3D;&quot;checkbox&quot; class&#x3D;&quot;[modifier class]&quot;&gt;
 &lt;label&gt;Label&lt;/label&gt;</code></pre>
           </div>
 
         <div class="kss-source kss-style">
-          Source: <code>base/form.scss</code>, line 116
+          Source: <code>base/form.scss</code>, line 112
         </div>
 
     </section>
@@ -374,28 +398,28 @@
             </div>
 
           <div class="kss-modifier__example">
-            <input type="radio" class="{$modifiers}">
+            <input type="radio" class="[modifier class]">
 <label>Label</label>
           </div>
 
             <div class="kss-modifier__name kss-style">
-              input[type&#x3D;&quot;radio&quot;]:checked
+              :checked
             </div>
             <div class="kss-modifier__description kss-style">
               When radiobutton is selected
             </div>
             <div class="kss-modifier__example">
-              <input type="radio" class="{$modifiers}">
+              <input type="radio" class="pseudo-class-checked">
 <label>Label</label>
             </div>
         </div>
           <div class="kss-markup kss-style">
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;input type&#x3D;&quot;radio&quot; class&#x3D;&quot;{$modifiers}&quot;&gt;
+            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;input type&#x3D;&quot;radio&quot; class&#x3D;&quot;[modifier class]&quot;&gt;
 &lt;label&gt;Label&lt;/label&gt;</code></pre>
           </div>
 
         <div class="kss-source kss-style">
-          Source: <code>base/form.scss</code>, line 145
+          Source: <code>base/form.scss</code>, line 141
         </div>
 
     </section>
@@ -429,25 +453,29 @@
 
           <div class="kss-modifier__example">
             <div class="form-type-select">
+<div class="select-wrapper">
 <select>
 <option>Option</option>
 <option>Option</option>
 </select>
+</div>
 </div>
           </div>
 
         </div>
           <div class="kss-markup kss-style">
             <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class&#x3D;&quot;form-type-select&quot;&gt;
+&lt;div class&#x3D;&quot;select-wrapper&quot;&gt;
 &lt;select&gt;
 &lt;option&gt;Option&lt;/option&gt;
 &lt;option&gt;Option&lt;/option&gt;
 &lt;/select&gt;
+&lt;/div&gt;
 &lt;/div&gt;</code></pre>
           </div>
 
         <div class="kss-source kss-style">
-          Source: <code>base/form.scss</code>, line 185
+          Source: <code>base/form.scss</code>, line 181
         </div>
 
     </section>
@@ -479,25 +507,83 @@
             </div>
 
           <div class="kss-modifier__example">
-            <input type="submit" value="Submit" class="{$modifiers}">
+            <input type="submit" value="Submit" class="[modifier class]">
           </div>
 
             <div class="kss-modifier__name kss-style">
-              input[type&#x3D;&quot;submit&quot;]:hover
+              :hover
             </div>
             <div class="kss-modifier__description kss-style">
               Hover styling
             </div>
             <div class="kss-modifier__example">
-              <input type="submit" value="Submit" class="{$modifiers}">
+              <input type="submit" value="Submit" class="pseudo-class-hover">
             </div>
         </div>
           <div class="kss-markup kss-style">
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;input type&#x3D;&quot;submit&quot; value&#x3D;&quot;Submit&quot; class&#x3D;&quot;{$modifiers}&quot;&gt;</code></pre>
+            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;input type&#x3D;&quot;submit&quot; value&#x3D;&quot;Submit&quot; class&#x3D;&quot;[modifier class]&quot;&gt;</code></pre>
           </div>
 
         <div class="kss-source kss-style">
           Source: <code>base/form.scss</code>, line 252
+        </div>
+
+    </section>
+    <section id="kssref-1-3" class="kss-section kss-section--depth-2">
+
+      <div class="kss-style">
+        <h2 class="kss-title kss-title--level-2">
+          <a class="kss-title__permalink" href="#kssref-1-3">
+            <span class="kss-title__ref">
+              1.3
+              <span class="kss-title__permalink-hash">
+                  #permalink
+              </span>
+            </span>
+            Table
+          </a>
+        </h2>
+
+
+      </div>
+
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Example
+          </div>
+
+
+          <div class="kss-modifier__example">
+            <table>
+<thead>
+<tr><th>Table head</th><th>Table head</th><th>Table head</th></tr>
+</thead>
+<tbody>
+<tr class="odd"><td>td</td><td>td</td><td>td</td></tr>
+<tr class="even"><td>td</td><td>td</td><td>td</td></tr>
+<tr class="odd"><td>td</td><td>td</td><td>td</td></tr>
+<tr class="even"><td>td</td><td>td</td><td>td</td></tr>
+</tbody>
+</table>
+          </div>
+
+        </div>
+          <div class="kss-markup kss-style">
+            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th&gt;Table head&lt;/th&gt;&lt;th&gt;Table head&lt;/th&gt;&lt;th&gt;Table head&lt;/th&gt;&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class&#x3D;&quot;odd&quot;&gt;&lt;td&gt;td&lt;/td&gt;&lt;td&gt;td&lt;/td&gt;&lt;td&gt;td&lt;/td&gt;&lt;/tr&gt;
+&lt;tr class&#x3D;&quot;even&quot;&gt;&lt;td&gt;td&lt;/td&gt;&lt;td&gt;td&lt;/td&gt;&lt;td&gt;td&lt;/td&gt;&lt;/tr&gt;
+&lt;tr class&#x3D;&quot;odd&quot;&gt;&lt;td&gt;td&lt;/td&gt;&lt;td&gt;td&lt;/td&gt;&lt;td&gt;td&lt;/td&gt;&lt;/tr&gt;
+&lt;tr class&#x3D;&quot;even&quot;&gt;&lt;td&gt;td&lt;/td&gt;&lt;td&gt;td&lt;/td&gt;&lt;td&gt;td&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+          </div>
+
+        <div class="kss-source kss-style">
+          Source: <code>base/table.scss</code>, line 3
         </div>
 
     </section>

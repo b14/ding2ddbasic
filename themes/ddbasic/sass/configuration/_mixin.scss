@@ -84,7 +84,7 @@
 //
 // place-icon($icon, $color, $size)
 //
-// $icon  - Name of icon to be placed - is a string, see ??? for icon names (@TODO list icon names somewhere)
+// $icon  - Name of icon to be placed - is a string, see _mixin.scss for icon names
 // $color - Color of icon - default is $charcoal-opacity-dark
 // $size  - Size of icon - default is 54px
 //
@@ -119,7 +119,7 @@
 //
 // button($icon, $color, $background-color, $color-hover, $background-color-hover)
 //
-// $icon                    - Name of icon to be placed - is a string, see ??? for icon names (@TODO list icon names somewhere)
+// $icon                    - Name of icon to be placed - is a string, see _mixin.scss for icon names
 // $color                   - Color of text and icon - default is $color-text-on-secondary
 // $background-color        - Background-color of button - default is $color-secondary
 // $color-hover             - Color of text and icon on hover - default is $white
@@ -167,7 +167,7 @@
 //
 // arrow-button($icon)
 //
-// $icon  - Name of icon to be placed - is a string, see ??? for icon names (@TODO list icon names somewhere)
+// $icon  - Name of icon to be placed - is a string, see _mixin.scss for icon names
 //
 // Styleguide 3.1.4
 
